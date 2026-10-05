@@ -1,76 +1,47 @@
 # Construction Cost Analyzer
 
-> A reproducible Python analysis of the factors associated with construction cost overruns.
+[简体中文](README_zh.md) · [MIT License](LICENSE)
 
-[中文说明](README_zh.md) · [License](LICENSE)
+An exploratory analysis of construction cost variance using Python, pandas, and Matplotlib. The repository includes an 18-record project dataset, a Jupyter notebook, and command-line scripts for examining budget overruns and related project factors.
 
-## Overview
+## Analysis
 
-This project analyzes 18 historical construction projects to identify measurable relationships between cost variance and factors such as change orders, weather delays, structural type, and region. It provides both a narrative Jupyter notebook and a command-line analysis script.
+- Compare actual cost with budget and summarize overrun frequency.
+- Examine variation by structural type and region.
+- Calculate correlations with weather delays, change orders, and other recorded factors.
+- Inspect high-overrun projects and generate charts.
 
-## Key findings
+The included data supports a small educational case study. Its provenance does not establish a representative industry sample; correlations should be interpreted as associations within these records.
 
-| Finding | Result | Practical interpretation |
-|---|---:|---|
-| Weather delays show the strongest correlation | `r = +0.891` | Longer delays are associated with larger cost overruns |
-| Change orders are a major risk indicator | `r = +0.757` | 90% of projects with more than 12 change orders exceeded budget |
-| Frame-shear wall projects had the highest variance | `+6.9%` | This category may require a larger contingency allowance |
-| Projects exceeding budget | `55.6%` | The mean cost variance in the sample was `+2.1%` |
-
-> These results describe a small educational dataset and should not be treated as causal estimates or industry-wide benchmarks.
-
-## Repository structure
-
-```text
-construction-cost-analyzer/
-├── analysis.ipynb                  # Narrative notebook
-├── analysis/analyzer.py            # Command-line analysis
-├── data/construction_projects.csv  # Source dataset (18 projects)
-├── outputs/                         # Generated figures
-├── requirements.txt
-└── LICENSE
-```
-
-## Quick start
-
-### Jupyter Notebook
+## Run
 
 ```bash
-python -m pip install -r requirements.txt
-jupyter notebook analysis.ipynb
+python -m venv .venv
 ```
 
-### Command line
+Activate the environment, then:
 
 ```bash
 python -m pip install -r requirements.txt
 python analysis/analyzer.py
 ```
 
-The script prints a summary report and writes six visualizations to `outputs/`.
+The script prints an analysis report and writes charts to `outputs/`. To explore the narrative analysis:
 
-## Analysis workflow
+```bash
+jupyter notebook analysis.ipynb
+```
 
-1. Clean and validate the project records.
-2. Summarize cost variance and over-budget frequency.
-3. Compare structural types and regions.
-4. Calculate Pearson correlations for six candidate drivers.
-5. Group projects by change-order count.
-6. Examine the five largest overruns and generate recommendations.
+## Repository
 
-## Tech stack
+| Path | Purpose |
+| --- | --- |
+| [analysis.ipynb](analysis.ipynb) | Notebook analysis |
+| [analysis/analyzer.py](analysis/analyzer.py) | Command-line report and charts |
+| [analysis/chart_generator.py](analysis/chart_generator.py) | Chart generation |
+| [data/construction_projects.csv](data/construction_projects.csv) | Included project records |
+| [requirements.txt](requirements.txt) | Python dependencies |
 
-- Python 3.10+
-- pandas and NumPy
-- Matplotlib
-- Jupyter Notebook
+## Interpretation
 
-## Roadmap
-
-- [ ] Validate the analysis on a larger public dataset
-- [ ] Add predictive modeling with scikit-learn
-- [ ] Build an interactive Streamlit dashboard
-
-## License
-
-MIT License. See [LICENSE](LICENSE).
+Recompute summaries from the CSV when changing data. The analysis does not estimate causal effects, validate a predictive model, or establish a contingency allowance for new projects.
