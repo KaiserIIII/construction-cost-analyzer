@@ -1,0 +1,15 @@
+{
+  "cashflows": [
+    -100000,
+    30000,
+    30000,
+    30000,
+    30000
+  ],
+  "discount_rate_pct": 8,
+  "currency": "GBP",
+  "gdv": 1000000,
+  "non_land_cost": 700000,
+  "target_profit_pct": 20,
+  "profit_basis": "gdv"
+}

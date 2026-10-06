@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source_type": "synthetic",
+  "source_ref": "scenario-generator-v1-seed-42",
+  "sample_count": 500,
+  "seed": 42,
+  "generator": "cost_analyzer.benchmarks.generate_scenarios",
+  "currency": "GBP",
+  "cost_scope": "building",
+  "sha256": "d1ab2f1c3972a9b09556cc6920c78cd6868bc645554b27aad7a38aa4f3ff405e",
+  "building_functions": [
+    "housing",
+    "office",
+    "school",
+    "warehouse",
+    "healthcare"
+  ],
+  "region_levels": [
+    "reference",
+    "metro",
+    "regional",
+    "remote"
+  ],
+  "assumptions": {
+    "illustrative_base_rates": {
+      "housing": 1400,
+      "office": 2000,
+      "school": 1800,
+      "warehouse": 1000,
+      "healthcare": 2600
+    },
+    "floor_area_range_m2": [
+      200,
+      25000
+    ],
+    "arbitrary_price_index_range": [
+      90,
+      145
+    ],
+    "specification_multiplier_range": [
+      0.85,
+      1.15
+    ],
+    "actual_budget_multiplier_range": [
+      0.88,
+      1.24
+    ]
+  },
+  "licence": "MIT (self-authored generated examples)",
+  "limitations": [
+    "Not calibrated to actual projects",
+    "No empirical market or causal inference",
+    "Dates and indexes are arbitrary scenario labels, not official market observations"
+  ]
+}

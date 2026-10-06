@@ -1,0 +1,5 @@
+item_id,description,element,unit,quantity,rate,currency,source_ref,price_date,included_preliminaries,included_ohp
+SUB-01,Strip excavation,Substructure,m3,33.408,18.5,GBP,self-authored,2026-01-01,false,false
+SUB-02,Foundation concrete,Substructure,m3,6.264,140,GBP,self-authored,2026-01-01,false,false
+SUB-03,Natural backfill,Substructure,m3,27.144,12,GBP,self-authored,2026-01-01,false,false
+WALL-01,Brick wall,Walls,m2,100,62.832,GBP,self-authored,2026-01-01,false,true

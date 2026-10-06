@@ -1,0 +1,10 @@
+{
+  "method": "strip_foundation",
+  "length": 10,
+  "width": 8,
+  "wall_thickness": 0.3,
+  "trench_width": 0.8,
+  "trench_depth": 1.2,
+  "concrete_width": 0.6,
+  "concrete_depth": 0.3
+}

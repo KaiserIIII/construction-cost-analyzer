@@ -1,0 +1,26 @@
+{
+  "unit": "m2",
+  "currency": "GBP",
+  "materials": [
+    {
+      "name": "Brick",
+      "consumption": 60,
+      "pack_price": 240,
+      "pack_size": 500,
+      "waste_pct": 5
+    },
+    {
+      "name": "Mortar",
+      "consumption": 0.036,
+      "pack_price": 80,
+      "pack_size": 1,
+      "waste_pct": 0
+    }
+  ],
+  "crew_hourly_cost": 48,
+  "crew_output_per_hour": 2,
+  "plant_hourly_cost": 0,
+  "plant_output_per_hour": 1,
+  "subcontract_per_unit": 0,
+  "markup_pct": 10
+}

@@ -1,0 +1,20 @@
+{
+  "project_name": "Community workspace",
+  "currency": "GBP",
+  "area_m2": 1000,
+  "base_rate": 1000,
+  "base_index": 100,
+  "target_index": 120,
+  "base_location_index": 100,
+  "target_location_index": 105,
+  "preliminaries_pct": 10,
+  "overheads_profit_pct": 5,
+  "contingency_pct": 0,
+  "fees_pct": 0,
+  "vat_pct": 0,
+  "rate_includes_preliminaries": false,
+  "rate_includes_ohp": false,
+  "cost_scope": "building",
+  "source_ref": "Self-authored arithmetic example (not market rates)",
+  "price_date": "2026-01-01"
+}

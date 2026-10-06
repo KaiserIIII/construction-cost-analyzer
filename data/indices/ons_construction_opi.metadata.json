@@ -1,0 +1,76 @@
+{
+  "dataset_title": "ONS Construction Output Price Indices (OPIs)",
+  "source_ref": "ons_construction_opi_2026-08-13",
+  "source_type": "official_statistics",
+  "source_url": "https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/datasets/interimconstructionoutputpriceindices",
+  "workbook_url": "https://www.ons.gov.uk/file?uri=%2Fbusinessindustryandtrade%2Fconstructionindustry%2Fdatasets%2Finterimconstructionoutputpriceindices%2Fcurrent%2Fbulletindataset9.xlsx",
+  "release_date": "2026-08-13",
+  "retrieved_at_utc": "2026-10-06T05:55:33Z",
+  "licence": "Open Government Licence v3.0",
+  "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: Office for National Statistics. Crown copyright 2026.",
+  "coverage_workbook": "Great Britain",
+  "coverage_dataset_page": "UK",
+  "coverage_note": "The source workbook cover says Great Britain; the ONS dataset page describes UK. Both source labels are retained without harmonising them.",
+  "index_type": "OPI",
+  "base_year": 2015,
+  "base_description": "2015=100",
+  "seasonal_adjustment": "not seasonally adjusted",
+  "observation_frequency": "monthly",
+  "release_frequency": "quarterly",
+  "period_start": "2014-01",
+  "period_end": "2026-06",
+  "row_count": 1500,
+  "month_count": 150,
+  "series_count": 10,
+  "series": [
+    "All construction (new work and repair and maintenance)",
+    "All new work",
+    "All repair and maintenance",
+    "Housing (public and private)",
+    "Housing repair and maintenance",
+    "Infrastructure",
+    "Non-housing repair and maintenance",
+    "Private commercial",
+    "Private industrial",
+    "Public (other than housing)"
+  ],
+  "source_worksheets": [
+    "All construction",
+    "New work",
+    "Repair & maintenance"
+  ],
+  "duplicate_aggregate_observations_removed": 300,
+  "exclusions": [
+    "Percentage-change columns",
+    "Annual and quarterly period rows",
+    "Repeated cross-sheet aggregate levels after equality checks"
+  ],
+  "workbook_sha256": "ea0cbfe6573be52210ea0469f182ac5f03c68af39b193ab0f328feb24626edde",
+  "workbook_bytes": 81331,
+  "csv_file": "ons_construction_opi.csv",
+  "csv_sha256": "15f833e66a9603abc95b38e87b6988fb78304213d2c62f73f1e46c8b6eade8bd",
+  "csv_encoding": "UTF-8",
+  "csv_line_endings": "LF",
+  "csv_fields": [
+    "period",
+    "index_type",
+    "series",
+    "index_value",
+    "base_year",
+    "source_type",
+    "source_ref"
+  ],
+  "importer": "scripts/import_ons_opi.py",
+  "import_environment": {
+    "python": "3.13.0",
+    "openpyxl": "3.2.0b1"
+  },
+  "limitations": [
+    "Output price index, not BCIS Tender Price Index (TPI)",
+    "Historical index levels, not inflation forecasts",
+    "Not individual project observations or a market quote",
+    "No regional location factors, currency conversion or project-specific calibration",
+    "ONS may revise historical data; this is a frozen reviewed release"
+  ]
+}

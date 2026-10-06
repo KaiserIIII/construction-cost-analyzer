@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A bilingual construction costing workspace: early estimates, quantity takeoff, unit rates, BOQs, comparable benchmarks and investment appraisal.">
+  <title>量价工坊 · Construction Cost Studio</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace" data-i18n="skip">跳至计算工作区</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">CC<span>↗</span></span><div><strong data-i18n="brand">量价工坊</strong><small>CONSTRUCTION COST STUDIO</small></div></div>
+    <div class="header-actions"><span class="local-badge"><span aria-hidden="true"></span><span data-i18n="local">本地计算</span></span><button id="language-toggle" class="language-button" type="button" aria-label="Switch to English">EN <span aria-hidden="true">⇄</span></button></div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow" data-i18n="eyebrow">从工程量，到投资决策</p><h1 id="page-title" data-i18n="title">让每一笔造价<br>都有计算依据。</h1><p class="hero-description" data-i18n="intro">从面积估算、工程量与单价，到工程量清单和现金流评价。输入假设，查看计算明细，导出可复核的结果。</p><div class="hero-actions"><button id="load-example" class="primary-button" type="button"><span aria-hidden="true">↗</span><span data-i18n="loadExample">载入教学示例</span></button><span class="quiet-note" data-i18n="exampleNote">自编示例 · 可直接修改</span></div></div>
+      <aside class="method-card"><div class="method-heading"><span data-i18n="methodLabel">估算思路</span><span aria-hidden="true">01 — 05</span></div><div class="formula-display"><span data-i18n="areaShort">工程量</span><b>×</b><span data-i18n="rateShort">单价</span><b>+</b><span data-i18n="allowanceShort">附加费用</span></div><div class="method-line"></div><p data-i18n="methodNote">明确计量单位、价格日期和费用范围，再比较结果。</p><div class="method-tags"><span data-i18n="traceable">明细可追溯</span><span data-i18n="twoLanguages">中英双语</span><span>CSV / JSON</span></div></aside>
+    </section>
+    <div id="global-status" class="global-status" role="status" aria-live="polite"></div>
+    <section id="workspace" class="workspace" aria-label="Costing workspace">
+      <div class="workspace-heading"><div><span class="eyebrow" data-i18n="workspaceLabel">计算工作区</span><h2 data-i18n="workspaceTitle">选择你的计算阶段</h2></div><button id="print-report" class="text-button" type="button" disabled><span aria-hidden="true">▤</span><span data-i18n="print">打印报告</span></button></div>
+      <div class="tabs" role="tablist" aria-label="Calculation stages">
+        <button id="tab-early" type="button" role="tab" aria-selected="true" aria-controls="panel-early" data-tool="early"><span>01</span><span data-i18n="tabEarly">初步估算</span></button>
+        <button id="tab-takeoff" type="button" role="tab" aria-selected="false" aria-controls="panel-takeoff" tabindex="-1" data-tool="takeoff"><span>02</span><span data-i18n="tabTakeoff">工程量与单价</span></button>
+        <button id="tab-boq" type="button" role="tab" aria-selected="false" aria-controls="panel-boq" tabindex="-1" data-tool="boq"><span>03</span><span data-i18n="tabBoq">工程量清单</span></button>
+        <button id="tab-benchmark" type="button" role="tab" aria-selected="false" aria-controls="panel-benchmark" tabindex="-1" data-tool="benchmark"><span>04</span><span data-i18n="tabBenchmark">同类项目比较</span></button>
+        <button id="tab-appraise" type="button" role="tab" aria-selected="false" aria-controls="panel-appraise" tabindex="-1" data-tool="appraise"><span>05</span><span data-i18n="tabAppraise">投资评价</span></button>
+      </div>
+      <section id="panel-early" role="tabpanel" aria-labelledby="tab-early" tabindex="0"></section>
+      <section id="panel-takeoff" role="tabpanel" aria-labelledby="tab-takeoff" tabindex="0" hidden></section>
+      <section id="panel-boq" role="tabpanel" aria-labelledby="tab-boq" tabindex="0" hidden></section>
+      <section id="panel-benchmark" role="tabpanel" aria-labelledby="tab-benchmark" tabindex="0" hidden></section>
+      <section id="panel-appraise" role="tabpanel" aria-labelledby="tab-appraise" tabindex="0" hidden></section>
+    </section>
+    <section class="principles"><div><span aria-hidden="true">↳</span><h3 data-i18n="principle1">先统一口径</h3><p data-i18n="principle1Note">面积、货币、费用范围与基准日期，决定哪些项目可以比较。</p></div><div><span aria-hidden="true">Σ</span><h3 data-i18n="principle2">看清附加费用</h3><p data-i18n="principle2Note">临时设施费、管理费及利润等分别列示，避免重复计取。</p></div><div><span aria-hidden="true">⤓</span><h3 data-i18n="principle3">保留计算依据</h3><p data-i18n="principle3Note">导出的结果包含输入与来源字段，便于复核和后续调整。</p></div></section>
+  </main>
+  <footer><span><strong>CC</strong><span data-i18n="footerTitle">建筑造价学习与计算工具</span></span><span data-i18n="footerNote">示例与模拟数据用于练习；项目判断取决于你提供的依据。</span></footer>
+  <noscript>请启用 JavaScript 使用计算工具。 Enable JavaScript to use the calculation workspace.</noscript>
+</body>
+</html>

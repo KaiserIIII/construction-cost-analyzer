@@ -1,0 +1,1501 @@
+period,index_type,series,index_value,base_year,source_type,source_ref
+2014-01,OPI,All construction (new work and repair and maintenance),100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,All new work,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,All repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Housing (public and private),100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Housing repair and maintenance,100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Infrastructure,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Non-housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Private commercial,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Private industrial,101.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-01,OPI,Public (other than housing),100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,All construction (new work and repair and maintenance),99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,All new work,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,All repair and maintenance,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Housing (public and private),99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Housing repair and maintenance,100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Infrastructure,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Non-housing repair and maintenance,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Private commercial,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Private industrial,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-02,OPI,Public (other than housing),99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,All construction (new work and repair and maintenance),99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,All new work,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,All repair and maintenance,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Housing (public and private),99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Housing repair and maintenance,100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Infrastructure,98.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Non-housing repair and maintenance,97.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Private commercial,98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Private industrial,99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-03,OPI,Public (other than housing),98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,All construction (new work and repair and maintenance),98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,All new work,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,All repair and maintenance,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Housing (public and private),98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Housing repair and maintenance,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Infrastructure,98.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Non-housing repair and maintenance,97.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Private commercial,98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Private industrial,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-04,OPI,Public (other than housing),98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,All construction (new work and repair and maintenance),98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,All new work,98.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,All repair and maintenance,98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Housing (public and private),98.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Housing repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Infrastructure,98.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Non-housing repair and maintenance,97.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Private commercial,98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Private industrial,98.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-05,OPI,Public (other than housing),98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,All construction (new work and repair and maintenance),99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,All new work,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,All repair and maintenance,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Housing (public and private),99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Housing repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Infrastructure,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Non-housing repair and maintenance,98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Private commercial,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Private industrial,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-06,OPI,Public (other than housing),98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,All construction (new work and repair and maintenance),99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,All new work,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,All repair and maintenance,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Housing (public and private),99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Housing repair and maintenance,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Infrastructure,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Non-housing repair and maintenance,98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Private commercial,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Private industrial,99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-07,OPI,Public (other than housing),99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,All construction (new work and repair and maintenance),98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,All new work,98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,All repair and maintenance,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Housing (public and private),98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Infrastructure,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Non-housing repair and maintenance,97.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Private commercial,98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Private industrial,99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-08,OPI,Public (other than housing),98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,All construction (new work and repair and maintenance),99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,All new work,99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,All repair and maintenance,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Housing (public and private),99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Housing repair and maintenance,99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Infrastructure,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Non-housing repair and maintenance,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Private commercial,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Private industrial,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-09,OPI,Public (other than housing),99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,All construction (new work and repair and maintenance),99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,All new work,99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,All repair and maintenance,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Housing (public and private),99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Housing repair and maintenance,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Infrastructure,99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Non-housing repair and maintenance,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Private commercial,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Private industrial,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-10,OPI,Public (other than housing),99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,All construction (new work and repair and maintenance),99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,All new work,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,All repair and maintenance,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Housing (public and private),99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Housing repair and maintenance,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Infrastructure,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Non-housing repair and maintenance,98.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Private commercial,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Private industrial,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-11,OPI,Public (other than housing),99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,All construction (new work and repair and maintenance),98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,All new work,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,All repair and maintenance,99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Housing (public and private),99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Housing repair and maintenance,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Infrastructure,98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Non-housing repair and maintenance,98.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Private commercial,98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Private industrial,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2014-12,OPI,Public (other than housing),98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,All construction (new work and repair and maintenance),98.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,All new work,98.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,All repair and maintenance,98.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Housing (public and private),99.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Housing repair and maintenance,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Infrastructure,98.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Non-housing repair and maintenance,98.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Private commercial,98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Private industrial,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-01,OPI,Public (other than housing),98.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,All construction (new work and repair and maintenance),99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,All new work,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,All repair and maintenance,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Housing (public and private),99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Housing repair and maintenance,99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Infrastructure,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Non-housing repair and maintenance,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Private commercial,99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Private industrial,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-02,OPI,Public (other than housing),99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,All construction (new work and repair and maintenance),100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,All new work,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,All repair and maintenance,100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Housing (public and private),101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Housing repair and maintenance,99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Infrastructure,100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Non-housing repair and maintenance,100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Private commercial,100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Private industrial,101.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-03,OPI,Public (other than housing),100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,All construction (new work and repair and maintenance),99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,All new work,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,All repair and maintenance,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Housing (public and private),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Infrastructure,99.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Non-housing repair and maintenance,99.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Private commercial,99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Private industrial,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-04,OPI,Public (other than housing),99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,All construction (new work and repair and maintenance),99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,All new work,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,All repair and maintenance,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Housing (public and private),99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Infrastructure,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Non-housing repair and maintenance,99.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Private commercial,99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Private industrial,99.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-05,OPI,Public (other than housing),99.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,All construction (new work and repair and maintenance),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,All new work,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,All repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Housing (public and private),100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Infrastructure,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Non-housing repair and maintenance,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Private commercial,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Private industrial,99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-06,OPI,Public (other than housing),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,All construction (new work and repair and maintenance),100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,All new work,100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,All repair and maintenance,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Housing (public and private),100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Housing repair and maintenance,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Infrastructure,100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Non-housing repair and maintenance,101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Private commercial,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Private industrial,100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-07,OPI,Public (other than housing),100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,All construction (new work and repair and maintenance),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,All new work,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,All repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Housing (public and private),99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Housing repair and maintenance,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Infrastructure,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Non-housing repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Private commercial,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Private industrial,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-08,OPI,Public (other than housing),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,All construction (new work and repair and maintenance),100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,All new work,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,All repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Housing (public and private),99.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Housing repair and maintenance,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Infrastructure,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Non-housing repair and maintenance,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Private commercial,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Private industrial,99.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-09,OPI,Public (other than housing),100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,All construction (new work and repair and maintenance),100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,All new work,100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,All repair and maintenance,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Housing (public and private),100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Housing repair and maintenance,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Infrastructure,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Non-housing repair and maintenance,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Private commercial,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Private industrial,100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-10,OPI,Public (other than housing),100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,All construction (new work and repair and maintenance),100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,All new work,100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,All repair and maintenance,100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Housing (public and private),100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Housing repair and maintenance,100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Infrastructure,100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Non-housing repair and maintenance,101.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Private commercial,101.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Private industrial,100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-11,OPI,Public (other than housing),101.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,All construction (new work and repair and maintenance),100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,All new work,100.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,All repair and maintenance,100.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Housing (public and private),99.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Housing repair and maintenance,100.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Infrastructure,100.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Non-housing repair and maintenance,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Private commercial,100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Private industrial,99.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2015-12,OPI,Public (other than housing),100.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,All construction (new work and repair and maintenance),101.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,All new work,101.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,All repair and maintenance,101.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Housing (public and private),101.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Housing repair and maintenance,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Infrastructure,101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Non-housing repair and maintenance,101.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Private commercial,101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Private industrial,101.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-01,OPI,Public (other than housing),101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,All construction (new work and repair and maintenance),101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,All new work,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,All repair and maintenance,101.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Housing (public and private),101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Housing repair and maintenance,100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Infrastructure,101.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Non-housing repair and maintenance,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Private commercial,101.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Private industrial,101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-02,OPI,Public (other than housing),101.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,All construction (new work and repair and maintenance),102.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,All new work,102.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,All repair and maintenance,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Housing (public and private),102.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Housing repair and maintenance,100.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Infrastructure,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Non-housing repair and maintenance,102.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Private commercial,102.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Private industrial,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-03,OPI,Public (other than housing),102.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,All construction (new work and repair and maintenance),102.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,All new work,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,All repair and maintenance,101.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Housing (public and private),102.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Housing repair and maintenance,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Infrastructure,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Non-housing repair and maintenance,102.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Private commercial,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Private industrial,102.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-04,OPI,Public (other than housing),102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,All construction (new work and repair and maintenance),102.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,All new work,102.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,All repair and maintenance,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Housing (public and private),102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Housing repair and maintenance,100.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Infrastructure,101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Non-housing repair and maintenance,102.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Private commercial,102.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Private industrial,102.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-05,OPI,Public (other than housing),102.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,All construction (new work and repair and maintenance),102.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,All new work,102.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,All repair and maintenance,102.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Housing (public and private),102.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Housing repair and maintenance,101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Infrastructure,102.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Non-housing repair and maintenance,103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Private commercial,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Private industrial,103.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-06,OPI,Public (other than housing),102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,All construction (new work and repair and maintenance),102.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,All new work,102.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,All repair and maintenance,102.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Housing (public and private),103.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Housing repair and maintenance,101.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Infrastructure,100.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Non-housing repair and maintenance,103.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Private commercial,103.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Private industrial,104.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-07,OPI,Public (other than housing),103.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,All construction (new work and repair and maintenance),102.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,All new work,102.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,All repair and maintenance,102.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Housing (public and private),103.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Housing repair and maintenance,101.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Infrastructure,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Non-housing repair and maintenance,103.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Private commercial,103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Private industrial,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-08,OPI,Public (other than housing),103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,All construction (new work and repair and maintenance),102.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,All new work,103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,All repair and maintenance,102.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Housing (public and private),103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Housing repair and maintenance,101.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Infrastructure,100.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Non-housing repair and maintenance,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Private commercial,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Private industrial,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-09,OPI,Public (other than housing),103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,All construction (new work and repair and maintenance),103.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,All new work,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,All repair and maintenance,103.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Housing (public and private),104.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Housing repair and maintenance,101.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Infrastructure,101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Non-housing repair and maintenance,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Private commercial,103.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Private industrial,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-10,OPI,Public (other than housing),103.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,All construction (new work and repair and maintenance),103.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,All new work,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,All repair and maintenance,103.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Housing (public and private),104.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Housing repair and maintenance,101.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Infrastructure,101.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Non-housing repair and maintenance,105.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Private commercial,104.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Private industrial,106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-11,OPI,Public (other than housing),104.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,All construction (new work and repair and maintenance),103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,All new work,103.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,All repair and maintenance,103.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Housing (public and private),104.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Housing repair and maintenance,102.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Infrastructure,101.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Non-housing repair and maintenance,104.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Private commercial,103.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Private industrial,106.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2016-12,OPI,Public (other than housing),103.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,All construction (new work and repair and maintenance),104.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,All new work,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,All repair and maintenance,103.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Housing (public and private),105.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Housing repair and maintenance,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Infrastructure,101.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Non-housing repair and maintenance,105.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Private commercial,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Private industrial,106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-01,OPI,Public (other than housing),104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,All construction (new work and repair and maintenance),104.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,All new work,104.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,All repair and maintenance,103.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Housing (public and private),105.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Housing repair and maintenance,102.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Infrastructure,101.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Non-housing repair and maintenance,105.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Private commercial,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Private industrial,106.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-02,OPI,Public (other than housing),104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,All construction (new work and repair and maintenance),104.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,All new work,104.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,All repair and maintenance,104.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Housing (public and private),106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Housing repair and maintenance,102.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Infrastructure,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Non-housing repair and maintenance,105.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Private commercial,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Private industrial,107.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-03,OPI,Public (other than housing),104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,All construction (new work and repair and maintenance),104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,All new work,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,All repair and maintenance,104.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Housing (public and private),106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Housing repair and maintenance,102.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Infrastructure,100.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Non-housing repair and maintenance,105.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Private commercial,104.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Private industrial,107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-04,OPI,Public (other than housing),104.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,All construction (new work and repair and maintenance),104.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,All new work,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,All repair and maintenance,104.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Housing (public and private),106.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Housing repair and maintenance,103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Infrastructure,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Non-housing repair and maintenance,105.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Private commercial,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Private industrial,107.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-05,OPI,Public (other than housing),104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,All construction (new work and repair and maintenance),105.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,All new work,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,All repair and maintenance,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Housing (public and private),106.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Housing repair and maintenance,103.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Infrastructure,101.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Non-housing repair and maintenance,106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Private commercial,105.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Private industrial,107.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-06,OPI,Public (other than housing),105.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,All construction (new work and repair and maintenance),105.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,All new work,105.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,All repair and maintenance,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Housing (public and private),107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Housing repair and maintenance,103.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Infrastructure,102.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Non-housing repair and maintenance,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Private commercial,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Private industrial,108.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-07,OPI,Public (other than housing),106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,All construction (new work and repair and maintenance),105.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,All new work,106.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,All repair and maintenance,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Housing (public and private),107.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Housing repair and maintenance,103.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Infrastructure,102.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Non-housing repair and maintenance,107.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Private commercial,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Private industrial,108.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-08,OPI,Public (other than housing),106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,All construction (new work and repair and maintenance),106.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,All new work,106.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,All repair and maintenance,105.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Housing (public and private),108.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Housing repair and maintenance,103.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Infrastructure,102.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Non-housing repair and maintenance,107.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Private commercial,106.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Private industrial,109.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-09,OPI,Public (other than housing),106.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,All construction (new work and repair and maintenance),106.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,All new work,106.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,All repair and maintenance,105.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Housing (public and private),108.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Housing repair and maintenance,103.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Infrastructure,102.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Non-housing repair and maintenance,107.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Private commercial,106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Private industrial,109.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-10,OPI,Public (other than housing),106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,All construction (new work and repair and maintenance),106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,All new work,106.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,All repair and maintenance,105.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Housing (public and private),108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Housing repair and maintenance,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Infrastructure,103.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Non-housing repair and maintenance,108.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Private commercial,106.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Private industrial,109.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-11,OPI,Public (other than housing),106.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,All construction (new work and repair and maintenance),106.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,All new work,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,All repair and maintenance,106.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Housing (public and private),108.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Housing repair and maintenance,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Infrastructure,103.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Non-housing repair and maintenance,108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Private commercial,107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Private industrial,110.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2017-12,OPI,Public (other than housing),107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,All construction (new work and repair and maintenance),107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,All new work,107.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,All repair and maintenance,106.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Housing (public and private),110.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Housing repair and maintenance,103.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Infrastructure,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Non-housing repair and maintenance,109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Private commercial,107.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Private industrial,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-01,OPI,Public (other than housing),107.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,All construction (new work and repair and maintenance),107.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,All new work,107.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,All repair and maintenance,106.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Housing (public and private),109.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Housing repair and maintenance,103.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Infrastructure,103.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Non-housing repair and maintenance,109.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Private commercial,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Private industrial,110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-02,OPI,Public (other than housing),107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,All construction (new work and repair and maintenance),107.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,All new work,108.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,All repair and maintenance,107.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Housing (public and private),110.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Housing repair and maintenance,104.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Infrastructure,104.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Non-housing repair and maintenance,110.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Private commercial,108.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Private industrial,111.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-03,OPI,Public (other than housing),108.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,All construction (new work and repair and maintenance),108.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,All new work,108.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,All repair and maintenance,107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Housing (public and private),110.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Housing repair and maintenance,104.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Infrastructure,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Non-housing repair and maintenance,110.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Private commercial,108.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Private industrial,111.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-04,OPI,Public (other than housing),108.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,All construction (new work and repair and maintenance),108.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,All new work,109.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,All repair and maintenance,107.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Housing (public and private),111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Housing repair and maintenance,104.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Infrastructure,105.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Non-housing repair and maintenance,110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Private commercial,108.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Private industrial,112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-05,OPI,Public (other than housing),108.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,All construction (new work and repair and maintenance),108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,All new work,109.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,All repair and maintenance,107.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Housing (public and private),111.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Housing repair and maintenance,104.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Infrastructure,105.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Non-housing repair and maintenance,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Private commercial,109.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Private industrial,113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-06,OPI,Public (other than housing),109.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,All construction (new work and repair and maintenance),108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,All new work,109.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,All repair and maintenance,107.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Housing (public and private),111.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Housing repair and maintenance,104.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Infrastructure,105.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Non-housing repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Private commercial,109.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Private industrial,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-07,OPI,Public (other than housing),109.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,All construction (new work and repair and maintenance),108.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,All new work,109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,All repair and maintenance,107.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Housing (public and private),111.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Housing repair and maintenance,104.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Infrastructure,105.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Non-housing repair and maintenance,110.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Private commercial,108.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Private industrial,112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-08,OPI,Public (other than housing),108.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,All construction (new work and repair and maintenance),108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,All new work,109.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,All repair and maintenance,107.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Housing (public and private),111.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Housing repair and maintenance,105.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Infrastructure,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Non-housing repair and maintenance,111.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Private commercial,109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Private industrial,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-09,OPI,Public (other than housing),109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,All construction (new work and repair and maintenance),108.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,All new work,109.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,All repair and maintenance,107.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Housing (public and private),111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Housing repair and maintenance,105.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Infrastructure,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Non-housing repair and maintenance,111.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Private commercial,109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Private industrial,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-10,OPI,Public (other than housing),109.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,All construction (new work and repair and maintenance),110.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,All new work,110.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,All repair and maintenance,108.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Housing (public and private),112.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Housing repair and maintenance,105.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Infrastructure,107.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Non-housing repair and maintenance,112.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Private commercial,110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Private industrial,114.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-11,OPI,Public (other than housing),110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,All construction (new work and repair and maintenance),110.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,All new work,110.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,All repair and maintenance,108.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Housing (public and private),112.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Housing repair and maintenance,105.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Infrastructure,107.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Non-housing repair and maintenance,112.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Private commercial,110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Private industrial,114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2018-12,OPI,Public (other than housing),110.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,All construction (new work and repair and maintenance),110.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,All new work,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,All repair and maintenance,109.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Housing (public and private),112.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Housing repair and maintenance,105.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Infrastructure,107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Non-housing repair and maintenance,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Private commercial,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Private industrial,114.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-01,OPI,Public (other than housing),110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,All construction (new work and repair and maintenance),110.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,All new work,111.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,All repair and maintenance,109.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Housing (public and private),113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Housing repair and maintenance,105.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Infrastructure,108.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Non-housing repair and maintenance,113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Private commercial,111.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Private industrial,114.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-02,OPI,Public (other than housing),111.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,All construction (new work and repair and maintenance),111.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,All new work,111.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,All repair and maintenance,109.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Housing (public and private),113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Housing repair and maintenance,105.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Infrastructure,109.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Non-housing repair and maintenance,113.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Private commercial,111.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Private industrial,114.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-03,OPI,Public (other than housing),111.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,All construction (new work and repair and maintenance),111.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,All new work,112.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,All repair and maintenance,110.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Housing (public and private),114.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Housing repair and maintenance,105.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Infrastructure,109.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Non-housing repair and maintenance,114.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Private commercial,112.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Private industrial,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-04,OPI,Public (other than housing),112.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,All construction (new work and repair and maintenance),112.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,All new work,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,All repair and maintenance,110.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Housing (public and private),114.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Housing repair and maintenance,106.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Infrastructure,110.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Non-housing repair and maintenance,115.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Private commercial,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Private industrial,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-05,OPI,Public (other than housing),113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,All construction (new work and repair and maintenance),112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,All new work,113.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,All repair and maintenance,110.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Housing (public and private),115.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Housing repair and maintenance,106.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Infrastructure,112.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Non-housing repair and maintenance,116.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Private commercial,113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Private industrial,117.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-06,OPI,Public (other than housing),113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,All construction (new work and repair and maintenance),113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,All new work,114.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,All repair and maintenance,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Housing (public and private),115.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Housing repair and maintenance,106.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Infrastructure,112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Non-housing repair and maintenance,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Private commercial,113.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Private industrial,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-07,OPI,Public (other than housing),113.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,All construction (new work and repair and maintenance),112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,All new work,114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,All repair and maintenance,111.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Housing (public and private),115.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Housing repair and maintenance,106.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Infrastructure,112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Non-housing repair and maintenance,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Private commercial,113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Private industrial,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-08,OPI,Public (other than housing),113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,All construction (new work and repair and maintenance),112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,All new work,113.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Housing (public and private),115.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Housing repair and maintenance,106.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Infrastructure,111.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Non-housing repair and maintenance,116.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Private commercial,113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Private industrial,117.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-09,OPI,Public (other than housing),113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,All construction (new work and repair and maintenance),112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,All new work,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,All repair and maintenance,110.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Housing (public and private),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Housing repair and maintenance,106.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Infrastructure,110.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Non-housing repair and maintenance,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Private commercial,113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Private industrial,116.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-10,OPI,Public (other than housing),113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,All construction (new work and repair and maintenance),112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,All new work,113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Housing (public and private),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Housing repair and maintenance,106.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Infrastructure,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Non-housing repair and maintenance,116.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Private commercial,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Private industrial,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-11,OPI,Public (other than housing),113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,All construction (new work and repair and maintenance),112.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,All new work,112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,All repair and maintenance,110.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Housing (public and private),114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Housing repair and maintenance,106.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Infrastructure,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Non-housing repair and maintenance,115.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Private commercial,112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Private industrial,115.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2019-12,OPI,Public (other than housing),112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,All construction (new work and repair and maintenance),112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,All new work,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Housing (public and private),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Housing repair and maintenance,106.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Infrastructure,111.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Non-housing repair and maintenance,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Private commercial,112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Private industrial,115.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-01,OPI,Public (other than housing),112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,All construction (new work and repair and maintenance),112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,All new work,113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Housing (public and private),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Housing repair and maintenance,106.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Infrastructure,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Non-housing repair and maintenance,115.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Private commercial,112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Private industrial,115.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-02,OPI,Public (other than housing),112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,All construction (new work and repair and maintenance),112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,All new work,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Housing (public and private),114.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Housing repair and maintenance,106.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Infrastructure,111.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Non-housing repair and maintenance,115.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Private commercial,112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Private industrial,115.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-03,OPI,Public (other than housing),112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,All construction (new work and repair and maintenance),112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,All new work,113.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,All repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Housing (public and private),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Housing repair and maintenance,106.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Infrastructure,111.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Non-housing repair and maintenance,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Private commercial,113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Private industrial,116.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-04,OPI,Public (other than housing),113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,All construction (new work and repair and maintenance),112.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,All new work,113.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,All repair and maintenance,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Housing (public and private),114.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Housing repair and maintenance,106.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Infrastructure,111.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Non-housing repair and maintenance,115.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Private commercial,113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Private industrial,116.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-05,OPI,Public (other than housing),113.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,All construction (new work and repair and maintenance),112.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,All new work,113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,All repair and maintenance,111.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Housing (public and private),114.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Housing repair and maintenance,106.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Infrastructure,111.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Non-housing repair and maintenance,115.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Private commercial,113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Private industrial,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-06,OPI,Public (other than housing),113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,All construction (new work and repair and maintenance),113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,All new work,114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,All repair and maintenance,111.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Housing (public and private),115.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Housing repair and maintenance,106.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Infrastructure,112.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Non-housing repair and maintenance,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Private commercial,113.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Private industrial,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-07,OPI,Public (other than housing),113.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,All construction (new work and repair and maintenance),113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,All new work,113.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,All repair and maintenance,111.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Housing (public and private),115.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Housing repair and maintenance,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Infrastructure,112.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Non-housing repair and maintenance,116.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Private commercial,113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Private industrial,116.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-08,OPI,Public (other than housing),113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,All construction (new work and repair and maintenance),113.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,All new work,114.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,All repair and maintenance,111.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Housing (public and private),115.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Housing repair and maintenance,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Infrastructure,112.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Non-housing repair and maintenance,116.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Private commercial,113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Private industrial,116.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-09,OPI,Public (other than housing),113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,All construction (new work and repair and maintenance),113.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,All new work,114.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,All repair and maintenance,111.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Housing (public and private),115.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Housing repair and maintenance,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Infrastructure,112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Non-housing repair and maintenance,116.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Private commercial,113.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Private industrial,116.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-10,OPI,Public (other than housing),113.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,All construction (new work and repair and maintenance),113.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,All new work,114.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,All repair and maintenance,111.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Housing (public and private),115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Housing repair and maintenance,107.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Infrastructure,114.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Non-housing repair and maintenance,116.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Private commercial,113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Private industrial,116.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-11,OPI,Public (other than housing),113.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,All construction (new work and repair and maintenance),113.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,All new work,115.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,All repair and maintenance,111.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Housing (public and private),116.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Housing repair and maintenance,107.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Infrastructure,114.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Non-housing repair and maintenance,116.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Private commercial,114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Private industrial,117.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2020-12,OPI,Public (other than housing),114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,All construction (new work and repair and maintenance),114.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,All new work,115.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,All repair and maintenance,112.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Housing (public and private),116.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Housing repair and maintenance,107.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Infrastructure,115.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Non-housing repair and maintenance,117.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Private commercial,114.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Private industrial,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-01,OPI,Public (other than housing),114.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,All construction (new work and repair and maintenance),114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,All new work,115.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,All repair and maintenance,112.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Housing (public and private),116.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Housing repair and maintenance,107.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Infrastructure,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Non-housing repair and maintenance,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Private commercial,114.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Private industrial,117.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-02,OPI,Public (other than housing),114.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,All construction (new work and repair and maintenance),114.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,All new work,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,All repair and maintenance,112.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Housing (public and private),117.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Housing repair and maintenance,108.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Infrastructure,114.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Non-housing repair and maintenance,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Private commercial,114.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Private industrial,118.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-03,OPI,Public (other than housing),114.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,All construction (new work and repair and maintenance),115.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,All new work,116.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,All repair and maintenance,113.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Housing (public and private),118.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Housing repair and maintenance,108.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Infrastructure,114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Non-housing repair and maintenance,118.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Private commercial,115.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Private industrial,119.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-04,OPI,Public (other than housing),115.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,All construction (new work and repair and maintenance),116.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,All new work,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,All repair and maintenance,113.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Housing (public and private),119.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Housing repair and maintenance,108.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Infrastructure,115.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Non-housing repair and maintenance,119.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Private commercial,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Private industrial,120.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-05,OPI,Public (other than housing),116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,All construction (new work and repair and maintenance),117.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,All new work,118.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,All repair and maintenance,114.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Housing (public and private),120.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Housing repair and maintenance,109.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Infrastructure,115.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Non-housing repair and maintenance,120.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Private commercial,116.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Private industrial,121.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-06,OPI,Public (other than housing),116.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,All construction (new work and repair and maintenance),117.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,All new work,119.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,All repair and maintenance,115.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Housing (public and private),122.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Housing repair and maintenance,110.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Infrastructure,116.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Non-housing repair and maintenance,121.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Private commercial,117.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Private industrial,122.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-07,OPI,Public (other than housing),117.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,All construction (new work and repair and maintenance),118.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,All new work,120.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,All repair and maintenance,116.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Housing (public and private),123.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Housing repair and maintenance,110.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Infrastructure,116.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Non-housing repair and maintenance,122.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Private commercial,117.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Private industrial,123.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-08,OPI,Public (other than housing),117.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,All construction (new work and repair and maintenance),118.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,All new work,120.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,All repair and maintenance,116.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Housing (public and private),123.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Housing repair and maintenance,111.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Infrastructure,117.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Non-housing repair and maintenance,122.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Private commercial,117.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Private industrial,124.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-09,OPI,Public (other than housing),117.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,All construction (new work and repair and maintenance),120.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,All new work,121.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,All repair and maintenance,118.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Housing (public and private),125.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Housing repair and maintenance,112.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Infrastructure,118.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Non-housing repair and maintenance,124.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Private commercial,119.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Private industrial,125.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-10,OPI,Public (other than housing),119.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,All construction (new work and repair and maintenance),120.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,All new work,122.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,All repair and maintenance,118.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Housing (public and private),126.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Housing repair and maintenance,112.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Infrastructure,118.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Non-housing repair and maintenance,124.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Private commercial,119.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Private industrial,125.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-11,OPI,Public (other than housing),119.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,All construction (new work and repair and maintenance),120.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,All new work,121.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,All repair and maintenance,118.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Housing (public and private),126.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Housing repair and maintenance,112.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Infrastructure,118.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Non-housing repair and maintenance,124.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Private commercial,118.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Private industrial,125.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2021-12,OPI,Public (other than housing),118.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,All construction (new work and repair and maintenance),123.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,All new work,124.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,All repair and maintenance,120.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Housing (public and private),129.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Housing repair and maintenance,113.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Infrastructure,119.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Non-housing repair and maintenance,127.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Private commercial,122.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Private industrial,127.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-01,OPI,Public (other than housing),122.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,All construction (new work and repair and maintenance),123.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,All new work,124.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,All repair and maintenance,120.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Housing (public and private),129.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Housing repair and maintenance,114.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Infrastructure,119.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Non-housing repair and maintenance,127.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Private commercial,121.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Private industrial,127.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-02,OPI,Public (other than housing),121.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,All construction (new work and repair and maintenance),123.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,All new work,125.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,All repair and maintenance,121.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Housing (public and private),130.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Housing repair and maintenance,114.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Infrastructure,120.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Non-housing repair and maintenance,128.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Private commercial,122.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Private industrial,129.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-03,OPI,Public (other than housing),122.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,All construction (new work and repair and maintenance),126.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,All new work,128.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,All repair and maintenance,123.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Housing (public and private),133.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Housing repair and maintenance,115.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Infrastructure,123.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Non-housing repair and maintenance,131.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Private commercial,125.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Private industrial,133.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-04,OPI,Public (other than housing),125.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,All construction (new work and repair and maintenance),129.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,All new work,131.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,All repair and maintenance,124.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Housing (public and private),134.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Housing repair and maintenance,116.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Infrastructure,133.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Non-housing repair and maintenance,133.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Private commercial,127.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Private industrial,135.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-05,OPI,Public (other than housing),127.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,All construction (new work and repair and maintenance),130.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,All new work,132.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,All repair and maintenance,125.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Housing (public and private),135.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Housing repair and maintenance,116.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Infrastructure,133.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Non-housing repair and maintenance,134.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Private commercial,127.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Private industrial,135.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-06,OPI,Public (other than housing),127.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,All construction (new work and repair and maintenance),130.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,All new work,133.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,All repair and maintenance,125.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Housing (public and private),136.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Housing repair and maintenance,117.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Infrastructure,133.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Non-housing repair and maintenance,135.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Private commercial,128.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Private industrial,135.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-07,OPI,Public (other than housing),128.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,All construction (new work and repair and maintenance),129.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,All new work,132.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,All repair and maintenance,125.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Housing (public and private),135.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Housing repair and maintenance,117.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Infrastructure,132.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Non-housing repair and maintenance,134.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Private commercial,127.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Private industrial,134.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-08,OPI,Public (other than housing),127.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,All construction (new work and repair and maintenance),131.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,All new work,133.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,All repair and maintenance,126.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Housing (public and private),137.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Housing repair and maintenance,118.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Infrastructure,133.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Non-housing repair and maintenance,135.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Private commercial,128.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Private industrial,136.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-09,OPI,Public (other than housing),128.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,All construction (new work and repair and maintenance),132.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,All new work,135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,All repair and maintenance,127.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Housing (public and private),138.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Housing repair and maintenance,118.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Infrastructure,134.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Non-housing repair and maintenance,136.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Private commercial,130.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Private industrial,137.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-10,OPI,Public (other than housing),130.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,All construction (new work and repair and maintenance),132.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,All new work,135.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,All repair and maintenance,127.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Housing (public and private),139.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Housing repair and maintenance,118.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Infrastructure,134.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Non-housing repair and maintenance,137.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Private commercial,130.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Private industrial,138.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-11,OPI,Public (other than housing),130.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,All construction (new work and repair and maintenance),132.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,All new work,134.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,All repair and maintenance,127.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Housing (public and private),139.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Housing repair and maintenance,118.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Infrastructure,133.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Non-housing repair and maintenance,136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Private commercial,129.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Private industrial,136.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2022-12,OPI,Public (other than housing),129.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,All construction (new work and repair and maintenance),134.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,All new work,137.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,All repair and maintenance,128.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Housing (public and private),142.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Housing repair and maintenance,119.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Infrastructure,135.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Non-housing repair and maintenance,138.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Private commercial,133.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Private industrial,138.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-01,OPI,Public (other than housing),133.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,All construction (new work and repair and maintenance),134.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,All new work,137.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,All repair and maintenance,128.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Housing (public and private),143.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Housing repair and maintenance,119.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Infrastructure,136.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Non-housing repair and maintenance,138.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Private commercial,132.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Private industrial,138.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-02,OPI,Public (other than housing),132.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,All construction (new work and repair and maintenance),135.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,All new work,139.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,All repair and maintenance,129.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Housing (public and private),144.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Housing repair and maintenance,119.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Infrastructure,138.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Non-housing repair and maintenance,140.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Private commercial,133.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Private industrial,139.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-03,OPI,Public (other than housing),133.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,All construction (new work and repair and maintenance),136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,All new work,139.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,All repair and maintenance,129.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Housing (public and private),144.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Housing repair and maintenance,119.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Infrastructure,138.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Non-housing repair and maintenance,141.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Private commercial,134.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Private industrial,141.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-04,OPI,Public (other than housing),134.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,All construction (new work and repair and maintenance),136.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,All new work,140.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,All repair and maintenance,130.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Housing (public and private),145.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Housing repair and maintenance,119.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Infrastructure,138.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Non-housing repair and maintenance,141.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Private commercial,135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Private industrial,141.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-05,OPI,Public (other than housing),135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,All construction (new work and repair and maintenance),137.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,All new work,140.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,All repair and maintenance,130.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Housing (public and private),145.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Housing repair and maintenance,120.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Infrastructure,139.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Non-housing repair and maintenance,141.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Private commercial,135.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Private industrial,141.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-06,OPI,Public (other than housing),135.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,All construction (new work and repair and maintenance),137.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,All new work,140.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,All repair and maintenance,130.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Housing (public and private),145.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Housing repair and maintenance,120.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Infrastructure,138.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Non-housing repair and maintenance,142.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Private commercial,135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Private industrial,141.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-07,OPI,Public (other than housing),135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,All construction (new work and repair and maintenance),137.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,All new work,140.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,All repair and maintenance,130.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Housing (public and private),145.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Housing repair and maintenance,120.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Infrastructure,138.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Non-housing repair and maintenance,142.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Private commercial,135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Private industrial,141.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-08,OPI,Public (other than housing),135.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,All construction (new work and repair and maintenance),136.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,All new work,140.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,All repair and maintenance,130.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Housing (public and private),146.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Housing repair and maintenance,120.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Infrastructure,136.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Non-housing repair and maintenance,142.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Private commercial,135.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Private industrial,141.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-09,OPI,Public (other than housing),135.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,All construction (new work and repair and maintenance),136.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,All new work,139.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,All repair and maintenance,130.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Housing (public and private),145.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Housing repair and maintenance,120.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Infrastructure,136.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Non-housing repair and maintenance,141.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Private commercial,134.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Private industrial,141.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-10,OPI,Public (other than housing),134.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,All construction (new work and repair and maintenance),136.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,All new work,139.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,All repair and maintenance,130.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Housing (public and private),145.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Housing repair and maintenance,120.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Infrastructure,136.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Non-housing repair and maintenance,141.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Private commercial,135.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Private industrial,140.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-11,OPI,Public (other than housing),135.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,All construction (new work and repair and maintenance),136.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,All new work,139.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,All repair and maintenance,130.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Housing (public and private),144.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Housing repair and maintenance,120.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Infrastructure,136.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Non-housing repair and maintenance,140.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Private commercial,134.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Private industrial,139.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2023-12,OPI,Public (other than housing),134.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,All construction (new work and repair and maintenance),136.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,All new work,139.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,All repair and maintenance,130.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Housing (public and private),145.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Housing repair and maintenance,121.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Infrastructure,136.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Non-housing repair and maintenance,141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Private commercial,135.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Private industrial,141.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-01,OPI,Public (other than housing),135.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,All construction (new work and repair and maintenance),137.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,All new work,141.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,All repair and maintenance,131.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Housing (public and private),147.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Housing repair and maintenance,121.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Infrastructure,137.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Non-housing repair and maintenance,143.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Private commercial,135.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Private industrial,141.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-02,OPI,Public (other than housing),135.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,All construction (new work and repair and maintenance),137.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,All new work,141.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,All repair and maintenance,131.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Housing (public and private),147.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Housing repair and maintenance,121.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Infrastructure,137.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Non-housing repair and maintenance,143.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Private commercial,136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Private industrial,142.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-03,OPI,Public (other than housing),136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,All construction (new work and repair and maintenance),139.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,All new work,142.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,All repair and maintenance,132.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Housing (public and private),148.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Housing repair and maintenance,121.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Infrastructure,139.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Non-housing repair and maintenance,144.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Private commercial,137.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Private industrial,143.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-04,OPI,Public (other than housing),137.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,All construction (new work and repair and maintenance),140.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,All new work,144.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,All repair and maintenance,133.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Housing (public and private),150.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Housing repair and maintenance,121.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Infrastructure,140.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Non-housing repair and maintenance,146.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Private commercial,138.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Private industrial,145.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-05,OPI,Public (other than housing),138.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,All construction (new work and repair and maintenance),140.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,All new work,143.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,All repair and maintenance,133.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Housing (public and private),150.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Housing repair and maintenance,121.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Infrastructure,140.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Non-housing repair and maintenance,146.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Private commercial,138.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Private industrial,145.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-06,OPI,Public (other than housing),138.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,All construction (new work and repair and maintenance),140.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,All new work,143.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,All repair and maintenance,133.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Housing (public and private),150.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Housing repair and maintenance,121.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Infrastructure,140.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Non-housing repair and maintenance,146.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Private commercial,138.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Private industrial,145.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-07,OPI,Public (other than housing),138.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,All construction (new work and repair and maintenance),140.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,All new work,143.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,All repair and maintenance,133.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Housing (public and private),149.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Housing repair and maintenance,121.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Infrastructure,140.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Non-housing repair and maintenance,146.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Private commercial,138.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Private industrial,145.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-08,OPI,Public (other than housing),138.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,All construction (new work and repair and maintenance),140.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,All new work,144.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,All repair and maintenance,133.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Housing (public and private),150.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Housing repair and maintenance,121.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Infrastructure,141.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Non-housing repair and maintenance,147.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Private commercial,139.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Private industrial,146.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-09,OPI,Public (other than housing),139.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,All construction (new work and repair and maintenance),141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,All new work,145.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,All repair and maintenance,134.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Housing (public and private),151.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Housing repair and maintenance,121.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Infrastructure,142.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Non-housing repair and maintenance,148.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Private commercial,140.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Private industrial,147.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-10,OPI,Public (other than housing),140.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,All construction (new work and repair and maintenance),140.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,All new work,144.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,All repair and maintenance,133.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Housing (public and private),150.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Housing repair and maintenance,121.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Infrastructure,141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Non-housing repair and maintenance,147.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Private commercial,139.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Private industrial,146.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-11,OPI,Public (other than housing),139.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,All construction (new work and repair and maintenance),140.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,All new work,144.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,All repair and maintenance,133.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Housing (public and private),150.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Housing repair and maintenance,121.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Infrastructure,141.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Non-housing repair and maintenance,147.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Private commercial,139.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Private industrial,146.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2024-12,OPI,Public (other than housing),139.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,All construction (new work and repair and maintenance),141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,All new work,145.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,All repair and maintenance,134.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Housing (public and private),151.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Housing repair and maintenance,122.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Infrastructure,142.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Non-housing repair and maintenance,148.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Private commercial,140.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Private industrial,147.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-01,OPI,Public (other than housing),140.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,All construction (new work and repair and maintenance),142.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,All new work,146.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,All repair and maintenance,134.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Housing (public and private),152.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Housing repair and maintenance,122.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Infrastructure,142.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Non-housing repair and maintenance,149.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Private commercial,141.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Private industrial,147.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-02,OPI,Public (other than housing),141.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,All construction (new work and repair and maintenance),142.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,All new work,146.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,All repair and maintenance,135.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Housing (public and private),153.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Housing repair and maintenance,122.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Infrastructure,143.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Non-housing repair and maintenance,149.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Private commercial,141.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Private industrial,148.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-03,OPI,Public (other than housing),141.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,All construction (new work and repair and maintenance),143.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,All new work,147.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,All repair and maintenance,135.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Housing (public and private),153.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Housing repair and maintenance,122.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Infrastructure,143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Non-housing repair and maintenance,150.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Private commercial,142.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Private industrial,148.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-04,OPI,Public (other than housing),142.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,All construction (new work and repair and maintenance),143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,All new work,147.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,All repair and maintenance,136.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Housing (public and private),153.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Housing repair and maintenance,123.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Infrastructure,144.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Non-housing repair and maintenance,151.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Private commercial,142.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Private industrial,149.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-05,OPI,Public (other than housing),142.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,All construction (new work and repair and maintenance),143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,All new work,147.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,All repair and maintenance,136.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Housing (public and private),154.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Housing repair and maintenance,123.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Infrastructure,143.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Non-housing repair and maintenance,151.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Private commercial,142.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Private industrial,149.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-06,OPI,Public (other than housing),142.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,All construction (new work and repair and maintenance),143.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,All new work,147.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,All repair and maintenance,136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Housing (public and private),154.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Housing repair and maintenance,123.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Infrastructure,144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Non-housing repair and maintenance,151.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Private commercial,142.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Private industrial,149.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-07,OPI,Public (other than housing),142.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,All construction (new work and repair and maintenance),144.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,All new work,148.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,All repair and maintenance,136.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Housing (public and private),154.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Housing repair and maintenance,123.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Infrastructure,143.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Non-housing repair and maintenance,151.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Private commercial,143.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Private industrial,149.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-08,OPI,Public (other than housing),143.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,All construction (new work and repair and maintenance),144.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,All new work,148.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,All repair and maintenance,136.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Housing (public and private),155.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Housing repair and maintenance,123.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Infrastructure,144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Non-housing repair and maintenance,151.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Private commercial,143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Private industrial,150.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-09,OPI,Public (other than housing),143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,All construction (new work and repair and maintenance),144.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,All new work,148.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,All repair and maintenance,136.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Housing (public and private),155.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Housing repair and maintenance,123.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Infrastructure,144.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Non-housing repair and maintenance,151.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Private commercial,143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Private industrial,150.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-10,OPI,Public (other than housing),143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,All construction (new work and repair and maintenance),144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,All new work,148.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,All repair and maintenance,136.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Housing (public and private),155.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Housing repair and maintenance,123.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Infrastructure,143.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Non-housing repair and maintenance,150.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Private commercial,142.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Private industrial,149.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-11,OPI,Public (other than housing),142.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,All construction (new work and repair and maintenance),143.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,All new work,147.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,All repair and maintenance,136.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Housing (public and private),154.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Housing repair and maintenance,123.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Infrastructure,143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Non-housing repair and maintenance,150.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Private commercial,142.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Private industrial,149.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2025-12,OPI,Public (other than housing),142.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,All construction (new work and repair and maintenance),143.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,All new work,147.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,All repair and maintenance,135.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Housing (public and private),155.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Housing repair and maintenance,123.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Infrastructure,143.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Non-housing repair and maintenance,149.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Private commercial,141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Private industrial,148.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-01,OPI,Public (other than housing),141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,All construction (new work and repair and maintenance),143.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,All new work,147.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,All repair and maintenance,136.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Housing (public and private),155.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Housing repair and maintenance,124.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Infrastructure,143.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Non-housing repair and maintenance,149.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Private commercial,141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Private industrial,148.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-02,OPI,Public (other than housing),141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,All construction (new work and repair and maintenance),143.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,All new work,148.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,All repair and maintenance,136.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Housing (public and private),155.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Housing repair and maintenance,124.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Infrastructure,144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Non-housing repair and maintenance,150.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Private commercial,141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Private industrial,148.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-03,OPI,Public (other than housing),141.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,All construction (new work and repair and maintenance),144.8,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,All new work,149.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,All repair and maintenance,137.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Housing (public and private),156.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Housing repair and maintenance,124.5,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Infrastructure,145.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Non-housing repair and maintenance,151.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Private commercial,142.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Private industrial,149.6,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-04,OPI,Public (other than housing),142.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,All construction (new work and repair and maintenance),146.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,All new work,150.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,All repair and maintenance,138.0,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Housing (public and private),158.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Housing repair and maintenance,124.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Infrastructure,146.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Non-housing repair and maintenance,152.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Private commercial,144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Private industrial,151.3,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-05,OPI,Public (other than housing),144.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,All construction (new work and repair and maintenance),146.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,All new work,150.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,All repair and maintenance,138.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Housing (public and private),158.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Housing repair and maintenance,125.2,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Infrastructure,146.9,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Non-housing repair and maintenance,153.1,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Private commercial,144.4,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Private industrial,151.7,2015,official_statistics,ons_construction_opi_2026-08-13
+2026-06,OPI,Public (other than housing),144.4,2015,official_statistics,ons_construction_opi_2026-08-13
