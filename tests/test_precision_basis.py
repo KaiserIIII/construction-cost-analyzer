@@ -22,10 +22,17 @@ class PrecisionBasisTests(unittest.TestCase):
     def test_benchmark_export_retains_normalization_inputs(self):
         from cost_analyzer.benchmarks import generate_scenarios, scenario_csv
         result=benchmark(scenario_csv(generate_scenarios(2,42)),{},100,100)
-        rows=list(csv.reader(io.StringIO(report_csv(result))))
-        header=next(row for row in rows if row and row[0]=='project_id')
-        for key in ('base_index','location_index','actual_cost','floor_area_m2','price_date','index_series','source_ref'):
-            self.assertIn(key,header)
+        rows=list(csv.DictReader(io.StringIO(report_csv(result))))
+        projects={}
+        for row in rows:
+            if row['section']=='projects':projects.setdefault(row['row_id'],{})[row['field']]=row['value']
+        self.assertEqual(len(projects),2)
+        for row in projects.values():
+            for key in ('project_id','base_index','location_index','actual_cost','floor_area_m2','price_date','index_series','index_base_year','source_ref','currency','cost_scope','source_type'):
+                self.assertIn(key,row)
+            self.assertEqual(row['currency'],'GBP')
+            self.assertEqual(row['index_series'],'scenario_reference')
+            self.assertEqual(row['index_base_year'],'reference_100')
 
     def test_boq_rejects_values_that_cannot_preserve_cents_in_json(self):
         with self.assertRaises(ValueError):

@@ -1,10 +1,10 @@
 # Construction Cost Analyzer · 建筑计量计价工具
 
-[English](README.md) · [计算方法](docs/course-methods.md) · [数据来源](docs/data-sources.md) · [MIT 许可证](LICENSE)
+[English](README.md) · [计算方法](docs/course-methods.md) · [数据来源](docs/data-sources.md) · [导出格式](docs/exports.md) · [MIT 许可证](LICENSE)
 
 用于工程量计算、工料机单价分析、工程量清单计价、指数调整估算和开发投资评价的本地工具。计算方法结合 **Construction Quantification and Costing（建筑计量与计价）** 课程内容。
 
-中英文浏览器工作区与 Python 命令行共用计算引擎。导出结果保留输入、报价来源、价格日期和费用基数，便于在电子表格中核对、修改和继续使用。
+中英文浏览器工作区与 Python 命令行共用计算引擎。导出结果保留输入、报价来源、价格日期和费用基数，提供带正确数据类型的 Excel 明细、可打印报告及完整交付包，便于复核与后续调整。
 
 ![计量计价与开发评价工作区](docs/images/workspace.jpg)
 
@@ -28,9 +28,9 @@ python -m cost_analyzer serve
 | 清单计价 | 导入 CSV 或在页面添加条目，计算逐项金额、分部汇总和项目附加费用；已含费用标记防止重复计取现场费用或总部费与利润。 |
 | 同类项目比较 | 按建筑用途、地区、币种、费用范围和来源类型筛选，统一适用的价格与地区指数，比较中位数、四分位数及预算偏差。 |
 | 开发投资评价 | 年度期末现金流、净现值、常规现金流内部收益率、简单与折现回收期，以及按销售额或总成本利润率计算的土地剩余价值。 |
-| 住宅方案估算 | 混合户型、详细 OCE、月度分期融资、总成本利润率、年化 IRR、考虑融资的土地余额，以及每个方案九组成本与售价敏感性分析。 |
+| 住宅方案估算 | 混合户型、详细 OCE、月度分期融资、总成本利润率、年化 IRR、考虑融资的土地余额，各方案独立工期与融资条件，以及每个方案最多 49 组成本与售价敏感性分析。 |
 
-输入可保存为 JSON 并重新载入，结果可导出 JSON、CSV 或打印。命令行还会生成独立 HTML 报告。修改输入后，原结果会提示重新计算，并暂停导出。
+输入可保存为 JSON 并重新载入，结果支持 Excel、HTML、CSV、JSON 和 ZIP 交付包。报告可选中文、英文或双语；Excel 包含费用明细、来源与独立核对公式。修改输入后，原结果会提示重新计算，并暂停导出。
 
 ## 数据与实际项目导入
 
@@ -56,10 +56,10 @@ python -m cost_analyzer estimate examples/early-estimate.json --output outputs/e
 python -m cost_analyzer boq --input examples/boq.csv --project examples/project.json --output outputs/boq
 python -m cost_analyzer benchmark --input data/synthetic_projects.csv --building-type office --currency GBP --source-type synthetic --output outputs/benchmark
 python -m cost_analyzer appraise examples/appraisal.json --output outputs/appraisal
-python -m cost_analyzer development examples/development.json --output outputs/development
+python -m cost_analyzer development examples/development-extended.json --output outputs/development --language bilingual
 ```
 
-各输出目录包含 JSON、UTF-8 CSV 和 HTML 文件。运行 `python -m cost_analyzer --help` 或在子命令后加 `--help` 可查看参数。
+各输出目录包含 XLSX、HTML、UTF-8 CSV、JSON 和 ZIP 文件。使用 `--language zh`、`--language en` 或 `--language bilingual` 选择报告语言。[导出说明](docs/exports.md) 列出单位、稳定编号和文件校验清单。运行 `python -m cost_analyzer --help` 或在子命令后加 `--help` 可查看参数。
 
 早期造价咨询作业可使用「方案估算」：输入户型组合和所要求的费用基数，比较 OCE、月度融资及敏感性表。只有达到总成本回报门槛的方案才会被推荐。[开发估算说明](docs/development-workflow.md) 解释了已含现场费的拆分、准备金范围，以及竣工指数与未来涨价比例的区别。此模块内部保留十进制精度，到展示时才舍入。
 

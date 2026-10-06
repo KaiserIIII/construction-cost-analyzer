@@ -28,7 +28,7 @@ class ReportTests(unittest.TestCase):
     def test_report_outputs_reconcile_and_preserve_json_values(self):
         with tempfile.TemporaryDirectory() as directory:
             paths=export_report({'currency':'GBP','total':12.34},Path(directory),'test')
-            self.assertEqual(set(paths),{'json','csv','html'})
+            self.assertEqual(set(paths),{'json','csv','html','xlsx','zip'})
             self.assertEqual(json.loads(Path(paths['json']).read_text(encoding='utf-8'))['total'],12.34)
             self.assertTrue(all(Path(p).stat().st_size>0 for p in paths.values()))
 

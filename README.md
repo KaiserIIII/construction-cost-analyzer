@@ -1,10 +1,10 @@
 # Construction Cost Analyzer
 
-[简体中文](README_zh.md) · [Methods](docs/course-methods.md) · [Data sources](docs/data-sources.md) · [MIT License](LICENSE)
+[简体中文](README_zh.md) · [Methods](docs/course-methods.md) · [Data sources](docs/data-sources.md) · [Export formats](docs/exports.md) · [MIT License](LICENSE)
 
 A local quantity surveying toolkit for measured work, resource-based unit rates, bills of quantities, indexed cost estimates and development appraisal. Built around the methods in **Construction Quantification and Costing**.
 
-The Chinese–English browser workspace and Python CLI share one calculation engine. Inputs, price references, dates and calculation bases accompany exported results, so an estimate can be checked and revised in a spreadsheet.
+The Chinese–English browser workspace and Python CLI share one calculation engine. Inputs, price references, dates and calculation bases accompany exported results, with typed Excel schedules, printable reports and complete delivery packages for review.
 
 ![Bilingual estimating and appraisal workspace](docs/images/workspace.jpg)
 
@@ -28,9 +28,9 @@ Open **http://127.0.0.1:8765/**. On Windows, double-click `start.cmd`. Select **
 | Bill of quantities | Import CSV or add items in the browser. Calculate rounded line amounts, element totals and project allowances. Included-cost flags prevent adding preliminaries or OH&P twice. |
 | Comparable projects | Filter by function, region, currency, cost scope and evidence type; normalize compatible price/location indices and compare median, quartiles and budget deviations. |
 | Development appraisal | Annual end-of-period cashflows, NPV, conventional IRR, simple and discounted payback, and residual land value with profit on GDV or total cost. |
-| Residential options | Housing mixes, a detailed OCE, staged monthly borrowing, profit on cost, annualized IRR, finance-aware residual land value and nine cost/value sensitivities per option. |
+| Residential options | Housing mixes, a detailed OCE, staged monthly borrowing, profit on cost, annualized IRR, finance-aware residual land value, independent option programmes and up to 49 cost/value sensitivities per option. |
 
-Save and reload input JSON; export results to JSON and CSV or print the browser report. CLI reports also include a standalone HTML file. Changing inputs marks the previous result as stale and disables its export until recalculated.
+Save and reload input JSON. Export Excel, HTML, CSV, JSON or a delivery ZIP, with Chinese, English or bilingual report labels. Excel includes cost schedules, sources and independent reconciliation formulas. Changing inputs marks the previous result as stale and disables its export until recalculated.
 
 ## Data you can work with
 
@@ -56,10 +56,10 @@ python -m cost_analyzer estimate examples/early-estimate.json --output outputs/e
 python -m cost_analyzer boq --input examples/boq.csv --project examples/project.json --output outputs/boq
 python -m cost_analyzer benchmark --input data/synthetic_projects.csv --building-type office --currency GBP --source-type synthetic --output outputs/benchmark
 python -m cost_analyzer appraise examples/appraisal.json --output outputs/appraisal
-python -m cost_analyzer development examples/development.json --output outputs/development
+python -m cost_analyzer development examples/development-extended.json --output outputs/development --language bilingual
 ```
 
-Each report directory contains JSON, UTF-8 CSV and HTML. Run `python -m cost_analyzer --help` or append `--help` to a command for available flags.
+Each report directory contains XLSX, HTML, UTF-8 CSV, JSON and ZIP. Add `--language zh`, `--language en` or `--language bilingual` to select the report language. [The export guide](docs/exports.md) documents units, stable identifiers and the package manifest. Run `python -m cost_analyzer --help` or append `--help` to a command for available flags.
 
 For early-cost-advice coursework, select **Development options**, enter each housing mix and the required allowance bases, and compare the OCE, monthly finance and sensitivity tables. An option is recommended only when it meets the entered return-on-cost hurdle. [The development workflow](docs/development-workflow.md) explains embedded preliminaries, alternative reserve scopes and the distinction between completion indices and future inflation allowances. This module retains Decimal precision until display rounding.
 

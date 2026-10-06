@@ -33,7 +33,16 @@
   formFields.development.splice(formFields.development.indexOf('csv'),0,'assumptions');
   developmentDefaults.assumptions='';
   copy.zh.assumptions='假设、包含范围与排除项';copy.en.assumptions='Assumptions, inclusions and exclusions';
-  const developmentTextFields=new Set(['project_name','currency','source_ref','index_source_ref','assumptions','start_date','price_date']);
+  const extensionCopy={reportIdentity:['报告信息','REPORT DETAILS'],report_reference:['报告编号','Report reference'],revision:['版本','Revision'],estimate_date:['估算日期','Estimate date'],prepared_by:['编制人','Prepared by'],client_name:['委托方 / 项目团队','Client / project team'],cost_changes_pct:['成本变化范围（逗号分隔）','Cost changes (comma separated)'],value_changes_pct:['售价变化范围（逗号分隔）','Value changes (comma separated)'],rangeNote:['空白使用上方变动幅度。自定义每轴最多 7 个值，须包含 0，范围 −100 至 100。','Blank uses the percentage above. Each custom axis accepts up to 7 unique values, including 0, from −100 to 100.'],optionSettings:['各方案独立参数','OPTION SETTINGS'],overrideNote:['空白沿用公共参数。填写 0 表示采用零。调整住宅 CSV 中的方案名称后，请刷新此处。','Blank inherits the common value. Enter 0 to adopt zero. Refresh after changing option names in the housing CSV.'],refreshOptions:['刷新方案参数','Refresh option settings'],adoptedSettings:['采用的方案参数','Adopted option settings'],exportLanguage:['报告语言','Report language'],bilingual:['中文与英文','Chinese and English'],zh:['中文','Chinese'],en:['英文','English'],xlsx:['导出 Excel','Export Excel'],html:['导出报告 HTML','Export report HTML'],zip:['导出交付包 ZIP','Export delivery ZIP'],preparingReport:['正在准备报告…','Preparing report…'],cost_per_unit:['每户总开发成本','Total development cost per unit']};
+  for(const [key,[zh,en]] of Object.entries(extensionCopy)){copy.zh[key]=zh;copy.en[key]=en;}
+  copy.zh.value='数值';copy.en.value='Value';
+  copy.zh.sensitivityTitle='成本与销售价值敏感性';copy.en.sensitivityTitle='Cost and sales sensitivity';
+  const reportFields=['report_reference','revision','estimate_date','prepared_by','client_name'];
+  const rangeFields=['cost_changes_pct','value_changes_pct'];
+  formFields.development.push(...reportFields,...rangeFields);
+  for(const key of reportFields)developmentDefaults[key]='';
+  const optionSettingKeys=new Set(['duration_months','prep_months','prep_spend_pct','start_date','external_works_pct','facilitating_cost','marketing_pct','loan_share_pct','loan_interest_pct','loan_fee_pct']);
+  const developmentTextFields=new Set(['project_name','currency','source_ref','index_source_ref','assumptions','start_date','price_date',...reportFields]);
   const developmentFlags=new Set(['rate_includes_preliminaries','rate_includes_ohp']);
   const developmentSettings=new Set(formFields.development.filter(key=>key!=='csv'));
   function knownDevelopmentObject(value,allowed,context){
@@ -44,12 +53,27 @@
     if((typeof value!=='number'&&typeof value!=='string')||(typeof value==='string'&&!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(value.trim()))||!Number.isFinite(Number(value)))throw new Error(key+': expected a finite number');
     return typeof value==='string'?value.trim().replace(/^\+/,'').replace(/^(-?)\./,(_match,sign)=>sign+'0.').replace(/\.(?=e|$)/i,''):value;
   }
+  function sensitivityValues(values,key){
+    if(!Array.isArray(values)||values.length<1||values.length>7)throw new Error(key+': use 1–7 values including 0');
+    const numbers=values.map(value=>Number(developmentNumber(value,key)));
+    if(numbers.some(v=>v< -100||v>100)||!numbers.includes(0)||new Set(numbers).size!==numbers.length)throw new Error(key+': use unique values from −100 to 100 including 0');
+    return numbers.sort((a,b)=>a-b);
+  }
+  function parseSensitivityRange(value,key){return value.trim()?sensitivityValues(value.split(',').map(v=>v.trim()),key):undefined;}
+  function validateOptionSettings(value){
+    knownDevelopmentObject(value,optionSettingKeys,'Option settings');
+    for(const [key,item] of Object.entries(value)){
+      if(key==='start_date'){if(typeof item!=='string')throw new Error('start_date: use text');validateDevelopmentInput({start_date:item});}
+      else developmentNumber(item,key);
+    }
+  }
   function validateDevelopmentOptions(options){
     if(!Array.isArray(options))throw new Error('Development options must be an array');
-    const optionKeys=new Set(['name','units']),unitKeys=new Set(housingColumns.filter(key=>key!=='option'));
+    const optionKeys=new Set(['name','units','settings']),unitKeys=new Set(housingColumns.filter(key=>key!=='option'));
     for(const [optionIndex,option] of options.entries()){
       const context='options['+optionIndex+']';knownDevelopmentObject(option,optionKeys,context);
       if(typeof option.name!=='string'||!option.name.trim())throw new Error(context+'.name: expected a nonempty string');
+      if('settings' in option)validateOptionSettings(option.settings);
       if(!Array.isArray(option.units))throw new Error(context+'.units: expected an array');
       for(const [unitIndex,unit] of option.units.entries()){
         const unitContext=context+'.units['+unitIndex+']';knownDevelopmentObject(unit,unitKeys,unitContext);
@@ -64,9 +88,10 @@
     const validated={...data};
     for(const [key,value] of Object.entries(data)){
       if(key==='options'){validateDevelopmentOptions(value);continue;}
+      if(rangeFields.includes(key)){const grid=editor?parseSensitivityRange(value,key):sensitivityValues(value,key);if(grid===undefined)delete validated[key];else validated[key]=grid;continue;}
       if(key==='csv'||developmentTextFields.has(key)){
         if(typeof value!=='string')throw new Error(key+': expected a string');
-        if((key==='start_date'||key==='price_date')&&value){
+        if(['start_date','price_date','estimate_date'].includes(key)&&value){
           const dateValue=new Date(value+'T00:00:00Z');
           if(!/^\d{4}-\d{2}-\d{2}$/.test(value)||value.startsWith('0000')||!Number.isFinite(dateValue.getTime())||dateValue.toISOString().slice(0,10)!==value)throw new Error(key+': expected a valid YYYY-MM-DD date or blank string');
         }
@@ -141,7 +166,17 @@
     const cell=protect?csvCell:value=>{const s=String(value??'');return /[,"\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;};
     return rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
   }
-  function developmentPayload(data){const {csv,...settings}=validateDevelopmentInput(data,true);return {...settings,options:parseDevelopmentCSV(csv)};}
+  function developmentPayload(data,overrides=new Map()){
+    const {csv,...settings}=validateDevelopmentInput(data,true),options=parseDevelopmentCSV(csv),names=new Set(options.map(option=>option.name));
+    for(const [name,values] of overrides){validateOptionSettings(values);if(!names.has(name)&&Object.keys(values).length)throw new Error('Refresh option settings / 请刷新方案参数');}
+    for(const option of options){const values=overrides.get(option.name);if(values&&Object.keys(values).length)option.settings={...values};}
+    return {...settings,options};
+  }
+  function reportExportRequest(tool,format,record,language){
+    if(record.stale)throw new Error('Inputs are stale; recalculate / 请重新计算');
+    if(!Object.hasOwn(apiPaths,tool)||!['json','csv','xlsx','html','zip'].includes(format)||!['zh','en','bilingual'].includes(language))throw new Error('Invalid export choice');
+    return {tool,format,inputs:record.inputs,language};
+  }
   function normalizedInputs(tool,data={}){
     if(tool==='development'){
       const value={...developmentDefaults,...validateDevelopmentInput(data)};
@@ -149,6 +184,15 @@
       if(data.prep_spend_pct===undefined&&Number(value.prep_months)===0)value.prep_spend_pct=0;
       developmentOptionsCSV(value.options);
       value.options=JSON.parse(JSON.stringify(value.options));
+      // Resolve omitted schedule defaults before the form materializes them.
+      for(const option of value.options){
+        const settings=option.settings||{},duration=Number(settings.duration_months??data.duration_months??5);
+        const prep=settings.prep_months??data.prep_months??(duration>1?1:0);
+        const spend=settings.prep_spend_pct??data.prep_spend_pct??(Number(prep)?10:0);
+        if(settings.prep_months===undefined&&Number(prep)!==Number(value.prep_months))settings.prep_months=prep;
+        if(settings.prep_spend_pct===undefined&&Number(spend)!==Number(value.prep_spend_pct))settings.prep_spend_pct=spend;
+        if(Object.keys(settings).length)option.settings=settings;
+      }
       value.csv=developmentOptionsCSV(value.options,false);
       return value;
     }
@@ -182,7 +226,7 @@
     if(typeof value==='number')return new Intl.NumberFormat(locale,{minimumFractionDigits:developmentMoney.has(key)?2:0,maximumFractionDigits:developmentMoney.has(key)?2:6}).format(value);
     return String(value);
   }
-  if(typeof module!=='undefined'&&module.exports){module.exports={copy,apiPaths,csvCell,parseCashflows,formFields,restoreIndexSource,rateInclusions,parseCSV,normalizedInputs,parseDevelopmentCSV,developmentOptionsCSV,developmentPayload,resultCSV,developmentRecommendation,formatDevelopmentValue};return;}
+  if(typeof module!=='undefined'&&module.exports){module.exports={copy,apiPaths,csvCell,parseCashflows,formFields,restoreIndexSource,rateInclusions,parseCSV,normalizedInputs,parseDevelopmentCSV,developmentOptionsCSV,developmentPayload,resultCSV,developmentRecommendation,formatDevelopmentValue,parseSensitivityRange,reportExportRequest};return;}
   if(typeof document==='undefined')return;
   let lang='zh';try{lang=localStorage.getItem('cost-language')==='en'?'en':'zh';}catch(_e){}
   copy.zh.label='费用项目'; copy.en.label='Cost item';
@@ -191,7 +235,7 @@
   copy.zh.useQuantity='将净量填入清单项';copy.en.useQuantity='Use quantity in BOQ item';
   copy.zh.useRate='将报价填入清单项';copy.en.useRate='Use rate in BOQ item';
   copy.zh.transferNotice='已填入新增清单项，请填写编号、说明和价格来源，再加入清单。';copy.en.transferNotice='BOQ item populated. Check the ID, description and price source, then add it to the bill.';
-  const state={active:'early',results:{},indices:[],indexSource:null,revisions:{},pending:{},loading:false};
+  const state={active:'early',results:{},indices:[],indexSource:null,revisions:{},pending:{},loading:false,reportLanguages:{}};
   const $=id=>document.getElementById(id), t=key=>copy[lang][key]||key;
   function el(tag,attrs={},children=[]){const n=document.createElement(tag);for(const [key,value] of Object.entries(attrs)){if(key==='class')n.className=value;else if(key==='text')n.textContent=value;else if(key==='i18n'){n.dataset.i18n=value;n.textContent=t(value);}else n.setAttribute(key,value);}for(const child of children)n.append(child);return n;}
   function label(key){return el('span',{i18n:key});}
@@ -233,7 +277,7 @@
   function developmentField(key){
     if(['rate_includes_preliminaries','rate_includes_ohp'].includes(key))return check('development',key);
     const options=key==='price_basis'?[['estimate_plus_inflation','estimate_plus_inflation'],['completion_index','completion_index']]:key==='risk_scope'?[['all_in','all_in'],['works_only','works_only']]:undefined;
-    const type=options?'select':key==='assumptions'?'textarea':['start_date','price_date'].includes(key)?'date':['project_name','currency','source_ref','index_source_ref'].includes(key)?'text':'number';
+    const type=options?'select':key==='assumptions'?'textarea':['start_date','price_date','estimate_date'].includes(key)?'date':developmentTextFields.has(key)||rangeFields.includes(key)?'text':'number';
     const node=field('development',key,developmentDefaults[key],type,options),input=node.querySelector('input');
     const specialLabels={fees_pct:'developmentFeesPct',preliminaries_pct:'developmentPreliminariesPct',overheads_profit_pct:'developmentOhpPct'};
     if(specialLabels[key]){const title=node.querySelector('label');title.dataset.i18n=specialLabels[key];title.textContent=t(specialLabels[key]);}
@@ -244,21 +288,45 @@
   const housingGroup=group('developmentHousing',[field('development','csv',developmentOptionsCSV([],false),'textarea')]);
   const csvTitle=housingGroup.querySelector('label');csvTitle.dataset.i18n='housing_csv';csvTitle.textContent=t('housing_csv');
   housingGroup.classList.add('housing-group');housingGroup.append(el('p',{class:'group-note',i18n:'housingCsvNote'}),el('p',{class:'schema-note',text:housingColumns.join(',')}));
-  developmentGroups.append(group('developmentProject',['project_name','currency','site_area_m2','land_rate'].map(developmentField)),housingGroup,
+  const overrideBody=el('div',{class:'option-settings-body'}),overrideCards=[];
+  const overrideSection=el('details',{class:'option-settings'},[el('summary',{i18n:'optionSettings'}),el('p',{class:'group-note',i18n:'overrideNote'}),overrideBody]);
+  const refreshOverrides=el('button',{type:'button',class:'small-button',i18n:'refreshOptions'});
+  overrideSection.append(refreshOverrides);
+  function readOptionOverrides(){
+    const result=new Map();
+    for(const card of overrideCards){const values={};for(const input of card.inputs)if(input.value.trim()!=='')values[input.dataset.setting]=input.value;validateOptionSettings(values);result.set(card.name,values);}
+    return result;
+  }
+  function renderOptionSettings(options,adopted=new Map()){
+    overrideBody.replaceChildren();overrideCards.length=0;
+    options.forEach((option,index)=>{
+      const values=adopted.get(option.name)||{},inputs=[],fields=[];
+      for(const key of optionSettingKeys){
+        const node=field('option-'+index,key,values[key]??'',key==='start_date'?'date':'number'),input=node.querySelector('input');
+        input.dataset.setting=key;if(key!=='start_date'){input.min=key==='duration_months'?1:0;if(key.endsWith('_pct'))input.max=100;if(key.endsWith('_months'))input.step=1;}
+        inputs.push(input);fields.push(node);
+      }
+      overrideBody.append(el('fieldset',{class:'field-group'},[el('legend',{text:option.name}),el('div',{class:'field-grid'},fields)]));overrideCards.push({name:option.name,inputs});
+    });
+  }
+  refreshOverrides.addEventListener('click',()=>{try{renderOptionSettings(parseDevelopmentCSV($('development-csv').value),readOptionOverrides());markStale('development');$('development-error').textContent='';}catch(error){$('development-error').textContent=error.message;}});
+  const targetsGroup=group('developmentTargets',['hurdle_pct','discount_rate_pct','sensitivity_pct',...rangeFields].map(developmentField));
+  targetsGroup.append(el('p',{class:'group-note',i18n:'rangeNote'}));
+  developmentGroups.append(group('developmentProject',['project_name','currency','site_area_m2','land_rate'].map(developmentField)),group('reportIdentity',reportFields.map(developmentField)),housingGroup,overrideSection,
     group('developmentCosts',['site_clearance_rate','facilitating_cost','external_works_pct','preliminaries_pct','overheads_profit_pct','fees_pct','rate_includes_preliminaries','embedded_preliminaries_pct','rate_includes_ohp'].map(developmentField)),
     group('developmentPrices',['base_index','target_index','base_location_index','target_location_index','price_basis'].map(developmentField)),
     group('developmentRisk',['risk_scope','risk_design_pct','risk_construction_pct','risk_employer_change_pct','risk_other_pct','tender_inflation_pct','construction_inflation_pct'].map(developmentField)),
     group('developmentFinance',['duration_months','prep_months','prep_spend_pct','loan_share_pct','loan_interest_pct','loan_fee_pct','marketing_pct','start_date'].map(developmentField)),
-    group('developmentTargets',['hurdle_pct','discount_rate_pct','sensitivity_pct'].map(developmentField)),
+    targetsGroup,
     group('developmentSources',['source_ref','index_source_ref','price_date','assumptions'].map(developmentField)));
   development.append(developmentGroups,el('p',{class:'group-note',i18n:'financeExplanation'}));actions('development',development);
   const developmentReset=el('button',{class:'small-button',type:'button',i18n:'resetInputs'}),housingDownload=el('button',{class:'small-button',type:'button',i18n:'saveHousingCsv'});
   developmentReset.addEventListener('click',()=>{applyInput('development',{});$('development-error').textContent='';});
-  housingDownload.addEventListener('click',()=>{try{download('development-housing.csv','\ufeff'+developmentOptionsCSV(parseDevelopmentCSV($('development-csv').value)),'text/csv');$('development-error').textContent='';}catch(error){$('development-error').textContent=t('housingCsvError')+error.message;}});
+  housingDownload.addEventListener('click',async()=>{housingDownload.disabled=true;try{await download('development-housing.csv','\ufeff'+developmentOptionsCSV(parseDevelopmentCSV($('development-csv').value)),'text/csv');$('development-error').textContent='';}catch(error){$('development-error').textContent=t('housingCsvError')+error.message;}finally{housingDownload.disabled=false;}});
   housingGroup.append(el('div',{class:'housing-actions'},[housingDownload,developmentReset]));
   function readFields(tool){const data={};for(const key of formFields[tool]){const input=$(tool+'-'+key);data[key]=input.type==='checkbox'?input.checked:input.value;}return data;}
-  function payload(tool){const data=readFields(tool);if(tool==='development'){try{return developmentPayload(data);}catch(error){throw new Error(t('housingCsvError')+error.message);}}if(tool==='early'&&state.indexSource)data.index_source=state.indexSource;if(tool==='rate')data.materials=Array.from(materialBody.children).map(row=>Object.fromEntries(Array.from(row.querySelectorAll('[data-material]')).map(input=>[input.dataset.material,input.value])));if(tool==='boq'){const {csv,...project}=data;return {csv,project};}if(tool==='benchmark'){const {csv,target_index,target_location_index,...filters}=data;return {csv,target_index,target_location_index,filters};}if(tool==='appraise'){try{data.cashflows=parseCashflows(data.cashflows);}catch(_e){throw new Error(t('cashflowError'));}}return data;}
-  function applyInput(tool,data){let values=normalizedInputs(tool,data);if(tool==='early')state.indexSource=restoreIndexSource(data);if(tool==='boq')values={...values.project,csv:values.csv};if(tool==='benchmark')values={...values.filters,csv:values.csv,target_index:values.target_index,target_location_index:values.target_location_index};for(const key of formFields[tool]){const input=$(tool+'-'+key);if(input.type==='checkbox')input.checked=values[key]===true||values[key]==='true';else input.value=key==='cashflows'&&Array.isArray(values[key])?values[key].join(','):values[key]??'';}if(tool==='rate'){if(!Array.isArray(values.materials))throw new Error('materials must be an array');materialBody.replaceChildren();values.materials.forEach(materialRow);}markStale(tool);showDimensions();}
+  function payload(tool){const data=readFields(tool);if(tool==='development'){try{return developmentPayload(data,readOptionOverrides());}catch(error){throw new Error(t('housingCsvError')+error.message);}}if(tool==='early'&&state.indexSource)data.index_source=state.indexSource;if(tool==='rate')data.materials=Array.from(materialBody.children).map(row=>Object.fromEntries(Array.from(row.querySelectorAll('[data-material]')).map(input=>[input.dataset.material,input.value])));if(tool==='boq'){const {csv,...project}=data;return {csv,project};}if(tool==='benchmark'){const {csv,target_index,target_location_index,...filters}=data;return {csv,target_index,target_location_index,filters};}if(tool==='appraise'){try{data.cashflows=parseCashflows(data.cashflows);}catch(_e){throw new Error(t('cashflowError'));}}return data;}
+  function applyInput(tool,data){let values=normalizedInputs(tool,data);if(tool==='early')state.indexSource=restoreIndexSource(data);if(tool==='boq')values={...values.project,csv:values.csv};if(tool==='benchmark')values={...values.filters,csv:values.csv,target_index:values.target_index,target_location_index:values.target_location_index};for(const key of formFields[tool]){const input=$(tool+'-'+key);if(input.type==='checkbox')input.checked=values[key]===true||values[key]==='true';else input.value=Array.isArray(values[key])?values[key].join(','):values[key]??'';}if(tool==='development')renderOptionSettings(values.options,new Map(values.options.map(option=>[option.name,option.settings||{}])));if(tool==='rate'){if(!Array.isArray(values.materials))throw new Error('materials must be an array');materialBody.replaceChildren();values.materials.forEach(materialRow);}markStale(tool);showDimensions();}
   function markStale(tool){state.revisions[tool]=(state.revisions[tool]||0)+1;if(!state.results[tool])return;state.results[tool].stale=true;renderResult(tool);updatePrint();}
   for(const tool of Object.keys(formFields)){const form=$(tool+'-form');form.addEventListener('input',()=>markStale(tool));form.addEventListener('change',()=>markStale(tool));form.addEventListener('submit',async event=>{event.preventDefault();if(state.loading||state.pending[tool])return;const button=$(tool+'-calculate'),revision=state.revisions[tool]||0;$(tool+'-error').textContent='';state.pending[tool]=true;button.disabled=true;button.textContent=t('working');try{const inputs=payload(tool);const response=await fetch(apiPaths[tool],{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(inputs)});const result=await response.json();if(!response.ok)throw new Error(result.error||t('failed'));state.results[tool]={value:result,inputs,stale:revision!==(state.revisions[tool]||0)};renderResult(tool);updatePrint();}catch(error){$(tool+'-error').textContent=t('failed')+' '+error.message;}finally{state.pending[tool]=false;button.disabled=state.loading;button.textContent=t('calculate');}});}
   function showDimensions(){const method=$('takeoff-method').value;const fields={rectangle:['length','width','count','deduction'],volume:['length','width','height','count','deduction'],linear:['length','count','deduction'],count:['count','deduction'],centreline:['length','width','wall_thickness','count','deduction'],strip_foundation:['length','width','wall_thickness','count','trench_width','trench_depth','concrete_width','concrete_depth','other_displaced_volume']}[method]||[];for(const key of formFields.takeoff.filter(k=>k!=='method'))$( 'takeoff-'+key).parentElement.hidden=!fields.includes(key);}
@@ -267,6 +335,27 @@
   function table(rows,keys,{labels={},format=fmt}={}){const node=el('table'),head=el('thead',{},[el('tr',{},keys.map(key=>el('th',{text:t(labels[key]||key)})))]),body=el('tbody');for(const row of rows){body.append(el('tr',{},keys.map(key=>el('td',{text:format(key==='label'?t(row[key]):row[key],key)}))));}node.append(head,body);return el('div',{class:'table-wrap'},[node]);}
   const primary={early:'total',takeoff:'quantity',rate:'quoted_rate',boq:'total',benchmark:'median_cost_per_m2',appraise:'npv'};
   const secondary={early:['adjusted_rate','cost_per_m2','direct_cost'],takeoff:['gross_quantity','deduction','centreline_m','excavation_m3','concrete_m3','backfill_m3'],rate:['material','labour','plant','subcontract','direct_rate'],boq:['direct_cost','preliminaries','contingency'],benchmark:['sample_count','p25_cost_per_m2','p75_cost_per_m2','mean_deviation_pct','over_budget_count'],appraise:['irr_pct','payback_period','discounted_payback_period','residual_land_value']};
+  function exportControls(tool,record){
+    const controls=el('div',{class:'result-actions export-controls'}),select=el('select',{id:'report-language-'+tool,'aria-label':t('exportLanguage')});
+    for(const language of ['bilingual','zh','en'])select.append(el('option',{value:language,text:t(language)}));
+    select.value=state.reportLanguages[tool]||'bilingual';select.addEventListener('change',()=>{state.reportLanguages[tool]=select.value;});
+    controls.append(el('label',{for:select.id,text:t('exportLanguage')}),select);
+    for(const kind of ['xlsx','zip','html','csv','json']){
+      const button=el('button',{class:'small-button',type:'button',text:t(kind),'data-export':kind});button.disabled=record.stale;
+      button.addEventListener('click',async()=>{
+        try{
+          const request=reportExportRequest(tool,kind,record,select.value);button.disabled=true;button.textContent=t('preparingReport');
+          const response=await fetch('/api/export',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)}),attachment=await response.json();
+          if(!response.ok)throw new Error(attachment.error||t('failed'));
+          if(record.stale||state.results[tool]!==record)throw new Error(t('stale'));
+          if(typeof attachment.url!=='string'||!/^\/download\/[A-Za-z0-9_-]+$/.test(attachment.url))throw new Error('Invalid download response');
+          const anchor=el('a',{href:attachment.url,download:attachment.filename});document.body.append(anchor);anchor.click();anchor.remove();$(tool+'-error').textContent='';
+        }catch(error){$(tool+'-error').textContent=error.message;}
+        finally{button.disabled=record.stale;button.textContent=t(kind);}
+      });controls.append(button);
+    }
+    return controls;
+  }
   function renderResult(tool){const record=state.results[tool];if(!record)return;const r=record.value,node=$('result-'+tool);if(tool==='development'){renderDevelopmentResult(record,node);return;}node.replaceChildren(el('div',{class:'result-heading'},[el('h3',{text:t('result')}),el('span',{class:'result-state',text:t('ready')})]));const body=el('div',{class:'result-body'});if(record.stale)body.append(el('p',{class:'stale-notice',text:t('stale')}));const key=tool==='takeoff'&&r.quantity===undefined?'excavation_m3':primary[tool];body.append(el('div',{class:'primary-metric'},[el('div',{class:'metric-label',text:t(key)}),el('div',{class:'metric-value',text:fmt(r[key])}),el('div',{class:'metric-unit',text:r.currency||r.unit||'m³'})]));const metrics=el('div',{class:'metrics-grid'});for(const metric of secondary[tool])if(metric in r)metrics.append(el('div',{class:'small-metric'},[el('div',{class:'metric-label',text:t(metric)}),el('div',{class:'metric-value',text:fmt(r[metric])})]));body.append(metrics);
     if(r.breakdown){body.append(el('h4',{class:'result-section-title',text:t('breakdown')}),table(r.breakdown,['label','base','percent','amount']));}
     if(r.items){body.append(el('h4',{class:'result-section-title',text:t('rows')}),table(r.items,['item_id','description','unit','quantity','rate','total']));}
@@ -275,8 +364,8 @@
     if(r.discounted_cashflows){body.append(el('h4',{class:'result-section-title',text:t('npvPeriods')}),table(r.discounted_cashflows.map((present_value,period)=>({period,present_value})),['period','present_value']));}
     if(r.formula)body.append(el('p',{class:'formula-note',text:r.formula}));
     if(r.warnings?.length){const list=el('ul',{class:'warning-list'});r.warnings.forEach(w=>list.append(el('li',{text:translateWarning(w)})));body.append(el('h4',{class:'result-section-title',text:t('notes')}),list);}
-    body.append(el('p',{class:'group-note',text:t('precisionNote')}),el('div',{class:'report-inputs'},[el('h4',{text:t('inputs')}),el('pre',{text:JSON.stringify(record.inputs,null,2)})]));node.append(body);
-    const exports=el('div',{class:'result-actions'});for(const kind of ['json','csv']){const button=el('button',{class:'small-button',type:'button',text:t(kind)});button.disabled=record.stale;button.addEventListener('click',()=>download(tool+'-result.'+kind,kind==='json'?JSON.stringify({...r,inputs:record.inputs},null,2):resultCSV(r,record.inputs),kind==='json'?'application/json':'text/csv'));exports.append(button);}if(tool==='rate'||(tool==='takeoff'&&r.quantity!==undefined)){const button=el('button',{id:'transfer-'+tool,class:'small-button',type:'button',text:t(tool==='rate'?'useRate':'useQuantity')});button.disabled=record.stale;button.addEventListener('click',()=>{if(tool==='rate'){$('item-rate').value=r.quoted_rate;$('boq-currency').value=r.currency;$('item-unit').value=r.unit;const included=rateInclusions(r);$('item-included_ohp').checked=included.included_ohp;$('item-included_preliminaries').checked=false;}else{$('item-quantity').value=r.quantity;$('item-unit').value=r.unit;}setTab('boq');status('transferNotice');});exports.append(button);}node.append(exports);
+    body.append(el('p',{class:'group-note',text:t('precisionNote')}),el('details',{class:'report-inputs'},[el('summary',{text:t('inputs')}),el('pre',{text:JSON.stringify(record.inputs,null,2)})]));node.append(body);
+    const exports=exportControls(tool,record);if(tool==='rate'||(tool==='takeoff'&&r.quantity!==undefined)){const button=el('button',{id:'transfer-'+tool,class:'small-button',type:'button',text:t(tool==='rate'?'useRate':'useQuantity')});button.disabled=record.stale;button.addEventListener('click',()=>{if(tool==='rate'){$('item-rate').value=r.quoted_rate;$('boq-currency').value=r.currency;$('item-unit').value=r.unit;const included=rateInclusions(r);$('item-included_ohp').checked=included.included_ohp;$('item-included_preliminaries').checked=false;}else{$('item-quantity').value=r.quantity;$('item-unit').value=r.unit;}setTab('boq');status('transferNotice');});exports.append(button);}node.insertBefore(exports,body);
   }
   function renderDevelopmentResult(record,node){
     const r=record.value,body=el('div',{class:'result-body development-result'}),format=(value,key)=>formatDevelopmentValue(value,key,lang==='zh'?'zh-CN':'en-GB');
@@ -292,18 +381,17 @@
       const details=el('details',{class:'development-option'}),content=el('div',{class:'option-detail-body'});
       details.append(el('summary',{},[el('span',{text:option.name}),el('span',{class:option.meets_hurdle?'viability viable':'viability',text:t('meets_hurdle')+': '+t(option.meets_hurdle?'yes':'no')})]));
       const metrics=el('div',{class:'metrics-grid development-metrics'});
-      for(const key of ['land_cost','works_and_fees','finance','interest','arrangement_fee','loan_principal','breakeven_gdv','target_gdv','residual_land_value','affordable_cost','budget_npv','equity_npv','budget_irr_annual_pct','equity_irr_annual_pct'])if(key in option)metrics.append(el('div',{class:'small-metric'},[el('div',{class:'metric-label',text:t(key)}),el('div',{class:'metric-value',text:format(option[key],key)})]));
-      content.append(metrics,el('h4',{class:'result-section-title',text:t('breakdown')}),table(option.breakdown||[],['label','base','percent','amount'],{format}),
+      for(const key of ['cost_per_m2','cost_per_unit','land_cost','works_and_fees','finance','interest','arrangement_fee','loan_principal','breakeven_gdv','target_gdv','residual_land_value','affordable_cost','budget_npv','equity_npv','budget_irr_annual_pct','equity_irr_annual_pct'])if(key in option)metrics.append(el('div',{class:'small-metric'},[el('div',{class:'metric-label',text:t(key)}),el('div',{class:'metric-value',text:format(option[key],key)})]));
+      content.append(el('h4',{class:'result-section-title',text:t('adoptedSettings')}),table(Object.entries(option.effective_settings||{}).map(([key,value])=>({label:key,value})),['label','value'],{format}),metrics,el('h4',{class:'result-section-title',text:t('breakdown')}),table(option.breakdown||[],['label','base','percent','amount'],{format}),
         el('h4',{class:'result-section-title',text:t('housingDetail')}),table(option.housing||[],['name','count','area_m2','adjusted_rate','gifa_m2','cost','gdv','source_ref','area_source_ref'],{labels:{name:'housingName'},format}),
         el('h4',{class:'result-section-title',text:t('monthlyFinance')}),table(option.cashflows||[],['month','date','spend_fraction','land_payment','works_payment','sales','marketing','budget_cashflow','loan_draw','loan_balance','interest','arrangement_fee','loan_repayment','equity_cashflow','present_value'],{format}),
-        el('h4',{class:'result-section-title',text:t('sensitivityTitle')}),table(option.sensitivity||[],['cost_change_pct','value_change_pct','total','gdv','profit','return_on_cost_pct','meets_hurdle'],{format}));
+        el('h4',{class:'result-section-title',text:t('sensitivityTitle')+' ('+(option.sensitivity||[]).length+')'}),table(option.sensitivity||[],['cost_change_pct','value_change_pct','total','gdv','profit','return_on_cost_pct','meets_hurdle'],{format}));
       details.append(content);body.append(details);
     }
-    if(r.warnings?.length){const warnings=el('ul',{class:'warning-list'});for(const warning of r.warnings)warnings.append(el('li',{text:warning}));body.append(el('h4',{class:'result-section-title',text:t('notes')}),warnings);}
-    body.append(el('p',{class:'group-note',text:t('developmentPrecision')}),el('div',{class:'report-inputs development-inputs'},[el('h4',{text:t('inputs')}),el('pre',{text:JSON.stringify(record.inputs,null,2)})]));
-    const exports=el('div',{class:'result-actions'});
-    for(const kind of ['json','csv']){const button=el('button',{class:'small-button',type:'button',text:t(kind)});button.disabled=record.stale;button.addEventListener('click',()=>download('development-result.'+kind,kind==='json'?JSON.stringify({...r,inputs:record.inputs},null,2):resultCSV(r,record.inputs),kind==='json'?'application/json':'text/csv'));exports.append(button);}
-    node.append(body,exports);
+    if(r.warnings?.length){const warnings=el('ul',{class:'warning-list'});for(const warning of r.warnings)warnings.append(el('li',{text:warning.includes(' / ')?warning.split(' / ')[lang==='zh'?0:1]:translateWarning(warning)}));body.append(el('h4',{class:'result-section-title',text:t('notes')}),warnings);}
+    body.append(el('p',{class:'group-note',text:t('developmentPrecision')}),el('details',{class:'report-inputs development-inputs'},[el('summary',{text:t('inputs')}),el('pre',{text:JSON.stringify(record.inputs,null,2)})]));
+    const exports=exportControls('development',record);
+    node.append(exports,body);
   }
   function translateWarning(w){if(lang==='en')return w;const translations={
     'Record the rate source and price date before using the estimate for a project.':'用于项目估价前，请补全单价来源和价格日期。',
@@ -320,9 +408,9 @@
     'Index basis not fully recorded. Confirm one shared index series/base year and consistent location-index basis before applying this comparison.':'指数基准记录不完整。对标前请确认统一的指数系列、基年和地区指数基准。'};
     if(translations[w])return translations[w];const missing=w.match(/^(\d+) item\(s\) lack a complete rate source and price date\.$/);return missing?missing[1]+' 个清单项缺少完整的价格来源和日期。':w;
   }
-  function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type:type+';charset=utf-8'})),a=el('a',{href:url,download:name});document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  async function download(name,content){const response=await fetch('/api/source',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({filename:name,content})}),attachment=await response.json();if(!response.ok)throw new Error(attachment.error||t('failed'));if(!/^\/download\/[A-Za-z0-9_-]+$/.test(attachment.url))throw new Error('Invalid download URL');const a=el('a',{href:attachment.url,download:name});document.body.append(a);a.click();a.remove();}
   for(const tool of ['boq','benchmark','development']){const file=el('input',{type:'file',accept:'.csv,text/csv'}),wrap=el('label',{class:'file-label'},[label('csvImport'),file]);$(tool+'-csv').parentElement.prepend(wrap);file.addEventListener('change',async()=>{try{const f=file.files[0];if(!f)return;if(f.size>5000000)throw new Error('CSV file exceeds 5 MB');const content=await file.text();if(tool==='development')parseDevelopmentCSV(content);$(tool+'-csv').value=content;markStale(tool);status('uploaded');}catch(error){$(tool+'-error').textContent=error.message;}finally{file.value='';}});}
-  for(const tool of Object.keys(formFields)){const controls=el('div',{class:'upload-actions'}),save=el('button',{class:'small-button',type:'button',text:t('inputJson'),'data-i18n':'inputJson'}),file=el('input',{type:'file',accept:'.json,application/json'}),load=el('label',{class:'file-label'},[label('inputImport'),file]);save.addEventListener('click',()=>{try{download(tool+'-inputs.json',JSON.stringify(payload(tool),null,2),'application/json');}catch(error){$(tool+'-error').textContent=error.message;}});file.addEventListener('change',async()=>{try{const f=file.files[0];if(!f)return;if(f.size>5000000)throw new Error('File exceeds 5 MB');const input=JSON.parse(await f.text());if(!input||Array.isArray(input)||typeof input!=='object')throw new Error('Input must be a JSON object');applyInput(tool,input);status('uploaded');}catch(error){$(tool+'-error').textContent=error.message;}finally{file.value='';}});controls.append(save,load);$(tool+'-form').prepend(controls);}
+  for(const tool of Object.keys(formFields)){const controls=el('div',{class:'upload-actions'}),save=el('button',{class:'small-button',type:'button',text:t('inputJson'),'data-i18n':'inputJson'}),file=el('input',{type:'file',accept:'.json,application/json'}),load=el('label',{class:'file-label'},[label('inputImport'),file]);save.addEventListener('click',async()=>{save.disabled=true;try{await download(tool+'-inputs.json',JSON.stringify(payload(tool),null,2));$(tool+'-error').textContent='';}catch(error){$(tool+'-error').textContent=error.message;}finally{save.disabled=false;}});file.addEventListener('change',async()=>{try{const f=file.files[0];if(!f)return;if(f.size>5000000)throw new Error('File exceeds 5 MB');const input=JSON.parse(await f.text());if(!input||Array.isArray(input)||typeof input!=='object')throw new Error('Input must be a JSON object');applyInput(tool,input);status('uploaded');}catch(error){$(tool+'-error').textContent=error.message;}finally{file.value='';}});controls.append(save,load);$(tool+'-form').prepend(controls);}
   function updatePrint(){const visible=Object.entries(state.results).filter(([tool])=>tool===state.active||(state.active==='takeoff'&&tool==='rate'));$('print-report').disabled=!visible.length||visible.some(([,r])=>r.stale);}
   function setTab(tool){state.active=tool;for(const button of document.querySelectorAll('[data-tool]')){const active=button.dataset.tool===tool;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;$('panel-'+button.dataset.tool).hidden=!active;}updatePrint();}
   const tabs=Array.from(document.querySelectorAll('[data-tool]'));for(const tab of tabs){tab.addEventListener('click',()=>setTab(tab.dataset.tool));tab.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const i=tabs.indexOf(tab),next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(i+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].focus();setTab(tabs[next].dataset.tool);}});}

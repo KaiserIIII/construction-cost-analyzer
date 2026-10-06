@@ -119,7 +119,7 @@ def benchmark(content,filters=None,target_index=100,target_location_index=100):
             'over_budget_count':sum(value>0 for value in deviations),'target_index':output(target),'target_location_index':output(location),
             'projects':projects,'warnings':warnings,'quantile_method':'Linear interpolation of ordered values (R7).',
             'index_basis':{key:rows[0][key] for key in ('index_type','index_series','index_base_year')},
-            'inputs':{'filters':filters,'target_index':output(target),'target_location_index':output(location)}}
+            'inputs':{'csv':content,'filters':filters,'target_index':output(target),'target_location_index':output(location)}}
 
 
 def generate_scenarios(count=500,seed=42):

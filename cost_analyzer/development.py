@@ -14,12 +14,16 @@ PERCENTAGES=('external_works_pct','preliminaries_pct','overheads_profit_pct','fe
              'risk_employer_change_pct','risk_other_pct','tender_inflation_pct','construction_inflation_pct',
              'loan_share_pct','loan_interest_pct','loan_fee_pct','hurdle_pct','discount_rate_pct','sensitivity_pct')
 RISK_KEYS=('risk_design','risk_construction','risk_employer_change','risk_other')
+OPTION_SETTINGS={'duration_months','prep_months','prep_spend_pct','start_date','external_works_pct',
+                 'facilitating_cost','marketing_pct','loan_share_pct','loan_interest_pct','loan_fee_pct'}
+REPORT_FIELDS={'report_reference','revision','estimate_date','prepared_by','client_name'}
 TOP_FIELDS=set(PERCENTAGES)|{'project_name','currency','site_area_m2','land_rate','site_clearance_rate',
     'facilitating_cost','duration_months','prep_months','prep_spend_pct','base_index','target_index',
     'base_location_index','target_location_index','price_basis','risk_scope','rate_includes_preliminaries',
-    'rate_includes_ohp','start_date','price_date','source_ref','index_source_ref','assumptions','options'}
+    'rate_includes_ohp','start_date','price_date','source_ref','index_source_ref','assumptions','options',
+    'cost_changes_pct','value_changes_pct'}|REPORT_FIELDS
 TEXT_FIELDS={'project_name','currency','price_basis','risk_scope','start_date','price_date',
-             'source_ref','index_source_ref','assumptions','name','area_source_ref'}
+             'source_ref','index_source_ref','assumptions','name','area_source_ref'}|REPORT_FIELDS
 
 
 def validate_fields(data,allowed):
@@ -37,6 +41,18 @@ def integer(value,name,minimum=0,maximum=120):
     result=number(value,name,minimum=minimum,maximum=maximum)
     if result!=result.to_integral_value():raise ValueError(f'{name}: use a whole number')
     return int(result)
+
+
+def sensitivity_grid(data,key):
+    if key not in data:
+        variance=pct(data.get('sensitivity_pct',10),'sensitivity_pct')
+        return sorted({-variance,ZERO,variance})
+    raw=data[key]
+    if not isinstance(raw,list) or not 1<=len(raw)<=7:raise ValueError(f'{key}: use 1 to 7 percentages including zero')
+    values=[number(v,key,minimum=-100,maximum=100) for v in raw]
+    if len(set(values))!=len(values) or ZERO not in values:
+        raise ValueError(f'{key}: use unique percentages including zero')
+    return sorted(values)
 
 
 def annual_irr(flows):
@@ -99,15 +115,25 @@ def settings(data):
     weighted_years=sum(w*Decimal(n-i)/12 for i,w in enumerate(weights))
     aK=p['loan_share_pct']*(p['loan_interest_pct']*weighted_years+p['loan_fee_pct'])
     aL=p['loan_share_pct']*(p['loan_interest_pct']*Decimal(n)/12+p['loan_fee_pct'])
-    start=price_date(data.get('start_date',''));price_date(data.get('price_date',''))
+    start=price_date(data.get('start_date',''));price_date(data.get('price_date',''));price_date(data.get('estimate_date',''))
     # Validate completion-date bounds before constructing the entire report.
     month_date(start,n)
     return p,n,weights,net_factor,site,land,clearance,facilitating,multiplier,other_factor,aK,aL,start
 
 
 def option(raw,s,data):
-    validate_fields(raw,{'name','units'})
+    validate_fields(raw,{'name','units','settings'})
+    if 'settings' in raw:
+        overrides=raw['settings']
+        if not isinstance(overrides,dict):raise ValueError('option settings: use an object')
+        validate_fields(overrides,OPTION_SETTINGS)
+        data={**data,**overrides};s=settings(data)
     p,n,weights,factor,site,land,clearance,facilitating,M,B,aK,aL,start=s
+    effective={k:output(p[k]*100) for k in sorted(OPTION_SETTINGS) if k in p}
+    adopted_prep=integer(data.get('prep_months',1 if n>1 else 0),'prep_months')
+    effective.update(duration_months=n,prep_months=adopted_prep,
+                     prep_spend_pct=output(pct(data.get('prep_spend_pct',10 if adopted_prep else 0),'prep_spend_pct')),
+                     start_date=start,facilitating_cost=output(facilitating,2))
     name=text(raw.get('name'),'option name',limit=100)
     if not name:raise ValueError('option name is required')
     units=raw.get('units')
@@ -174,9 +200,10 @@ def option(raw,s,data):
     target_denominator=ONE/(ONE+p['hurdle_pct'])-B*p['marketing_pct']
     residual=(V/(ONE+p['hurdle_pct'])-B*p['marketing_pct']*V-K*(M+B*aK))/(B*(ONE+aL))
     sensitivity=[]
-    variance=p['sensitivity_pct']
-    for change_cost in (-variance,ZERO,variance):
-        for change_value in (-variance,ZERO,variance):
+    for cost_pct in sensitivity_grid(data,'cost_changes_pct'):
+        change_cost=cost_pct/100
+        for value_pct in sensitivity_grid(data,'value_changes_pct'):
+            change_value=value_pct/100
             sv=V*(ONE+change_value);sc=non_sales*(ONE+change_cost)+B*p['marketing_pct']*sv
             sp=sv-sc;sr=sp/sc if sc else None
             sensitivity.append({'cost_change_pct':output(change_cost*100),'value_change_pct':output(change_value*100),
@@ -192,12 +219,14 @@ def option(raw,s,data):
             'target_gdv':output(non_sales/target_denominator,2),'residual_land_value':output(residual,2),
             'affordable_cost':output(V/(ONE+p['hurdle_pct']),2),'budget_npv':npv(budget_flows),'equity_npv':npv(equity_flows),
             'budget_irr_annual_pct':annual_irr(budget_flows),'equity_irr_annual_pct':annual_irr(equity_flows),
+            'effective_settings':effective,'cost_per_m2':output(total/area),'cost_per_unit':output(total/Decimal(count),2),
             'breakdown':breakdown,'housing':housing,'cashflows':flows,'sensitivity':sensitivity},roc
 
 
 @capture_inputs
 def development(data):
     common=settings(data)
+    cost_grid=sensitivity_grid(data,'cost_changes_pct');value_grid=sensitivity_grid(data,'value_changes_pct')
     raw=data.get('options')
     if not isinstance(raw,list) or not 1<=len(raw)<=20:raise ValueError('options: provide 1 to 20 alternatives')
     if any(not isinstance(r,dict) for r in raw):raise ValueError('options: each alternative must be an object')
@@ -225,4 +254,5 @@ def development(data):
             'currency':currency(data.get('currency','GBP')),'option_count':len(options),'viable_count':len(viable),
             'recommended_option':recommended,'price_basis':data.get('price_basis','estimate_plus_inflation'),
             'risk_scope':data.get('risk_scope','all_in'),'rounding_policy':'Full Decimal calculation; display only: money 2 decimals, quantities/rates 6 decimals',
+            'cost_changes_pct':[output(v) for v in cost_grid],'value_changes_pct':[output(v) for v in value_grid],
             'options':options,'warnings':warnings}

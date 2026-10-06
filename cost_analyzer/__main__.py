@@ -32,6 +32,8 @@ def main(argv=None):
     p=sub.add_parser('demo');p.add_argument('--output',type=Path,default=Path('outputs/demo'))
     p=sub.add_parser('serve');p.add_argument('--port',type=int,default=8765)
     p=sub.add_parser('generate');p.add_argument('--count',type=int,default=500);p.add_argument('--seed',type=int,default=42);p.add_argument('--output',type=Path,required=True)
+    for command in ('estimate','appraise','development','boq','benchmark','demo'):
+        sub.choices[command].add_argument('--language',choices=('zh','en','bilingual'),default='bilingual')
     args=parser.parse_args(argv)
     try:
         if args.command=='serve':
@@ -53,7 +55,7 @@ def main(argv=None):
                 'appraisal':appraise(inputs['appraise']),
                 'development':development(inputs['development']),
                 'benchmark':benchmark(scenario_csv(generate_scenarios()),{'currency':'GBP','cost_scope':'building'},100,100)}
-            result={name:export_report(value,args.output,name) for name,value in reports.items()}
+            result={name:export_report(value,args.output,name,language=args.language) for name,value in reports.items()}
             print(json.dumps(result,ensure_ascii=False,indent=2));return 0
         if args.command=='estimate':result=early_estimate(read_json(args.input))
         elif args.command=='appraise':result=appraise(read_json(args.input))
@@ -62,7 +64,7 @@ def main(argv=None):
         else:
             filters={key:getattr(args,key) for key in ('currency','building_type','region','cost_scope','source_type') if getattr(args,key)}
             result=benchmark(args.input.read_text(encoding='utf-8-sig'),filters,args.target_index,args.target_location_index)
-        paths=export_report(result,args.output)
+        paths=export_report(result,args.output,language=args.language)
         print(json.dumps({'result':result,'files':paths},ensure_ascii=False,indent=2,allow_nan=False));return 0
     except (ValueError,OSError,DecimalException,TypeError) as exc:
         print(f'Error: {exc}',file=sys.stderr);return 2

@@ -15,6 +15,12 @@ def main():
     inputs=example()
     for name,key in [('early-estimate','early'),('unit-rate','rate'),('strip-foundation','takeoff'),('appraisal','appraise'),('development','development')]:
         (directory/f'{name}.json').write_text(json.dumps(inputs[key],ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+    extended=json.loads(json.dumps(inputs['development']))
+    extended.update(report_reference='EX-DEV-002',revision='01',estimate_date='2026-10-06',
+                    cost_changes_pct=[-20,-10,0,10,20],value_changes_pct=[-20,-10,0,10,20])
+    extended['options'][1]['settings']={'duration_months':12,'prep_months':2,'prep_spend_pct':15,'loan_share_pct':50}
+    extended['options'][2]['settings']={'duration_months':9,'prep_months':1,'marketing_pct':0,'loan_interest_pct':8}
+    (directory/'development-extended.json').write_text(json.dumps(extended,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     (directory/'boq.csv').write_text(inputs['boq']['csv'],encoding='utf-8',newline='\n')
     (directory/'project.json').write_text(json.dumps(inputs['boq']['project'],ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     (directory/'project-history-template.csv').write_text(','.join(PROJECT_FIELDS+('index_type','index_series','index_base_year'))+'\n',encoding='utf-8',newline='\n')
@@ -28,7 +34,7 @@ def main():
                              'actual_budget_multiplier_range':[0.88,1.24]},
               'licence':'MIT (self-authored generated examples)','limitations':['Not calibrated to actual projects','No empirical market or causal inference','Dates and indexes are arbitrary scenario labels, not official market observations']}
     (ROOT/'data/synthetic_projects.metadata.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
-    print('Generated 500 labeled scenarios and 8 example/template files.')
+    print('Generated 500 labeled scenarios and 9 example/template files.')
 
 
 if __name__=='__main__':main()

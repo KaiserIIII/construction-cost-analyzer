@@ -49,9 +49,9 @@ Programmes run 1–120 months. Preparation spending is distributed equally over 
 
 ## Decision and sensitivity / 决策与敏感性
 
-Return on cost is `(GDV − total cost) / total cost` over the entire project, distinct from annual IRR. Only options meeting the entered cost-return hurdle qualify for recommendation, ranked by return on cost. No qualifying option means no viable recommendation. Nine sensitivity combinations independently vary non-sales costs and sales value, defaulting to ±10%; marketing is recalculated from the changed sales value.
+Return on cost is `(GDV − total cost) / total cost` over the entire project, distinct from annual IRR. Only options meeting the entered cost-return hurdle qualify for recommendation, ranked by return on cost. No qualifying option means no viable recommendation. Sensitivity combinations independently vary non-sales costs and sales value, defaulting to nine cases at ±10%; custom axes accept 1–7 unique values each, including zero, from −100% to +100% (up to 49 cases). marketing is recalculated from the changed sales value.
 
-回报门槛按整个项目的总成本利润率判断；亏损最小仍可能不具备可行性。九组情景独立调整非销售费用与售价，营销费按情景下的销售总值重算。
+回报门槛按整个项目的总成本利润率判断；亏损最小仍可能不具备可行性。默认九组情景；两轴可分别自定义 1–7 个变动值，须含 0，范围 −100% 至 +100%，最多 49 组。非销售费用与售价分别调整，营销费随售价重算。
 
 With `F = aK×K + aL×L` derived from loan timing, `B=M` for all-in or `B=1` for works-only, marketing fraction `q`, and hurdle `h`:
 
@@ -69,3 +69,13 @@ Residual land = [V/(1+h) − B×q×V − K×(M + B×aK)] / [B×(1+aL)]
 Populate settings from the brief and adopted sources; retain geometry assumptions and price references. Compare exported cost bases, dates and financing assumptions with the required method, then review base and sensitivity results. Reproducing arithmetic does not establish source reliability.
 
 先录入题目和采用的资料，再核对费用基数、指数日期、借款时点及回报定义。JSON 保留完整输入，CSV 包含每个方案的费用、融资与敏感性明细，HTML 可独立查看和打印。内部保持十进制精度，到展示时金额才取两位，因此显示行的合计可能有分位差异；清单工具则逐行舍入后汇总。
+
+## Independent option controls / 方案独立参数
+
+Expand **Option settings** and refresh the housing option names. Blank fields inherit common settings; entered zero overrides them. Each option may set its own duration, preparation months/spend, start date, external works, facilitating cost, marketing, loan share, annual interest and arrangement fee. The result records `effective_settings` for each option and total development cost per m² and per dwelling. Programme-dependent interest, NPV, IRR and residual land value use that option's adopted schedule.
+
+展开「各方案独立参数」，刷新住宅 CSV 中的方案名称。空白继承公共值，输入 0 则采用零。工期、准备期与支出、开始日、室外工程、前期工程、营销及贷款条件可分别设置；结果保留各方案实际采用值，每平方米成本采用总开发成本 ÷ GIFA，每户成本采用总开发成本 ÷ 总户数。名称变更后须刷新参数，避免将旧方案条件套入新方案。
+
+Native JSON stores overrides in `options[].settings`. Missing controls inherit; invalid resulting preparation/programme combinations are rejected. `cost_changes_pct` and `value_changes_pct` store the custom sensitivity arrays; a missing axis uses the common sensitivity percentage.
+
+See [the extended original example](../examples/development-extended.json) and [report/export formats](exports.md). 完整的原始输入、方案采用值、来源与全部情景随交付包保存。
