@@ -36,6 +36,8 @@ Rectangular centreline length is `2 × (external length + external width − 2 �
 
 ## Financial conventions / 财务约定
 
+The separate [residential development workflow](development-workflow.md) supports multi-option OCEs and monthly staged financing. Its fees precede risk allowances, with selectable reserve scope. Monthly NPV, annualized IRR, finance-aware residuals and sales-dependent marketing are described there. / [住宅开发估算](development-workflow.md) 支持多方案 OCE 和月度分期融资，设计费先于风险准备计取，可选择准备金范围；其月度现金流及费用基数与下列年度评价工具分别记录。
+
 Cashflow 0 occurs now; subsequent flows occur at annual period ends. Payback interpolates within the recovery period, so its convention differs from strict year-end receipts. IRR is reported only for an initial outflow followed by nonnegative flows with a root inside the supported range; otherwise it returns `null` with a reason. Residual land value is `GDV × (1−profit margin) − non-land cost` for a GDV-based target, or `GDV/(1+cost markup) − non-land cost` for profit on total development cost including land. Finance, taxes and transaction costs must already be included in the supplied non-land cost or cashflows.
 
 第 0 期为现在，其后现金流按年末折现。回收期采用回收期间内的线性插值；严格只在年末收款时不能直接使用该小数年份。IRR 仅报告初始支出、随后非负流入的常规单根，其他情况明确返回不可用。利润按 GDV 或按含土地的总开发成本计取时采用不同剩余法公式；融资、税费和交易成本须已进入输入。

@@ -13,7 +13,7 @@ from cost_analyzer.examples import example
 def main():
     directory=ROOT/'examples';directory.mkdir(exist_ok=True)
     inputs=example()
-    for name,key in [('early-estimate','early'),('unit-rate','rate'),('strip-foundation','takeoff'),('appraisal','appraise')]:
+    for name,key in [('early-estimate','early'),('unit-rate','rate'),('strip-foundation','takeoff'),('appraisal','appraise'),('development','development')]:
         (directory/f'{name}.json').write_text(json.dumps(inputs[key],ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     (directory/'boq.csv').write_text(inputs['boq']['csv'],encoding='utf-8',newline='\n')
     (directory/'project.json').write_text(json.dumps(inputs['boq']['project'],ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
@@ -28,7 +28,7 @@ def main():
                              'actual_budget_multiplier_range':[0.88,1.24]},
               'licence':'MIT (self-authored generated examples)','limitations':['Not calibrated to actual projects','No empirical market or causal inference','Dates and indexes are arbitrary scenario labels, not official market observations']}
     (ROOT/'data/synthetic_projects.metadata.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
-    print('Generated 500 labeled scenarios and 7 example/template files.')
+    print('Generated 500 labeled scenarios and 8 example/template files.')
 
 
 if __name__=='__main__':main()

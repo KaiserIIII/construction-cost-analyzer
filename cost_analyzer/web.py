@@ -8,6 +8,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 from .engine import early_estimate, takeoff, unit_rate, price_boq, appraise
+from .development import development
 from .benchmarks import benchmark, read_boq_csv, generate_scenarios, scenario_csv
 from .examples import example
 
@@ -18,7 +19,7 @@ MAX_BODY=5_000_000
 
 def dispatch(path,data):
     if not isinstance(data,dict):raise ValueError('Request JSON must be an object')
-    functions={'/api/early':early_estimate,'/api/takeoff':takeoff,'/api/rate':unit_rate,'/api/appraise':appraise}
+    functions={'/api/early':early_estimate,'/api/takeoff':takeoff,'/api/rate':unit_rate,'/api/appraise':appraise,'/api/development':development}
     if path in functions:return functions[path](data)
     if path=='/api/boq':
         project=data.get('project',{})

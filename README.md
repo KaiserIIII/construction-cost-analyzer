@@ -28,6 +28,7 @@ Open **http://127.0.0.1:8765/**. On Windows, double-click `start.cmd`. Select **
 | Bill of quantities | Import CSV or add items in the browser. Calculate rounded line amounts, element totals and project allowances. Included-cost flags prevent adding preliminaries or OH&P twice. |
 | Comparable projects | Filter by function, region, currency, cost scope and evidence type; normalize compatible price/location indices and compare median, quartiles and budget deviations. |
 | Development appraisal | Annual end-of-period cashflows, NPV, conventional IRR, simple and discounted payback, and residual land value with profit on GDV or total cost. |
+| Residential options | Housing mixes, a detailed OCE, staged monthly borrowing, profit on cost, annualized IRR, finance-aware residual land value and nine cost/value sensitivities per option. |
 
 Save and reload input JSON; export results to JSON and CSV or print the browser report. CLI reports also include a standalone HTML file. Changing inputs marks the previous result as stale and disables its export until recalculated.
 
@@ -55,9 +56,14 @@ python -m cost_analyzer estimate examples/early-estimate.json --output outputs/e
 python -m cost_analyzer boq --input examples/boq.csv --project examples/project.json --output outputs/boq
 python -m cost_analyzer benchmark --input data/synthetic_projects.csv --building-type office --currency GBP --source-type synthetic --output outputs/benchmark
 python -m cost_analyzer appraise examples/appraisal.json --output outputs/appraisal
+python -m cost_analyzer development examples/development.json --output outputs/development
 ```
 
 Each report directory contains JSON, UTF-8 CSV and HTML. Run `python -m cost_analyzer --help` or append `--help` to a command for available flags.
+
+For early-cost-advice coursework, select **Development options**, enter each housing mix and the required allowance bases, and compare the OCE, monthly finance and sensitivity tables. An option is recommended only when it meets the entered return-on-cost hurdle. [The development workflow](docs/development-workflow.md) explains embedded preliminaries, alternative reserve scopes and the distinction between completion indices and future inflation allowances. This module retains Decimal precision until display rounding.
+
+![Residential option comparison using original example inputs](docs/images/development.jpg)
 
 ## Measurement and pricing basis
 

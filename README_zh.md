@@ -28,6 +28,7 @@ python -m cost_analyzer serve
 | 清单计价 | 导入 CSV 或在页面添加条目，计算逐项金额、分部汇总和项目附加费用；已含费用标记防止重复计取现场费用或总部费与利润。 |
 | 同类项目比较 | 按建筑用途、地区、币种、费用范围和来源类型筛选，统一适用的价格与地区指数，比较中位数、四分位数及预算偏差。 |
 | 开发投资评价 | 年度期末现金流、净现值、常规现金流内部收益率、简单与折现回收期，以及按销售额或总成本利润率计算的土地剩余价值。 |
+| 住宅方案估算 | 混合户型、详细 OCE、月度分期融资、总成本利润率、年化 IRR、考虑融资的土地余额，以及每个方案九组成本与售价敏感性分析。 |
 
 输入可保存为 JSON 并重新载入，结果可导出 JSON、CSV 或打印。命令行还会生成独立 HTML 报告。修改输入后，原结果会提示重新计算，并暂停导出。
 
@@ -55,9 +56,14 @@ python -m cost_analyzer estimate examples/early-estimate.json --output outputs/e
 python -m cost_analyzer boq --input examples/boq.csv --project examples/project.json --output outputs/boq
 python -m cost_analyzer benchmark --input data/synthetic_projects.csv --building-type office --currency GBP --source-type synthetic --output outputs/benchmark
 python -m cost_analyzer appraise examples/appraisal.json --output outputs/appraisal
+python -m cost_analyzer development examples/development.json --output outputs/development
 ```
 
 各输出目录包含 JSON、UTF-8 CSV 和 HTML 文件。运行 `python -m cost_analyzer --help` 或在子命令后加 `--help` 可查看参数。
+
+早期造价咨询作业可使用「方案估算」：输入户型组合和所要求的费用基数，比较 OCE、月度融资及敏感性表。只有达到总成本回报门槛的方案才会被推荐。[开发估算说明](docs/development-workflow.md) 解释了已含现场费的拆分、准备金范围，以及竣工指数与未来涨价比例的区别。此模块内部保留十进制精度，到展示时才舍入。
+
+![使用自编数据比较住宅开发方案](docs/images/development.jpg)
 
 ## 计量与费用口径
 
