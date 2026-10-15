@@ -73,6 +73,8 @@ Net quantities and material waste are calculated separately. Rectangular strip g
 
 Amounts use decimal arithmetic and round half up to two decimal places. BOQ quantities and rates support up to six decimal places; line totals are rounded before summation. Supplied mixed currencies, cost scopes, evidence types or index bases must be filtered or corrected before benchmarking. Nonconventional cashflows retain NPV but do not receive a potentially ambiguous IRR.
 
+Benchmark project IDs are trimmed before duplicate checking and remain case-sensitive. Filters must be a JSON object (or omitted). The saved `inputs` owns its filter snapshot and stores target indexes as exact numeric strings for replay; top-level index fields remain rounded display numbers. CLI and library delivery bundles preserve these inputs in `inputs.json`; HTTP exports retain the original request inputs. Replay from the saved inputs rather than the rounded display fields.
+
 ## Development and verification
 
 ```bash

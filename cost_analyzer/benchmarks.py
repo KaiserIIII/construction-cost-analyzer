@@ -1,6 +1,7 @@
 """Comparable cost records and reproducible, explicitly synthetic scenarios."""
 import csv
 import io
+import json
 import random
 from decimal import Decimal
 from .validation import number, currency, unit, price_date, flag, text, output
@@ -58,11 +59,11 @@ def read_projects(content):
             price_date(row['price_date'])
             if row['source_type'] not in ('observed','synthetic','illustrative'):
                 raise ValueError('source_type: use observed, synthetic or illustrative')
+            for key in ('project_id','building_type','region','cost_scope','source_ref'):
+                row[key]=text(row[key],key)
             if row['project_id'] in seen:
                 raise ValueError('project_id duplicated')
             seen.add(row['project_id'])
-            for key in ('project_id','building_type','region','cost_scope','source_ref'):
-                row[key]=text(row[key],key)
             for key in ('index_type','index_series','index_base_year'):
                 row[key]=text(row.get(key,'unspecified'),key) or 'unspecified'
         except ValueError as exc:
@@ -79,12 +80,17 @@ def quantile(values,p):
 
 
 def benchmark(content,filters=None,target_index=100,target_location_index=100):
-    filters=filters or {}
+    if filters is None:
+        filters={}
     if not isinstance(filters,dict):
         raise ValueError('filters: use an object')
     allowed=('building_type','region','currency','cost_scope','source_type')
     if any(key not in allowed for key in filters):
         raise ValueError('Unsupported benchmark filter')
+    try:
+        filters=json.loads(json.dumps(filters,allow_nan=False))
+    except (TypeError,ValueError) as exc:
+        raise ValueError('filters: use JSON-compatible values') from exc
     target=number(target_index,'target_index',positive=True)
     location=number(target_location_index,'target_location_index',positive=True)
     rows=[row for row in read_projects(content) if all(not value or str(row.get(key))==str(value) for key,value in filters.items())]
@@ -119,7 +125,7 @@ def benchmark(content,filters=None,target_index=100,target_location_index=100):
             'over_budget_count':sum(value>0 for value in deviations),'target_index':output(target),'target_location_index':output(location),
             'projects':projects,'warnings':warnings,'quantile_method':'Linear interpolation of ordered values (R7).',
             'index_basis':{key:rows[0][key] for key in ('index_type','index_series','index_base_year')},
-            'inputs':{'csv':content,'filters':filters,'target_index':output(target),'target_location_index':output(location)}}
+            'inputs':{'csv':content,'filters':filters,'target_index':str(target),'target_location_index':str(location)}}
 
 
 def generate_scenarios(count=500,seed=42):
