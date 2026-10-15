@@ -18,6 +18,16 @@ python -m cost_analyzer serve
 
 打开 **http://127.0.0.1:8765/**。Windows 下也可双击 `start.cmd`。点击「载入教学示例」，修改参数后计算；页面右上角可切换中文与英文。服务仅监听本机回环地址，文件在本地处理。
 
+## 报告前检查输入
+
+```bash
+python -m cost_analyzer review examples/development-review.json --output outputs/input-review.json
+```
+
+检查会逐项列出未明确填写的费用、缺少的依据和价格日期，以及各方案采用的起止日期。明确填写的零与遗漏输入分别处理。住宅行新增 `sale_source_ref`、`sale_price_date`、`sale_basis`（`asking` 挂牌、`sold` 成交、`assumed` 假设），将售价依据与造价单价依据分开记录，导入导出时保留。
+
+这项检查只判断记录是否齐全及输入能否通过原计算引擎，不核实引用内容，也不判定作业可提交。退出码 **0** 表示已记录但仍可能有警告，**1** 表示资料缺项，**2** 表示输入无效。详见[输入检查说明](docs/input-review.md)。
+
 ## 从计量到估价
 
 | 阶段 | 计算与输出 |

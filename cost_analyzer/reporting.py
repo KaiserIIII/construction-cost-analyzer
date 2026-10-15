@@ -58,6 +58,8 @@ LABELS.update({
     'recommended_option':'推荐方案 / Recommended option','price_basis':'价格基准 / Price basis',
     'risk_scope':'风险范围 / Risk scope','rounding_policy':'舍入方式 / Rounding policy',
     'source_ref':'价格或数据来源 / Source reference','area_source_ref':'面积来源 / Area source reference',
+    'sale_source_ref':'售价依据 / Sales evidence','sale_price_date':'售价依据日期 / Sales evidence date',
+    'sale_basis':'售价口径 / Sales price basis',
     'base_rate':'基础单价 / Base rate','sale_price':'每户售价 / Sale price',
     'cost_per_m2':'每平方米成本 / Cost per m²','cost_per_unit':'单位成本 / Cost per unit',
     'profit_on_gdv_pct':'销售值利润率 / Profit on GDV','finance':'融资成本 / Finance cost',
@@ -339,6 +341,8 @@ def report_html(result,language='bilingual'):
             elif section=='housing':
                 content+=table(records,['row_id','name','count','area_m2','gifa_m2','adjusted_rate','cost','gdv'])
                 content+=table(records,['row_id','source_ref','area_source_ref'])
+                if any(r.get('sale_source_ref') or r.get('sale_price_date') or r.get('sale_basis') for r in records):
+                    content+=table(records,['row_id','sale_source_ref','sale_price_date','sale_basis'])
             else:content+=table(records)
     for section,records in tables.items():
         if section in ('summary','option_comparison','inputs_json','option_settings') or any(r['option_id'] for r in records):continue

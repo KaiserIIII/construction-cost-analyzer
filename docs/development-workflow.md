@@ -79,3 +79,7 @@ Expand **Option settings** and refresh the housing option names. Blank fields in
 Native JSON stores overrides in `options[].settings`. Missing controls inherit; invalid resulting preparation/programme combinations are rejected. `cost_changes_pct` and `value_changes_pct` store the custom sensitivity arrays; a missing axis uses the common sensitivity percentage.
 
 See [the extended original example](../examples/development-extended.json) and [report/export formats](exports.md). 完整的原始输入、方案采用值、来源与全部情景随交付包保存。
+
+## Input review / 输入检查
+
+Run `python -m cost_analyzer review saved-input.json` before preparing a report. The review distinguishes omitted assumptions from explicit zero and records each option's dates. Store `sale_source_ref`, `sale_price_date` and `sale_basis` per housing row to keep sales evidence separate from the construction-rate reference. These fields are optional for calculation and retained by exports; they are required for the documentation review. [Review scope and exit codes](input-review.md) explain why a documented-input status does not verify evidence or certify an estimate.

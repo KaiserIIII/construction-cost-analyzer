@@ -9,6 +9,7 @@ from .development import development
 from .benchmarks import benchmark, read_boq_csv, generate_scenarios, scenario_csv
 from .examples import example
 from .reporting import export_report
+from .review import review_development
 
 
 def read_json(path):
@@ -23,6 +24,8 @@ def main(argv=None):
         if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     parser=argparse.ArgumentParser(description='Construction cost estimation, measurement and appraisal / 建筑计量计价')
     sub=parser.add_subparsers(dest='command',required=True)
+    p=sub.add_parser('review',help='Check recorded development inputs and evidence gaps')
+    p.add_argument('input',type=Path);p.add_argument('--output',type=Path,help='Optional JSON review file')
     for command in ('estimate','appraise','development'):
         p=sub.add_parser(command);p.add_argument('input',type=Path);p.add_argument('--output',type=Path,default=Path('outputs')/command)
     p=sub.add_parser('boq');p.add_argument('--input',type=Path,required=True);p.add_argument('--project',type=Path,required=True);p.add_argument('--output',type=Path,default=Path('outputs/boq'))
@@ -36,6 +39,16 @@ def main(argv=None):
         sub.choices[command].add_argument('--language',choices=('zh','en','bilingual'),default='bilingual')
     args=parser.parse_args(argv)
     try:
+        if args.command=='review':
+            if args.output and args.output.resolve()==args.input.resolve():
+                raise ValueError('Review output must differ from the original input file')
+            review=review_development(read_json(args.input))
+            content=json.dumps(review,ensure_ascii=False,indent=2,allow_nan=False)
+            if args.output:
+                args.output.parent.mkdir(parents=True,exist_ok=True)
+                args.output.write_text(content+'\n',encoding='utf-8')
+            print(content)
+            return 2 if review['status']=='invalid' else 1 if review['status']=='incomplete' else 0
         if args.command=='serve':
             from .web import create_server
             server=create_server(args.port)

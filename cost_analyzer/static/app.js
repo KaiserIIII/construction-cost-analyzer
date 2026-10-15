@@ -27,6 +27,9 @@
   Object.assign(copy.en,{loan_share_pct:'Loan % of land and pre-reserve works/fees',budget_npv:'Budget cashflow NPV',budget_irr_annual_pct:'Budget cashflow annual IRR %',budget_cashflow:'Budget cashflow',works_payment:'Works and reserve payments'});
   formFields.development=['project_name','currency','site_area_m2','land_rate','site_clearance_rate','facilitating_cost','external_works_pct','preliminaries_pct','overheads_profit_pct','fees_pct','rate_includes_preliminaries','embedded_preliminaries_pct','rate_includes_ohp','base_index','target_index','base_location_index','target_location_index','price_basis','risk_scope','risk_design_pct','risk_construction_pct','risk_employer_change_pct','risk_other_pct','tender_inflation_pct','construction_inflation_pct','duration_months','prep_months','prep_spend_pct','loan_share_pct','loan_interest_pct','loan_fee_pct','hurdle_pct','discount_rate_pct','sensitivity_pct','start_date','source_ref','index_source_ref','price_date','csv'];
   const housingColumns=['option','name','count','area_m2','base_rate','sale_price','source_ref','area_source_ref'];
+  const salesColumns=['sale_source_ref','sale_price_date','sale_basis'];
+  Object.assign(copy.zh,{sale_source_ref:'售价依据',sale_price_date:'售价依据日期',sale_basis:'售价口径'});
+  Object.assign(copy.en,{sale_source_ref:'Sales evidence',sale_price_date:'Sales evidence date',sale_basis:'Sales price basis'});
   const developmentDefaults={project_name:'',currency:'GBP',site_area_m2:0,land_rate:0,site_clearance_rate:0,facilitating_cost:0,external_works_pct:0,preliminaries_pct:0,overheads_profit_pct:0,fees_pct:0,rate_includes_preliminaries:false,embedded_preliminaries_pct:0,rate_includes_ohp:false,base_index:100,target_index:100,base_location_index:100,target_location_index:100,price_basis:'estimate_plus_inflation',risk_scope:'all_in',risk_design_pct:0,risk_construction_pct:0,risk_employer_change_pct:0,risk_other_pct:0,tender_inflation_pct:0,construction_inflation_pct:0,duration_months:5,prep_months:1,prep_spend_pct:10,loan_share_pct:0,loan_interest_pct:0,loan_fee_pct:0,hurdle_pct:10,discount_rate_pct:0,sensitivity_pct:10,start_date:'',source_ref:'',index_source_ref:'',price_date:'',options:[]};
   formFields.development.splice(formFields.development.indexOf('hurdle_pct'),0,'marketing_pct');
   developmentDefaults.marketing_pct=0;
@@ -69,7 +72,7 @@
   }
   function validateDevelopmentOptions(options){
     if(!Array.isArray(options))throw new Error('Development options must be an array');
-    const optionKeys=new Set(['name','units','settings']),unitKeys=new Set(housingColumns.filter(key=>key!=='option'));
+    const optionKeys=new Set(['name','units','settings']),unitKeys=new Set([...housingColumns.filter(key=>key!=='option'),...salesColumns]);
     for(const [optionIndex,option] of options.entries()){
       const context='options['+optionIndex+']';knownDevelopmentObject(option,optionKeys,context);
       if(typeof option.name!=='string'||!option.name.trim())throw new Error(context+'.name: expected a nonempty string');
@@ -78,7 +81,9 @@
       for(const [unitIndex,unit] of option.units.entries()){
         const unitContext=context+'.units['+unitIndex+']';knownDevelopmentObject(unit,unitKeys,unitContext);
         if(typeof unit.name!=='string'||!unit.name.trim())throw new Error(unitContext+'.name: expected a nonempty string');
-        for(const key of ['source_ref','area_source_ref'])if(key in unit&&typeof unit[key]!=='string')throw new Error(unitContext+'.'+key+': expected a string');
+        for(const key of ['source_ref','area_source_ref',...salesColumns])if(key in unit&&typeof unit[key]!=='string')throw new Error(unitContext+'.'+key+': expected a string');
+        if(unit.sale_basis&&!['asking','sold','assumed'].includes(unit.sale_basis))throw new Error(unitContext+'.sale_basis: use asking, sold or assumed');
+        if(unit.sale_price_date)validateDevelopmentInput({price_date:unit.sale_price_date});
         for(const key of ['count','area_m2','base_rate','sale_price'])developmentNumber(unit[key],unitContext+'.'+key);
       }
     }
@@ -137,7 +142,7 @@
     const rows=parseCSV(content.replace(/^\ufeff/,''));
     if(rows.length<2)throw new Error('Housing CSV needs a header and at least one housing row');
     const header=rows.shift().map(value=>value.trim());
-    if(header.length!==housingColumns.length||new Set(header).size!==header.length||!housingColumns.every(key=>header.includes(key)))throw new Error('Housing CSV columns must be '+housingColumns.join(','));
+    if(new Set(header).size!==header.length||!housingColumns.every(key=>header.includes(key))||header.some(key=>![...housingColumns,...salesColumns].includes(key)))throw new Error('Housing CSV columns must include '+housingColumns.join(',')+'; optional '+salesColumns.join(','));
     const grouped=new Map();
     rows.forEach((row,index)=>{
       if(row.length!==header.length)throw new Error('Housing CSV row '+(index+2)+' has the wrong number of columns');
@@ -154,14 +159,15 @@
       if(!grouped.has(option))grouped.set(option,{name:option,units:[]});
       grouped.get(option).units.push(unit);
     });
-    return Array.from(grouped.values());
+    const options=Array.from(grouped.values());validateDevelopmentOptions(options);return options;
   }
   function developmentOptionsCSV(options,protect=true){
     validateDevelopmentOptions(options);
-    const rows=[housingColumns];
+    const optional=salesColumns.filter(key=>options.some(option=>option.units.some(unit=>key in unit)));
+    const columns=[...housingColumns,...optional],rows=[columns];
     for(const option of options){
       if(!option||typeof option.name!=='string'||!Array.isArray(option.units))throw new Error('Each option needs a name and units array');
-      for(const unit of option.units){if(!unit||typeof unit!=='object'||Array.isArray(unit))throw new Error('Housing units must be objects');rows.push(housingColumns.map(key=>key==='option'?option.name:unit[key]??''));}
+      for(const unit of option.units){if(!unit||typeof unit!=='object'||Array.isArray(unit))throw new Error('Housing units must be objects');rows.push(columns.map(key=>key==='option'?option.name:unit[key]??''));}
     }
     const cell=protect?csvCell:value=>{const s=String(value??'');return /[,"\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;};
     return rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
