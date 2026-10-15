@@ -19,5 +19,5 @@ No new dependencies, network calls, personal coursework data, grade predictions 
 - [x] Add `review.py`; extend optional housing metadata validation in `development.py`; retain it through `web.py` and `static/app.js` CSV handling; add `review` CLI command.
 - [x] Run targeted and complete standard-library suites. Verify an exported synthetic housing CSV preserves sales references/dates and existing estimate totals are unchanged. Include a regression check that a review cannot overwrite its original input.
 - [x] Document command and limits in English/Chinese READMEs and `docs/development-workflow.md`. Add a complete synthetic review example.
-- [ ] Check the diff for private material, commit the tested change on a feature branch and publish a reviewable GitHub change.
+- [x] Check the diff for private material, commit the tested change on a feature branch and publish a reviewable GitHub change. Draft PR #1 records the change and all 113 passing local tests (97 existing plus 16 added).
 - [x] Create the classmate basic guide with accurate basic steps and a transparent project recommendation; render and inspect all four pages. The user requested sufficient detail without sharing private coursework calculations.
