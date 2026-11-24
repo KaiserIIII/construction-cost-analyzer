@@ -58,7 +58,7 @@ for (const language of ['zh', 'en']) {
 assert.deepEqual(ui.apiPaths, {
   early:'/api/early', takeoff:'/api/takeoff', rate:'/api/rate',
   boq:'/api/boq', benchmark:'/api/benchmark', appraise:'/api/appraise',
-  development:'/api/development'
+  development:'/api/development', 'measured-boq':'/api/measured-boq'
 });
 assert.equal(ui.csvCell('=HYPERLINK("bad")'), '"\'=HYPERLINK(""bad"")"');
 assert.equal(ui.csvCell('  +SUM(1,2)'), '"\'  +SUM(1,2)"');
@@ -76,6 +76,8 @@ assert.ok(fields.early.includes('rate_includes_ohp'));
 assert.ok(fields.takeoff.includes('wall_thickness'));
 assert.ok(fields.rate.includes('crew_output_per_hour'));
 assert.ok(fields.boq.includes('csv'));
+const measuredInput = {items: [{item_id:'F01', rate:'120.50'}]};
+assert.deepEqual(JSON.parse(ui.normalizedInputs('measured-boq', measuredInput).schedule_json), measuredInput);
 assert.ok(fields.benchmark.includes('source_type'));
 assert.ok(fields.appraise.includes('profit_basis'));
 assert.deepEqual(ui.restoreIndexSource({base_index:100,target_index:120}), null);

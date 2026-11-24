@@ -15,6 +15,23 @@ LABELS={
     'price_date':'价格日期 / Price date','npv':'净现值 / NPV','irr_pct':'内部收益率% / IRR%',
     'payback_period':'回收期 / Payback periods','residual_land_value':'土地余额 / Residual land value'}
 
+LABELS.update({
+    'taking_off':'计量底稿 / Taking off', 'squaring':'列式计算 / Squaring',
+    'abstract':'工程量汇总 / Abstract', 'daywork_rates':'计日工费率 / Daywork rates',
+    'measurement_id':'计量编号 / Measurement ID', 'drawing_ref':'图纸或假设依据 / Drawing or assumption reference',
+    'timesing':'计量倍数 / Timesing', 'dimensions':'尺寸（米） / Dimensions (m)',
+    'operation':'加减项 / Operation', 'note':'计量说明 / Measurement note',
+    'squared_quantity':'计算量 / Squared quantity', 'added_quantity':'加项合计 / Added quantity',
+    'deducted_quantity':'扣减合计 / Deducted quantity', 'net_quantity':'未舍入净量 / Unrounded net quantity',
+    'quantity_places':'清单工程量小数位 / Billing quantity decimal places',
+    'measurement_standard':'计量规则 / Measurement standard', 'kind':'清单项类型 / Item type',
+})
+
+MEASUREMENT_SHEETS = {
+    'taking_off': 'Taking off', 'squaring': 'Squaring', 'abstract': 'Abstract', 'daywork_rates': 'Daywork rates',
+}
+EXACT_QUANTITIES = {'squared_quantity', 'added_quantity', 'deducted_quantity', 'net_quantity'}
+
 LABELS.update(name='方案或户型 / Option or type',gifa_m2='总内部楼面面积 / GIFA m²',
               units_count='住宅数量 / Dwellings',gdv='销售总值 / GDV',profit='利润或亏损 / Profit or loss',
               return_on_cost_pct='总成本回报 % / Return on cost %',meets_hurdle='达到目标 / Meets hurdle',
@@ -165,7 +182,8 @@ def field_unit(key,row=None):
     if key in ('count','units_count','option_count','viable_count','period'):return 'count'
     if key in ('duration_months','prep_months','month'):return 'month'
     if key.endswith('index'):return 'index'
-    if key in ('quantity','gross_quantity','deduction','consumption','purchased_consumption'):return str((row or {}).get('unit','quantity'))
+    if key in EXACT_QUANTITIES or key in ('quantity','gross_quantity','deduction','consumption','purchased_consumption'):
+        return str((row or {}).get('unit','quantity'))
     if key in ('meets_hurdle','rate_includes_preliminaries','rate_includes_ohp','included_preliminaries','included_ohp'):return 'boolean'
     value=(row or {}).get(raw_key,(row or {}).get(key,(row or {}).get('value')))
     if isinstance(value,bool):return 'boolean'
@@ -353,7 +371,8 @@ def report_html(result,language='bilingual'):
 def excel_value(value,key,row):
     if key=='value' and row.get('field'):key=row['field']
     unit=field_unit(key,row)
-    value=typed_source_value(value,unit)
+    if key not in EXACT_QUANTITIES:
+        value=typed_source_value(value,unit)
     if isinstance(value,(int,float,Decimal)) and not isinstance(value,bool):
         if not math.isfinite(value):raise ValueError('Report numeric values must be finite')
         if unit=='percent':return Cell(Decimal(str(value))/100,4)
@@ -414,6 +433,8 @@ def report_xlsx(result,language='bilingual'):
     else:
         rows=[{'row_id':f'summary.{key}','option_id':'','field':key,'value':value,'unit':field_unit(key,tables['summary'][0]),'currency':result.get('currency','')} for key,value in {**adopted_metadata(result),**tables['summary'][0]}.items() if key not in ('row_id','option_id')]
         schedule('Summary',rows)
+        for section,name in MEASUREMENT_SHEETS.items():
+            if tables.get(section):schedule(name,tables[section])
         for section,name in [('items','BOQ'),('breakdown','Cost plan'),('materials','Resources'),('projects','Benchmarks'),('adjustments','Adjustments'),('element_totals','Elements'),('discounted_cashflows','Appraisal')]:
             if tables.get(section):schedule(name,tables[section])
     input_records=[]
@@ -426,6 +447,7 @@ def report_xlsx(result,language='bilingual'):
     input_records += [{**r,'section':'condition','warning':standard_warning(str(r['warning']),language)} for r in tables.get('warnings',[])]
     # Top-level grid controls and unknown future nested data remain inspectable.
     assigned={'summary','option_comparison','breakdown','housing','cashflows','sensitivity','effective_settings','option_settings','inputs','inputs_json','sources','warnings','items','materials','projects','adjustments','element_totals','discounted_cashflows'}
+    assigned.update(MEASUREMENT_SHEETS)
     for section,records in tables.items():
         if section not in assigned:
             for r in records:
@@ -441,6 +463,23 @@ def report_xlsx(result,language='bilingual'):
         name,address,value=refs[(rid,key)];return (f"'{name}'!{address}" if ' ' in name else f'{name}!{address}'),value
     def check(oid,name,expression,cached,tolerance,basis):
         checks.append({'row_id':f'{oid or "report"}.check.{len(checks)+1:04d}','option_id':oid,'check':translated(name,language),'basis':translated(basis,language),'difference':Formula(expression,float(cached)),'tolerance':tolerance})
+    if tables.get('abstract'):
+        abstracts = {row['item_id']: row for row in tables['abstract']}
+        for item in tables['items']:
+            item_id = item['item_id']
+            bill, quantity = ref(item['row_id'], 'quantity')
+            rate, _ = ref(item['row_id'], 'rate')
+            total, _ = ref(item['row_id'], 'total')
+            check('', '清单金额 / Bill amount',
+                  f'ROUND({bill}*{rate},2)-{total}', 0, 0,
+                  '清单工程量 × 单价，舍入至分 / Bill quantity × rate, rounded to 2 places')
+            checks[-1]['check'] += f' · {item_id}'
+            if item_id in abstracts:
+                source, abstract_quantity = ref(abstracts[item_id]['row_id'], 'quantity')
+                check('', '汇总与清单工程量 / Abstract and bill quantity',
+                      f'{source}-{bill}', Decimal(str(abstract_quantity))-Decimal(str(quantity)), 0,
+                      '汇总表舍入量减清单量 / Rounded abstract quantity minus bill quantity')
+                checks[-1]['check'] += f' · {item_id}'
     for record in options:
         oid=record['option_id'];housing=[r for r in tables.get('housing',[]) if r['option_id']==oid];flows=[r for r in tables.get('cashflows',[]) if r['option_id']==oid]
         def total_of(rows,key):

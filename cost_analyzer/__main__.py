@@ -6,6 +6,7 @@ from decimal import DecimalException
 from pathlib import Path
 from .engine import early_estimate, price_boq, appraise
 from .development import development
+from .measured_boq import measured_boq
 from .benchmarks import benchmark, read_boq_csv, generate_scenarios, scenario_csv
 from .examples import example
 from .reporting import export_report
@@ -23,7 +24,7 @@ def main(argv=None):
         if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     parser=argparse.ArgumentParser(description='Construction cost estimation, measurement and appraisal / 建筑计量计价')
     sub=parser.add_subparsers(dest='command',required=True)
-    for command in ('estimate','appraise','development'):
+    for command in ('estimate','appraise','development','measured-boq'):
         p=sub.add_parser(command);p.add_argument('input',type=Path);p.add_argument('--output',type=Path,default=Path('outputs')/command)
     p=sub.add_parser('boq');p.add_argument('--input',type=Path,required=True);p.add_argument('--project',type=Path,required=True);p.add_argument('--output',type=Path,default=Path('outputs/boq'))
     p=sub.add_parser('benchmark');p.add_argument('--input',type=Path,default=Path(__file__).resolve().parents[1]/'data/synthetic_projects.csv')
@@ -32,7 +33,7 @@ def main(argv=None):
     p=sub.add_parser('demo');p.add_argument('--output',type=Path,default=Path('outputs/demo'))
     p=sub.add_parser('serve');p.add_argument('--port',type=int,default=8765)
     p=sub.add_parser('generate');p.add_argument('--count',type=int,default=500);p.add_argument('--seed',type=int,default=42);p.add_argument('--output',type=Path,required=True)
-    for command in ('estimate','appraise','development','boq','benchmark','demo'):
+    for command in ('estimate','appraise','development','boq','measured-boq','benchmark','demo'):
         sub.choices[command].add_argument('--language',choices=('zh','en','bilingual'),default='bilingual')
     args=parser.parse_args(argv)
     try:
@@ -60,6 +61,7 @@ def main(argv=None):
         if args.command=='estimate':result=early_estimate(read_json(args.input))
         elif args.command=='appraise':result=appraise(read_json(args.input))
         elif args.command=='development':result=development(read_json(args.input))
+        elif args.command=='measured-boq':result=measured_boq(read_json(args.input))
         elif args.command=='boq':result=price_boq(read_boq_csv(args.input.read_text(encoding='utf-8-sig')),read_json(args.project))
         else:
             filters={key:getattr(args,key) for key in ('currency','building_type','region','cost_scope','source_type') if getattr(args,key)}
