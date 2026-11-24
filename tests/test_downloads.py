@@ -54,6 +54,28 @@ class DownloadTests(unittest.TestCase):
             html=(Path(folder)/'report.html').read_text(encoding='utf-8')
             self.assertIn('Option',html);self.assertNotIn('方案比较',html)
 
+    def test_invalid_download_store_limits(self):
+        from cost_analyzer.downloads import DownloadStore
+        for field, values in {
+            'max_count': (0, -1, 1.5, True),
+            'max_bytes': (0, -1, 1.5, True),
+            'ttl': (0, -1, float('nan'), float('inf'), True, '10'),
+        }.items():
+            for value in values:
+                with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+                    DownloadStore(**{field: value})
+
+    def test_exact_capacity_and_expiry_boundary(self):
+        from cost_analyzer.downloads import DownloadStore
+        now = [0.0]
+        store = DownloadStore(ttl=0.5, max_count=1, max_bytes=3, clock=lambda: now[0])
+        first = store.put(b'abc', 'report.json', 'application/json')
+        second = store.put(b'xyz', 'report.json', 'application/json')
+        self.assertIsNone(store.get(first))
+        self.assertEqual(store.get(second)[0], b'xyz')
+        now[0] = 0.5
+        self.assertIsNone(store.get(second))
+
     def test_ttl_limits_and_concurrent_unique_tokens(self):
         from cost_analyzer.downloads import DownloadStore
         now=[100.0];store=DownloadStore(ttl=10,max_count=2,max_bytes=6,clock=lambda:now[0])

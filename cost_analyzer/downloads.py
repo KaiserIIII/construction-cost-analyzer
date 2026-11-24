@@ -1,4 +1,5 @@
 """Bounded, expiring report attachments held only in this process."""
+import math
 import secrets
 import threading
 import time
@@ -7,6 +8,12 @@ from collections import OrderedDict
 
 class DownloadStore:
     def __init__(self,ttl=600,max_count=64,max_bytes=32_000_000,clock=time.monotonic):
+        if isinstance(max_count, bool) or not isinstance(max_count, int) or max_count < 1:
+            raise ValueError('max_count must be a positive integer')
+        if isinstance(max_bytes, bool) or not isinstance(max_bytes, int) or max_bytes < 1:
+            raise ValueError('max_bytes must be a positive integer')
+        if not isinstance(ttl, (int, float)) or isinstance(ttl, bool) or not math.isfinite(ttl) or ttl <= 0:
+            raise ValueError('ttl must be a finite positive number')
         self.ttl=ttl;self.max_count=max_count;self.max_bytes=max_bytes;self.clock=clock
         self._items=OrderedDict();self._bytes=0;self._lock=threading.Lock()
 
