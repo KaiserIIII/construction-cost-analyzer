@@ -80,7 +80,8 @@ def measured_boq(data):
     # Three six-place dimensions, timesing, and the sum of up to 10,000 lines
     # fit within this context without rounding intermediate quantities.
     rounding_unit = Decimal(1).scaleb(-places)
-    with localcontext(prec=64):
+    with localcontext() as context:
+        context.prec = 64
         for position, row in enumerate(dimension_rows, 1):
             name = f'Measurement {position}'
             check_fields(row, MEASUREMENT_FIELDS, name)
