@@ -40,3 +40,11 @@
 .export-controls select{max-width:100%;padding:9px;border:1px solid #ccc;border-radius:6px;background:white}
 .export-controls{border-top:0;border-bottom:1px solid #ddd}
 .report-inputs summary{cursor:pointer;font-weight:600}
+
+.measured-paste,.measured-rows{margin-bottom:12px}
+.measured-paste summary,.measured-rate-details summary{cursor:pointer;color:var(--navy);font-size:12px;font-weight:600}
+.measured-paste .field,.measured-rate-details .field-grid{margin:12px 0}
+.measured-rows:not(:empty){display:grid;gap:12px;margin-top:12px}
+.measured-row{padding:14px;border:1px solid var(--line);border-radius:8px;min-width:0}
+.measured-rate-details,.measured-remove{margin-top:12px}
+.measured-row .field textarea{min-height:0}

@@ -2,7 +2,7 @@
 
 [English](README.md) · [计算方法](docs/course-methods.md) · [数据来源](docs/data-sources.md) · [导出格式](docs/exports.md) · [MIT 许可证](LICENSE)
 
-用于工程量计算、工料机单价分析、工程量清单计价、指数调整估算和开发投资评价的本地工具。计算方法结合 **Construction Quantification and Costing（建筑计量与计价）** 课程内容。
+面向英国 **Construction Quantification and Costing（建筑计量与计价）** 课程的开源学习工具。通过可编辑算例练习工程量计算、工料机单价分析、工程量清单计价、指数调整和开发投资评价。
 
 中英文浏览器工作区与 Python 命令行共用计算引擎。导出结果保留输入、报价来源、价格日期和费用基数，提供带正确数据类型的 Excel 明细、可打印报告及完整交付包，便于复核与后续调整。
 
@@ -69,7 +69,7 @@ python -m cost_analyzer development examples/development-extended.json --output 
 
 ## 计量与费用口径
 
-在网页选择「计量到清单」，再载入示例。示例先扣除基础交接处的重复工程量，对净量 1.440 m³ 计价，并计入 £100 指定暂定金额。计日工仅列费率，含附加费用的总额为 £351.20。字段说明和舍入口径见[计量到清单工作流](docs/measured-boq.md)。
+在网页选择「计量到清单」，可直接添加清单项和尺寸记录，也可载入示例。示例先扣除基础交接处的重复工程量，对净量 1.440 m³ 计价，并计入 £100 指定暂定金额。计日工仅列费率，含附加费用的总额为 £351.20。字段说明和舍入口径见[计量到清单工作流](docs/measured-boq.md)。
 
 工具对应课程中的设计经济性、早期估算、中心线计量、工料机组价与开发评价。[计算方法说明](docs/course-methods.md) 列出公式、附加费用基数、舍入规则和计量边界。
 

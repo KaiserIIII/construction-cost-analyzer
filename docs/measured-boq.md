@@ -8,7 +8,9 @@ python -m cost_analyzer measured-boq examples/measured-boq.json --output outputs
 
 The editable JSON contains `project`, `items`, and `measurements`. Record the applicable measurement rules and edition in `measurement_standard`. Use the project's required number of decimal places in `quantity_places` (0–6, default 6).
 
-网页选择「计量到清单」，可载入示例或上传输入 JSON。输入按项目、清单项和计量记录组织。可在 `measurement_standard` 写明采用的规则及版本，在 `quantity_places` 设置清单量小数位数。
+In the browser, add a **Bill item** for each work description and rate. Add **Dimension records** for measured items using the same item ID. The dimensions field accepts comma-separated lengths in metres. The project settings control rounding, and the rate evidence can be expanded on each bill item. Save inputs as JSON to resume later or load existing inputs by file or by pasting JSON.
+
+在网页「计量到清单」中添加清单项，再为实测项目录入同编号的尺寸记录。尺寸以米为单位，用逗号隔开。项目设置里可填计量规则及版本和清单量小数位，单价来源在各清单项内展开填写。可保存输入 JSON 继续练习，也可载入文件或粘贴已有 JSON。
 
 | Stage / 工序 | Record / 记录 |
 | --- | --- |

@@ -2,7 +2,7 @@
 
 [简体中文](README_zh.md) · [Methods](docs/course-methods.md) · [Data sources](docs/data-sources.md) · [Export formats](docs/exports.md) · [MIT License](LICENSE)
 
-A local quantity surveying toolkit for measured work, resource-based unit rates, bills of quantities, indexed cost estimates and development appraisal. Built around the methods in **Construction Quantification and Costing**.
+An open-source learning tool for UK construction quantification and costing. Practise take-off, unit-rate build-ups, bills of quantities, indexed estimates and development appraisal with worked examples and editable inputs.
 
 The Chinese–English browser workspace and Python CLI share one calculation engine. Inputs, price references, dates and calculation bases accompany exported results, with typed Excel schedules, printable reports and complete delivery packages for review.
 
@@ -63,7 +63,7 @@ python -m cost_analyzer development examples/development-extended.json --output 
 
 Each report directory contains XLSX, HTML, UTF-8 CSV, JSON and ZIP. Add `--language zh`, `--language en` or `--language bilingual` to select the report language. [The export guide](docs/exports.md) documents units, stable identifiers and the package manifest. Run `python -m cost_analyzer --help` or append `--help` to a command for available flags.
 
-In the browser, open **Measured BOQ** and select **Load example**. The example subtracts a junction overlap before pricing 1.440 m³, includes a £100 prime cost sum and lists daywork rates separately. The priced total is £351.20. See [the measurement-to-bill workflow](docs/measured-boq.md) for the input fields and rounding rules.
+In the browser, open **Measured BOQ** to add bill items and dimension records, or select **Load worked example**. The example subtracts a junction overlap before pricing 1.440 m³, includes a £100 prime cost sum and lists daywork rates separately. The priced total is £351.20. See [the measurement-to-bill workflow](docs/measured-boq.md) for the input fields and rounding rules.
 
 For early-cost-advice coursework, select **Development options**, enter each housing mix and the required allowance bases, and compare the OCE, monthly finance and sensitivity tables. An option is recommended only when it meets the entered return-on-cost hurdle. [The development workflow](docs/development-workflow.md) explains embedded preliminaries, alternative reserve scopes and the distinction between completion indices and future inflation allowances. This module retains Decimal precision until display rounding.
 

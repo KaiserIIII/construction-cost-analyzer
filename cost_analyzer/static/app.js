@@ -11,12 +11,26 @@
     project:'PROJECT AND PRICE BASIS',dimensions:'DIMENSIONS AND MEASUREMENT',resources:'LABOUR, PLANT AND SUBCONTRACTS',adjustments:'PRICE ADJUSTMENTS',oncosts:'ALLOWANCES (%)',materials:'MATERIAL CONSUMPTION AND PURCHASE PRICES',investment:'ANNUAL END-PERIOD CASHFLOWS',residual:'RESIDUAL LAND VALUATION',calculate:'Calculate and review',working:'Calculating…',ready:'Calculated',pending:'Awaiting input',result:'Calculation result',emptyTitle:'Start with your inputs',emptyNote:'Complete the parameters and calculate to see results and their pricing basis here.',netNote:'Inputs and calculations stay on this computer.',csvImport:'Import CSV',dataset:'Load 500 synthetic scenarios',syntheticNote:'The 500 bundled projects are reproducible synthetic scenarios for practising this workflow. Import sourced comparable projects for actual estimating.',json:'Export JSON',csv:'Export CSV',inputJson:'Save inputs',inputImport:'Load input JSON',inputs:'INPUTS AND SOURCES',breakdown:'Cost build-up and bases',notes:'Conditions of use',stale:'Inputs changed. Recalculate before exporting.',loaded:'Worked examples loaded. Edit the parameters before calculating.',failed:'Calculation failed. Check the inputs.',uploaded:'File loaded.',all:'All',yes:'Yes',no:'No',addMaterial:'Add material',remove:'Remove',opiTitle:'Official historic index reference (optional)',opiNote:'The ONS OPI measures construction output prices, not BCIS tender prices. Use it to review historic UK price movements. It provides neither location factors nor future index forecasts.',opiApply:'Apply selected indexes',opiUnavailable:'Official indexes unavailable. Enter index values manually.',opiApplied:'Historic indexes applied. Check the original rate month and relevance to your project.',series:'Index series',basePeriod:'Original price month',targetPeriod:'Target price month',formula:'Calculation',rows:'Item detail',currency:'Currency',area_m2:'Gross internal floor area (m²)',base_rate:'Original works rate (currency / m²)',base_index:'Original price index',target_index:'Target price index',base_location_index:'Original location index',target_location_index:'Target location index',quality_factor:'Quality adjustment factor',project_name:'Project name',source_ref:'Rate source / quotation reference',price_date:'Rate price date',cost_scope:'Cost scope',preliminaries_pct:'Preliminaries % (direct works)',overheads_profit_pct:'OH&P % (direct works + preliminaries)',contingency_pct:'Contingency % (preceding works total)',fees_pct:'Fees % (including contingency)',vat_pct:'VAT % (including fees)',rate_includes_preliminaries:'Historic rate includes preliminaries',rate_includes_ohp:'Historic rate includes OH&P',method:'Measurement method',length:'External length (m)',width:'External width (m)',height:'Height / depth (m)',count:'Repetition count (whole number)',deduction:'Total deduction (same measurement unit)',wall_thickness:'Wall thickness (m)',trench_width:'Trench width (m)',trench_depth:'Trench depth (m)',concrete_width:'Concrete width (m)',concrete_depth:'Concrete depth (m)',other_displaced_volume:'Other displaced volume (m³)',rectangle:'Rectangular area',volume:'Volume',linear:'Length',countMethod:'Count',centreline:'Rectangular centreline',strip_foundation:'Continuous strip foundation',unit:'Completed work unit',crew_hourly_cost:'Total crew hourly cost',crew_output_per_hour:'Whole-crew output per hour',plant_hourly_cost:'Plant hourly cost',plant_output_per_hour:'Plant output per hour',subcontract_per_unit:'Subcontract cost per work unit',markup_pct:'Markup on direct cost %',name:'Material name',consumption:'Net consumption / work unit',pack_price:'Pack purchase price',pack_size:'Units per pack',waste_pct:'Material waste %',building_type:'Building function',region:'Region',source_type:'Record source type',observed:'Observed project records',synthetic:'Synthetic scenarios',illustrative:'Original illustrative records',cashflows:'Cashflows (comma or newline separated)',discount_rate_pct:'Annual discount rate %',gdv:'Gross development value',non_land_cost:'Development cost excluding land',target_profit_pct:'Target profit %',profit_basis:'Profit percentage basis',gdvBasis:'Sales value / GDV',costBasis:'Total development cost (including land)',total:'Estimate total',adjusted_rate:'Adjusted rate / m²',direct_cost:'Direct works / net cost',cost_per_m2:'Total / m²',preliminaries:'Preliminaries',overheads_profit:'Overheads & profit',contingency:'Contingency',fees:'Fees',vat:'VAT',base:'Calculation base',percent:'Percent',amount:'Amount',quantity:'Net quantity',gross_quantity:'Gross quantity',centreline_m:'Centreline length (m)',excavation_m3:'Natural excavation (m³)',concrete_m3:'Concrete (m³)',backfill_m3:'Natural backfill (m³)',material:'Materials per unit',labour:'Labour per unit',plant:'Plant per unit',subcontract:'Subcontract per unit',direct_rate:'Direct cost per unit',quoted_rate:'Rate with markup',sample_count:'Comparable records',median_cost_per_m2:'Normalized median cost / m²',p25_cost_per_m2:'25th percentile / m²',p75_cost_per_m2:'75th percentile / m²',mean_deviation_pct:'Mean cost deviation %',over_budget_count:'Projects exceeding budget',npv:'Net present value',irr_pct:'Internal rate of return %',payback_period:'Simple payback (years)',discounted_payback_period:'Discounted payback (years)',residual_land_value:'Residual land value',item_id:'Item ID',description:'Description',element:'Element',rate:'Rate',project_id:'Project ID',normalized_cost_per_m2:'Normalized cost / m²',cost_deviation_pct:'Cost deviation %',na:'Not applicable / not reached',showAll:'All records are included in the exports.',cashflowError:'Invalid cashflows: use finite numbers separated by commas or newlines.',quantityActions:'Keep work units consistent when transferring net quantities or quoted rates to the BOQ.',elementTotals:'Element totals',npvPeriods:'Discounted cashflows',period:'Period',present_value:'Present value',precisionNote:'Round line amounts to 2 decimals; rates retain up to 6 decimals.',benchmarkCaution:'Synthetic records do not predict real market prices.',boqSourceNote:'Optional CSV columns included_preliminaries and included_ohp accept true/false for rate inclusions.'
   }};
   const formFields={early:['project_name','currency','area_m2','base_rate','source_ref','price_date','cost_scope','base_index','target_index','base_location_index','target_location_index','quality_factor','preliminaries_pct','overheads_profit_pct','contingency_pct','fees_pct','vat_pct','rate_includes_preliminaries','rate_includes_ohp'],takeoff:['method','length','width','height','count','deduction','wall_thickness','trench_width','trench_depth','concrete_width','concrete_depth','other_displaced_volume'],rate:['unit','currency','crew_hourly_cost','crew_output_per_hour','plant_hourly_cost','plant_output_per_hour','subcontract_per_unit','markup_pct'],boq:['project_name','currency','csv','preliminaries_pct','overheads_profit_pct','contingency_pct','fees_pct','vat_pct'],benchmark:['csv','currency','cost_scope','source_type','building_type','region','target_index','target_location_index'],appraise:['currency','cashflows','discount_rate_pct','gdv','non_land_cost','target_profit_pct','profit_basis']};
-  formFields['measured-boq']=['schedule_json'];
+  const measuredProjectFields=['project_name','currency','preliminaries_pct','overheads_profit_pct','contingency_pct','fees_pct','vat_pct'];
+  const measuredItemFields=['item_id','description','element','kind','unit','quantity','rate','currency','source_ref','price_date','included_preliminaries','included_ohp'];
+  const measurementFields=['measurement_id','item_id','drawing_ref','timesing','dimensions','operation','note'];
+  const measuredKinds=['measured','fixed','pc_sum','daywork_rate'];
+  const measuredUnits=['m','m2','m3','nr','item','h','day','t','kg'];
+  formFields['measured-boq']=[...measuredProjectFields,'measurement_standard','quantity_places'];
   const measuredBoqCopy = {
     tabMeasuredBoq:['计量到清单','Measured BOQ'],
     measuredBoqTitle:['计量、汇总与清单计价','Take-off, abstracting and billing'],
-    measuredBoqNote:['载入示例或输入 JSON。用清单编号连接图纸尺寸和单价，再核对扣减与清单量。','Load the example or enter JSON. Link drawing dimensions and rates by bill item ID, then check deductions and billed quantities.'],
+    measuredBoqNote:['输入清单项，再用清单编号关联尺寸记录。计算后依次查看列式、工程量汇总和清单金额。','Enter bill items, then link dimension records by item ID. Calculate to review squaring, abstract quantities and bill amounts.'],
     schedule_json:['计量和计价输入（JSON）','Measurement and pricing inputs (JSON)'],
+    pasteSchedule:['粘贴 JSON','Paste JSON'], applySchedule:['载入到表单','Load into form'],
+    measuredItems:['清单项目','Bill items'], measurementRows:['图纸尺寸记录','Dimension records'],
+    addMeasuredItem:['添加清单项','Add bill item'], addMeasurement:['添加尺寸记录','Add dimension record'],
+    removeMeasuredItem:['移除此清单项','Remove bill item'], removeMeasurement:['移除此尺寸记录','Remove dimension record'],
+    measuredRateDetails:['单价来源及包含项','Rate evidence and inclusions'],
+    daywork_rate:['计日工费率','Daywork rate'],
+    measurement_standard:['计量规则及版本','Measurement rules and edition'],
+    quantity_places:['清单量小数位（0–6）','Billing quantity decimal places (0–6)'],
+    dimensionsHelp:['尺寸以米为单位，用逗号分隔。计数项（nr）留空，在倍数栏填写数量。','Enter dimensions in metres, separated by commas. For counts (nr), leave dimensions blank and enter the count under Timesing.'],
     taking_off:['计量底稿','Taking off'], squaring:['列式计算','Squaring'],
     abstract:['工程量汇总','Abstract'], daywork_rates:['计日工费率','Daywork rates'],
     measurement_id:['计量编号','Measurement ID'], drawing_ref:['图纸或假设依据','Drawing or assumption reference'],
@@ -196,8 +210,73 @@
     if(!Object.hasOwn(apiPaths,tool)||!['json','csv','xlsx','html','zip'].includes(format)||!['zh','en','bilingual'].includes(language))throw new Error('Invalid export choice');
     return {tool,format,inputs:record.inputs,language};
   }
+  function measuredForm(data){
+    function fields(record, keys, name){
+      if(!record||Array.isArray(record)||typeof record!=='object')throw new Error(name+' must be an object');
+      for(const key of Object.keys(record)){
+        if(!keys.includes(key))throw new Error(name+': unknown field '+key);
+        if(!['project','items','measurements','dimensions'].includes(key)&&record[key]!==null&&!['string','number','boolean'].includes(typeof record[key])){
+          throw new Error(name+': invalid '+key);
+        }
+      }
+      return record;
+    }
+    function rows(key, keys, transform){
+      const entries=Object.hasOwn(data,key)?data[key]:[];
+      if(!Array.isArray(entries))throw new Error(key+' must be an array');
+      return entries.map((record,index)=>transform(fields(record,keys,key+' '+(index+1))));
+    }
+    function choice(value, options, key){
+      if(!options.includes(value))throw new Error('Invalid '+key+': '+value);
+      return value;
+    }
+    function included(value,key){
+      const flag=String(value??'').trim().toLowerCase();
+      return ['true','yes','1'].includes(choice(flag,['true','false','yes','no','1','0',''],key));
+    }
+    const {project={},quantity_places=6,measurement_standard=''}=
+      fields(data,['project','quantity_places','measurement_standard','items','measurements'],'Measured BOQ');
+    const settings=fields(project,measuredProjectFields,'Project');
+    return {
+      fields:{currency:'GBP',...settings,quantity_places,measurement_standard},
+      items:rows('items',measuredItemFields,record=>{
+        const kind=choice(record.kind??'measured',measuredKinds,'kind');
+        const unit=choice(String(record.unit??'item').trim().replace('²','2').replace('³','3'),measuredUnits,'unit');
+        if((kind==='measured'||kind==='daywork_rate')&&Object.hasOwn(record,'quantity')){
+          throw new Error('quantity must be omitted for '+kind);
+        }
+        return {...record,kind,unit,rate:record.rate==null?'':String(record.rate),
+          included_preliminaries:included(record.included_preliminaries,'included_preliminaries'),
+          included_ohp:included(record.included_ohp,'included_ohp')};
+      }),
+      measurements:rows('measurements',measurementFields,record=>{
+        const dimensions=Object.hasOwn(record,'dimensions')?record.dimensions:[];
+        if(!Array.isArray(dimensions)||dimensions.some(value=>!['string','number'].includes(typeof value)||!String(value).trim()||/[,，]/.test(String(value)))){
+          throw new Error('dimensions must be an array of numbers or decimal strings');
+        }
+        return {...record,timesing:record.timesing??1,dimensions:dimensions.join(', '),
+          operation:choice(record.operation??'add',['add','deduct'],'operation')};
+      }),
+    };
+  }
+  function measuredBoqInput(form){
+    const {measurement_standard='',quantity_places=6,...settings}=form.fields;
+    if(!/^[0-6]$/.test(String(quantity_places).trim()))throw new Error('quantity_places must be an integer from 0 to 6');
+    const filled=record=>Object.fromEntries(Object.entries(record).filter(([,value])=>value!=null&&value!==''));
+    return {
+      project:Object.fromEntries(Object.entries(filled(settings)).map(([key,value])=>[key,String(value)])),
+      quantity_places:Number(quantity_places),measurement_standard,
+      items:form.items.map(({quantity,...item})=>{
+        if(item.kind==='fixed'||item.kind==='pc_sum')item.quantity=quantity;
+        return filled(item);
+      }),
+      measurements:form.measurements.map(row=>({
+        ...filled(row),dimensions:row.dimensions.trim()?row.dimensions.split(/[,，]/).map(value=>value.trim()):[],
+      })),
+    };
+  }
   function normalizedInputs(tool,data={}){
-    if(tool==='measured-boq')return {schedule_json:JSON.stringify(data,null,2)};
+    if(tool==='measured-boq')return measuredForm(data);
     if(tool==='development'){
       const value={...developmentDefaults,...validateDevelopmentInput(data)};
       if(data.prep_months===undefined&&Number(value.duration_months)===1)value.prep_months=0;
@@ -246,7 +325,7 @@
     if(typeof value==='number')return new Intl.NumberFormat(locale,{minimumFractionDigits:developmentMoney.has(key)?2:0,maximumFractionDigits:developmentMoney.has(key)?2:6}).format(value);
     return String(value);
   }
-  if(typeof module!=='undefined'&&module.exports){module.exports={copy,apiPaths,csvCell,parseCashflows,formFields,restoreIndexSource,rateInclusions,parseCSV,normalizedInputs,parseDevelopmentCSV,developmentOptionsCSV,developmentPayload,resultCSV,developmentRecommendation,formatDevelopmentValue,parseSensitivityRange,reportExportRequest};return;}
+  if(typeof module!=='undefined'&&module.exports){module.exports={copy,apiPaths,csvCell,parseCashflows,formFields,restoreIndexSource,rateInclusions,parseCSV,normalizedInputs,measuredBoqInput,parseDevelopmentCSV,developmentOptionsCSV,developmentPayload,resultCSV,developmentRecommendation,formatDevelopmentValue,parseSensitivityRange,reportExportRequest};return;}
   if(typeof document==='undefined')return;
   let lang='zh';try{lang=localStorage.getItem('cost-language')==='en'?'en':'zh';}catch(_e){}
   copy.zh.label='费用项目'; copy.en.label='Cost item';
@@ -344,18 +423,135 @@
   developmentReset.addEventListener('click',()=>{applyInput('development',{});$('development-error').textContent='';});
   housingDownload.addEventListener('click',async()=>{housingDownload.disabled=true;try{await download('development-housing.csv','\ufeff'+developmentOptionsCSV(parseDevelopmentCSV($('development-csv').value)),'text/csv');$('development-error').textContent='';}catch(error){$('development-error').textContent=t('housingCsvError')+error.message;}finally{housingDownload.disabled=false;}});
   housingGroup.append(el('div',{class:'housing-actions'},[housingDownload,developmentReset]));
-  const measuredBoq=makeTool('measured-boq','measuredBoqTitle','measuredBoqNote');
-  measuredBoq.append(group('project',[field('measured-boq','schedule_json','','textarea')]));
-  actions('measured-boq',measuredBoq);
-  function measuredBoqPayload(input){
-    const value=JSON.parse(input);
-    if(!value||Array.isArray(value)||typeof value!=='object')throw new Error('Input must be a JSON object');
-    return value;
+  const measuredTool='measured-boq';
+  const measuredBoq=makeTool(measuredTool,'measuredBoqTitle','measuredBoqNote');
+  const measuredBillRows=el('div',{class:'measured-rows','data-schedule':'items'});
+  const measuredDimensionRows=el('div',{class:'measured-rows','data-schedule':'measurements'});
+  const measuredItemOptions=el('datalist',{id:'measured-item-options'});
+  let nextMeasuredRow=0;
+
+  function measuredRow(section,row){
+    const isItem=section===measuredBillRows;
+    const prefix='measured-row-'+(++nextMeasuredRow);
+    const card=el('div',{class:'measured-row'});
+    const readControl=node=>node.querySelector('input,select');
+    const makeField=(key,options,title=key)=>{
+      const multiline=['description','drawing_ref','note'].includes(key);
+      const node=field(prefix,key,row[key],multiline?'textarea':options?'select':'text',options);
+      if(multiline){
+        node.classList.add('wide');
+        node.querySelector('textarea').rows=2;
+      }
+      if(title!==key){const label=node.querySelector('label');label.dataset.i18n=title;label.textContent=t(title);}
+      return node;
+    };
+    if(isItem){
+      const kind=makeField('kind',measuredKinds.map(value=>[value,value]));
+      const unit=makeField('unit',measuredUnits.map(value=>[value,value]));
+      const itemId=makeField('item_id');
+      const quantity=makeField('quantity',null,'billed_quantity');
+      const rate=makeField('rate');
+      for(const node of [quantity,rate])readControl(node).inputMode='decimal';
+      const refreshQuantity=()=>{
+        const value=readControl(kind).value;
+        quantity.hidden=value!=='fixed'&&value!=='pc_sum';
+      };
+      readControl(kind).addEventListener('change',()=>{
+        if(readControl(kind).value==='pc_sum'){
+          readControl(unit).value='item';
+          readControl(quantity).value='1';
+        }
+        refreshQuantity();
+        refreshMeasuredItemOptions();
+      });
+      readControl(itemId).addEventListener('input',refreshMeasuredItemOptions);
+      refreshQuantity();
+      const details=el('details',{class:'measured-rate-details'},[
+        el('summary',{i18n:'measuredRateDetails'}),
+        el('div',{class:'field-grid'},[makeField('element'),makeField('currency'),makeField('source_ref'),makeField('price_date')]),
+      ]);
+      for(const key of ['included_preliminaries','included_ohp']){
+        const node=check(prefix,key);
+        readControl(node).checked=Boolean(row[key]);
+        details.append(node);
+      }
+      card.append(el('div',{class:'field-grid'},[itemId,kind,makeField('description'),unit,rate,quantity]),details);
+    }else{
+      const itemId=makeField('item_id');
+      readControl(itemId).setAttribute('list',measuredItemOptions.id);
+      const timesing=makeField('timesing');
+      readControl(timesing).inputMode='numeric';
+      const dimensions=makeField('dimensions',null,'dimensions_m');
+      dimensions.classList.add('wide');
+      card.append(el('div',{class:'field-grid'},[makeField('measurement_id'),itemId,makeField('drawing_ref'),
+        makeField('operation',[['add','add'],['deduct','deduct']]),timesing,dimensions,makeField('note',null,'measurement_note')]));
+    }
+    const remove=el('button',{type:'button',class:'text-button measured-remove',i18n:isItem?'removeMeasuredItem':'removeMeasurement'});
+    remove.addEventListener('click',()=>{
+      card.remove();
+      if(isItem)refreshMeasuredItemOptions();
+      markStale(measuredTool);
+      section.nextElementSibling.focus();
+    });
+    card.append(remove);
+    return card;
   }
+  function measuredRows(section){
+    return Array.from(section.children,card=>Object.fromEntries(
+      Array.from(card.querySelectorAll('[name]'),control=>[control.name,control.type==='checkbox'?control.checked:control.value])));
+  }
+  function refreshMeasuredItemOptions(){
+    const ids=measuredRows(measuredBillRows).filter(row=>row.kind==='measured').map(row=>row.item_id.trim()).filter(Boolean);
+    measuredItemOptions.replaceChildren(...Array.from(new Set(ids),value=>el('option',{value})));
+  }
+  function measuredRowGroup(title,section,buttonLabel,defaults,hint){
+    const add=el('button',{type:'button',class:'small-button',i18n:buttonLabel});
+    add.addEventListener('click',()=>{
+      const card=measuredRow(section,defaults);
+      section.append(card);
+      markStale(measuredTool);
+      card.querySelector('input').focus();
+    });
+    const contents=[el('legend',{i18n:title})];
+    if(hint)contents.push(el('p',{class:'group-note',i18n:hint}));
+    return el('fieldset',{class:'field-group'},[...contents,section,add]);
+  }
+  function loadMeasuredForm(form){
+    for(const key of formFields[measuredTool])$(measuredTool+'-'+key).value=form.fields[key]??'';
+    measuredBillRows.replaceChildren(...form.items.map(row=>measuredRow(measuredBillRows,row)));
+    measuredDimensionRows.replaceChildren(...form.measurements.map(row=>measuredRow(measuredDimensionRows,row)));
+    refreshMeasuredItemOptions();
+    markStale(measuredTool);
+  }
+  const measuredPaste=el('details',{class:'measured-paste'},[el('summary',{i18n:'pasteSchedule'})]);
+  const pastedSchedule=field(measuredTool,'schedule_json','','textarea');
+  for(const event of ['input','change'])pastedSchedule.addEventListener(event,e=>e.stopPropagation());
+  const applySchedule=el('button',{type:'button',class:'small-button',i18n:'applySchedule'});
+  const pasteError=el('div',{class:'form-error',role:'alert'});
+  applySchedule.addEventListener('click',()=>{
+    try{
+      const textarea=pastedSchedule.querySelector('textarea');
+      applyInput(measuredTool,JSON.parse(textarea.value));
+      textarea.value='';
+      measuredPaste.open=false;
+      pasteError.textContent='';
+      $(measuredTool+'-error').textContent='';
+      status('uploaded');
+      $(measuredTool+'-project_name').focus();
+    }catch(error){pasteError.textContent=error.message;}
+  });
+  measuredPaste.append(pastedSchedule,applySchedule,pasteError);
+  measuredBoq.append(measuredPaste,measuredItemOptions,
+    group('project',[field(measuredTool,'project_name','','text'),field(measuredTool,'currency','GBP','text'),
+      field(measuredTool,'quantity_places',6,'text'),field(measuredTool,'measurement_standard','','text')]),
+    measuredRowGroup('measuredItems',measuredBillRows,'addMeasuredItem',{kind:'measured',unit:'m3'}),
+    measuredRowGroup('measurementRows',measuredDimensionRows,'addMeasurement',{timesing:1,operation:'add'},'dimensionsHelp'),
+    allowances(measuredTool));
+  actions(measuredTool,measuredBoq);
   function readFields(tool){const data={};for(const key of formFields[tool]){const input=$(tool+'-'+key);data[key]=input.type==='checkbox'?input.checked:input.value;}return data;}
-  function payload(tool){const data=readFields(tool);if(tool==='measured-boq')return measuredBoqPayload(data.schedule_json);if(tool==='development'){try{return developmentPayload(data,readOptionOverrides());}catch(error){throw new Error(t('housingCsvError')+error.message);}}if(tool==='early'&&state.indexSource)data.index_source=state.indexSource;if(tool==='rate')data.materials=Array.from(materialBody.children).map(row=>Object.fromEntries(Array.from(row.querySelectorAll('[data-material]')).map(input=>[input.dataset.material,input.value])));if(tool==='boq'){const {csv,...project}=data;return {csv,project};}if(tool==='benchmark'){const {csv,target_index,target_location_index,...filters}=data;return {csv,target_index,target_location_index,filters};}if(tool==='appraise'){try{data.cashflows=parseCashflows(data.cashflows);}catch(_e){throw new Error(t('cashflowError'));}}return data;}
-  function applyInput(tool,data){let values=normalizedInputs(tool,data);if(tool==='early')state.indexSource=restoreIndexSource(data);if(tool==='boq')values={...values.project,csv:values.csv};if(tool==='benchmark')values={...values.filters,csv:values.csv,target_index:values.target_index,target_location_index:values.target_location_index};for(const key of formFields[tool]){const input=$(tool+'-'+key);if(input.type==='checkbox')input.checked=values[key]===true||values[key]==='true';else input.value=Array.isArray(values[key])?values[key].join(','):values[key]??'';}if(tool==='development')renderOptionSettings(values.options,new Map(values.options.map(option=>[option.name,option.settings||{}])));if(tool==='rate'){if(!Array.isArray(values.materials))throw new Error('materials must be an array');materialBody.replaceChildren();values.materials.forEach(materialRow);}markStale(tool);showDimensions();}
-  function markStale(tool){state.revisions[tool]=(state.revisions[tool]||0)+1;if(!state.results[tool])return;state.results[tool].stale=true;renderResult(tool);updatePrint();}
+  function payload(tool){const data=readFields(tool);if(tool===measuredTool)return measuredBoqInput({fields:data,items:measuredRows(measuredBillRows),measurements:measuredRows(measuredDimensionRows)});if(tool==='development'){try{return developmentPayload(data,readOptionOverrides());}catch(error){throw new Error(t('housingCsvError')+error.message);}}if(tool==='early'&&state.indexSource)data.index_source=state.indexSource;if(tool==='rate')data.materials=Array.from(materialBody.children).map(row=>Object.fromEntries(Array.from(row.querySelectorAll('[data-material]')).map(input=>[input.dataset.material,input.value])));if(tool==='boq'){const {csv,...project}=data;return {csv,project};}if(tool==='benchmark'){const {csv,target_index,target_location_index,...filters}=data;return {csv,target_index,target_location_index,filters};}if(tool==='appraise'){try{data.cashflows=parseCashflows(data.cashflows);}catch(_e){throw new Error(t('cashflowError'));}}return data;}
+  function applyInput(tool,data){let values=normalizedInputs(tool,data);if(tool===measuredTool){loadMeasuredForm(values);return;}if(tool==='early')state.indexSource=restoreIndexSource(data);if(tool==='boq')values={...values.project,csv:values.csv};if(tool==='benchmark')values={...values.filters,csv:values.csv,target_index:values.target_index,target_location_index:values.target_location_index};for(const key of formFields[tool]){const input=$(tool+'-'+key);if(input.type==='checkbox')input.checked=values[key]===true||values[key]==='true';else input.value=Array.isArray(values[key])?values[key].join(','):values[key]??'';}if(tool==='development')renderOptionSettings(values.options,new Map(values.options.map(option=>[option.name,option.settings||{}])));if(tool==='rate'){if(!Array.isArray(values.materials))throw new Error('materials must be an array');materialBody.replaceChildren();values.materials.forEach(materialRow);}markStale(tool);showDimensions();}
+  function markStale(tool){state.revisions[tool]=(state.revisions[tool]||0)+1;if(!state.results[tool]||state.results[tool].stale)return;state.results[tool].stale=true;renderResult(tool);updatePrint();}
   for(const tool of Object.keys(formFields)){const form=$(tool+'-form');form.addEventListener('input',()=>markStale(tool));form.addEventListener('change',()=>markStale(tool));form.addEventListener('submit',async event=>{event.preventDefault();if(state.loading||state.pending[tool])return;const button=$(tool+'-calculate'),revision=state.revisions[tool]||0;$(tool+'-error').textContent='';state.pending[tool]=true;button.disabled=true;button.textContent=t('working');try{const inputs=payload(tool);const response=await fetch(apiPaths[tool],{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(inputs)});const result=await response.json();if(!response.ok)throw new Error(result.error||t('failed'));state.results[tool]={value:result,inputs,stale:revision!==(state.revisions[tool]||0)};renderResult(tool);updatePrint();}catch(error){$(tool+'-error').textContent=t('failed')+' '+error.message;}finally{state.pending[tool]=false;button.disabled=state.loading;button.textContent=t('calculate');}});}
   function showDimensions(){const method=$('takeoff-method').value;const fields={rectangle:['length','width','count','deduction'],volume:['length','width','height','count','deduction'],linear:['length','count','deduction'],count:['count','deduction'],centreline:['length','width','wall_thickness','count','deduction'],strip_foundation:['length','width','wall_thickness','count','trench_width','trench_depth','concrete_width','concrete_depth','other_displaced_volume']}[method]||[];for(const key of formFields.takeoff.filter(k=>k!=='method'))$( 'takeoff-'+key).parentElement.hidden=!fields.includes(key);}
   $('takeoff-method').addEventListener('change',showDimensions);showDimensions();
