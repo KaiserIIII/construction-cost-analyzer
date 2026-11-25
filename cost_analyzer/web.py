@@ -35,7 +35,10 @@ def prepare_source(data):
         return json.dumps(value,ensure_ascii=False,indent=2,allow_nan=False).encode('utf-8'),name,EXPORT_TYPES['json']
     rows=list(csv.reader(io.StringIO(content.lstrip('\ufeff'))))
     fields=['option','name','count','area_m2','base_rate','sale_price','source_ref','area_source_ref']
-    if not rows or rows[0]!=fields or any(len(row)!=len(fields) for row in rows):raise ValueError('Invalid housing CSV structure')
+    optional={'sale_source_ref','sale_price_date','sale_basis'}
+    if (not rows or len(set(rows[0]))!=len(rows[0]) or not set(fields)<=set(rows[0])
+            or not set(rows[0])<=set(fields)|optional or any(len(row)!=len(rows[0]) for row in rows)):
+        raise ValueError('Invalid housing CSV structure')
     stream=io.StringIO(newline='');writer=csv.writer(stream,lineterminator='\r\n')
     writer.writerows([[reporting.csv_safe(value) for value in row] for row in rows])
     return stream.getvalue().encode('utf-8-sig'),name,EXPORT_TYPES['csv']

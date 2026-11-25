@@ -1,0 +1,56 @@
+{
+  "project_name": "Synthetic review example",
+  "currency": "GBP",
+  "site_area_m2": 100,
+  "land_rate": 100,
+  "site_clearance_rate": 0,
+  "facilitating_cost": 0,
+  "external_works_pct": 0,
+  "preliminaries_pct": 0,
+  "overheads_profit_pct": 0,
+  "fees_pct": 0,
+  "marketing_pct": 3,
+  "risk_design_pct": 0,
+  "risk_construction_pct": 0,
+  "risk_employer_change_pct": 0,
+  "risk_other_pct": 0,
+  "tender_inflation_pct": 0,
+  "construction_inflation_pct": 0,
+  "rate_includes_preliminaries": false,
+  "rate_includes_ohp": false,
+  "price_basis": "estimate_plus_inflation",
+  "risk_scope": "works_only",
+  "base_index": 100,
+  "target_index": 100,
+  "base_location_index": 100,
+  "target_location_index": 100,
+  "loan_share_pct": 0,
+  "duration_months": 2,
+  "prep_months": 0,
+  "hurdle_pct": 10,
+  "discount_rate_pct": 8,
+  "prep_spend_pct": 0,
+  "start_date": "2026-11-01",
+  "price_date": "2026-09-01",
+  "estimate_date": "2026-10-01",
+  "index_source_ref": "Self-authored constant-index example",
+  "source_ref": "Self-authored construction rate example",
+  "options": [
+    {
+      "name": "Synthetic option",
+      "units": [
+        {
+          "name": "House",
+          "count": 1,
+          "area_m2": 100,
+          "base_rate": 1000,
+          "sale_price": 180000,
+          "area_source_ref": "Self-authored 10m x 10m envelope",
+          "sale_source_ref": "Self-authored price record; not actual market evidence",
+          "sale_price_date": "2026-09-01",
+          "sale_basis": "assumed"
+        }
+      ]
+    }
+  ]
+}

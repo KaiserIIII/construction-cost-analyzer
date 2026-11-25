@@ -18,6 +18,16 @@ python -m cost_analyzer serve
 
 Open **http://127.0.0.1:8765/**. On Windows, double-click `start.cmd`. Select **Load example**, edit the inputs and calculate. Switch between 中文 and English in the page header. The server listens on the local loopback interface; files are processed on your computer.
 
+## Review development inputs before reporting
+
+```bash
+python -m cost_analyzer review examples/development-review.json --output outputs/input-review.json
+```
+
+The review lists omitted cost assumptions, missing references and price dates, and the adopted start/completion dates for each option. Explicit zero is distinguished from an omitted input. Housing rows can record sales evidence separately through `sale_source_ref`, `sale_price_date` and `sale_basis` (`asking`, `sold`, `assumed`); these survive CSV import/export and estimate exports. A construction cost reference is not substituted for sales evidence.
+
+The command checks documentation presence and the existing engine's input validation. It does not verify the referenced evidence or certify submission readiness. Exit codes: **0** for recorded inputs (possibly with warnings), **1** for documentation gaps, **2** for invalid input. See [input review](docs/input-review.md).
+
 ## Estimating workflow
 
 | Stage | Calculation and output |

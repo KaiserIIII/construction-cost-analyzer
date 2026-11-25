@@ -23,7 +23,8 @@ TOP_FIELDS=set(PERCENTAGES)|{'project_name','currency','site_area_m2','land_rate
     'rate_includes_ohp','start_date','price_date','source_ref','index_source_ref','assumptions','options',
     'cost_changes_pct','value_changes_pct'}|REPORT_FIELDS
 TEXT_FIELDS={'project_name','currency','price_basis','risk_scope','start_date','price_date',
-             'source_ref','index_source_ref','assumptions','name','area_source_ref'}|REPORT_FIELDS
+             'source_ref','index_source_ref','assumptions','name','area_source_ref',
+             'sale_source_ref','sale_price_date','sale_basis'}|REPORT_FIELDS
 
 
 def validate_fields(data,allowed):
@@ -141,7 +142,12 @@ def option(raw,s,data):
     housing=[];house_cost=ZERO;V=ZERO;area=ZERO;count=0
     for item in units:
         if not isinstance(item,dict):raise ValueError('units: each housing type must be an object')
-        validate_fields(item,{'name','count','area_m2','base_rate','sale_price','source_ref','area_source_ref'})
+        validate_fields(item,{'name','count','area_m2','base_rate','sale_price','source_ref','area_source_ref',
+                              'sale_source_ref','sale_price_date','sale_basis'})
+        sale_date=price_date(item.get('sale_price_date',''))
+        sale_basis=item.get('sale_basis','')
+        if sale_basis not in ('','asking','sold','assumed'):
+            raise ValueError('sale_basis: use asking, sold or assumed')
         unit_name=text(item.get('name'),'housing name',limit=100)
         if not unit_name:raise ValueError('housing name is required')
         c=integer(item.get('count'),'count',minimum=1,maximum=10000)
@@ -154,6 +160,9 @@ def option(raw,s,data):
                         'adjusted_rate':output(rate),'cost':output(cost,2),'gdv':output(gdv,2),
                         'source_ref':text(item.get('source_ref',data.get('source_ref','')),'source_ref'),
                         'area_source_ref':text(item.get('area_source_ref',''),'area_source_ref')})
+        for key,value in [('sale_source_ref',text(item.get('sale_source_ref',''),'sale_source_ref')),
+                          ('sale_price_date',sale_date),('sale_basis',sale_basis)]:
+            if key in item:housing[-1][key]=value
     externals=house_cost*p['external_works_pct'];building=house_cost+externals
     prelim=building*p['preliminaries_pct'];contract=building+clearance+facilitating+prelim
     ohp=contract*p['overheads_profit_pct'];works=contract+ohp;fees=works*p['fees_pct'];K=works+fees
