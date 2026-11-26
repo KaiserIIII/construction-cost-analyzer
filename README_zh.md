@@ -2,7 +2,7 @@
 
 [English](README.md) · [计算方法](docs/course-methods.md) · [数据来源](docs/data-sources.md) · [导出格式](docs/exports.md) · [MIT 许可证](LICENSE)
 
-用于工程量计算、工料机单价分析、工程量清单计价、指数调整估算和开发投资评价的本地工具。计算方法结合 **Construction Quantification and Costing（建筑计量与计价）** 课程内容。
+面向英国 **Construction Quantification and Costing（建筑计量与计价）** 课程的开源学习工具。通过可编辑算例练习工程量计算、工料机单价分析、工程量清单计价、指数调整和开发投资评价。
 
 中英文浏览器工作区与 Python 命令行共用计算引擎。导出结果保留输入、报价来源、价格日期和费用基数，提供带正确数据类型的 Excel 明细、可打印报告及完整交付包，便于复核与后续调整。
 
@@ -26,6 +26,7 @@ python -m cost_analyzer serve
 | 工程量计算 | 面积、体积、长度、个数与矩形中心线计量；连续条形基础分别计算开挖、混凝土和自然回填。 |
 | 工料机组价 | 材料包装价格换算、材料损耗、整个班组的生产率、机械产量、分包费用和加价；报价单价可带入清单条目。 |
 | 清单计价 | 导入 CSV 或在页面添加条目，计算逐项金额、分部汇总和项目附加费用；已含费用标记防止重复计取现场费用或总部费与利润。 |
+| 计量到清单 | 按清单编号关联图纸尺寸与单价，计算加项和扣减，汇总净量后计价。可导出计量底稿、列式结果、工程量汇总和计价清单。 |
 | 同类项目比较 | 按建筑用途、地区、币种、费用范围和来源类型筛选，统一适用的价格与地区指数，比较中位数、四分位数及预算偏差。 |
 | 开发投资评价 | 年度期末现金流、净现值、常规现金流内部收益率、简单与折现回收期，以及按销售额或总成本利润率计算的土地剩余价值。 |
 | 住宅方案估算 | 混合户型、详细 OCE、月度分期融资、总成本利润率、年化 IRR、考虑融资的土地余额，各方案独立工期与融资条件，以及每个方案最多 49 组成本与售价敏感性分析。 |
@@ -54,6 +55,7 @@ ONS OPI 是建筑产出价格指数，与 BCIS 投标价格指数不同，不提
 python -m cost_analyzer demo --output outputs/demo
 python -m cost_analyzer estimate examples/early-estimate.json --output outputs/estimate
 python -m cost_analyzer boq --input examples/boq.csv --project examples/project.json --output outputs/boq
+python -m cost_analyzer measured-boq examples/measured-boq.json --output outputs/measured-boq
 python -m cost_analyzer benchmark --input data/synthetic_projects.csv --building-type office --currency GBP --source-type synthetic --output outputs/benchmark
 python -m cost_analyzer appraise examples/appraisal.json --output outputs/appraisal
 python -m cost_analyzer development examples/development-extended.json --output outputs/development --language bilingual
@@ -66,6 +68,8 @@ python -m cost_analyzer development examples/development-extended.json --output 
 ![使用自编数据比较住宅开发方案](docs/images/development.jpg)
 
 ## 计量与费用口径
+
+在网页选择「计量到清单」，可直接添加清单项和尺寸记录，也可载入示例。示例先扣除基础交接处的重复工程量，对净量 1.440 m³ 计价，并计入 £100 指定暂定金额。计日工仅列费率，含附加费用的总额为 £351.20。字段说明和舍入口径见[计量到清单工作流](docs/measured-boq.md)。
 
 工具对应课程中的设计经济性、早期估算、中心线计量、工料机组价与开发评价。[计算方法说明](docs/course-methods.md) 列出公式、附加费用基数、舍入规则和计量边界。
 

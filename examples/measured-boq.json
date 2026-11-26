@@ -1,0 +1,66 @@
+{
+  "project": {
+    "project_name": "Example footing and specialist package",
+    "currency": "GBP",
+    "overheads_profit_pct": 20,
+    "contingency_pct": 7
+  },
+  "quantity_places": 3,
+  "measurement_standard": "Illustrative dimension schedule; project measurement rules to be supplied",
+  "items": [
+    {
+      "item_id": "F01",
+      "description": "Strip foundation concrete",
+      "element": "Substructure",
+      "unit": "m3",
+      "rate": "120.50",
+      "source_ref": "Self-authored unit prices for arithmetic practice",
+      "price_date": "2026-01-01"
+    },
+    {
+      "item_id": "PC01",
+      "description": "Specialist floor supply",
+      "element": "PC sums",
+      "unit": "item",
+      "kind": "pc_sum",
+      "rate": 100,
+      "source_ref": "Self-authored unit prices for arithmetic practice",
+      "price_date": "2026-01-01"
+    },
+    {
+      "item_id": "D01",
+      "description": "General operative",
+      "unit": "h",
+      "kind": "daywork_rate",
+      "rate": 25,
+      "source_ref": "Self-authored unit prices for arithmetic practice",
+      "price_date": "2026-01-01"
+    }
+  ],
+  "measurements": [
+    {
+      "measurement_id": "M01",
+      "item_id": "F01",
+      "drawing_ref": "Illustrative sketch SK-01 Rev A",
+      "timesing": 2,
+      "dimensions": [
+        "4.2",
+        "0.6",
+        "0.3"
+      ],
+      "note": "Two matching strips"
+    },
+    {
+      "measurement_id": "M02",
+      "item_id": "F01",
+      "drawing_ref": "Illustrative sketch SK-01 Rev A",
+      "operation": "deduct",
+      "dimensions": [
+        "0.4",
+        "0.6",
+        "0.3"
+      ],
+      "note": "Shared junction counted above"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from .engine import early_estimate, takeoff, unit_rate, price_boq, appraise
 from .development import development
+from .measured_boq import measured_boq
 from .benchmarks import benchmark, read_boq_csv, generate_scenarios, scenario_csv
 from .examples import example
 from .downloads import DownloadStore
@@ -17,7 +18,7 @@ from . import reporting
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=Path(__file__).resolve().parent/'static'
 MAX_BODY=5_000_000
-EXPORT_TOOLS={'early','takeoff','rate','boq','benchmark','appraise','development'}
+EXPORT_TOOLS={'early','takeoff','rate','boq','measured-boq','benchmark','appraise','development'}
 EXPORT_TYPES={'json':'application/json; charset=utf-8','csv':'text/csv; charset=utf-8',
     'html':'text/html; charset=utf-8','xlsx':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','zip':'application/zip'}
 
@@ -62,6 +63,7 @@ def dispatch(path,data):
     if not isinstance(data,dict):raise ValueError('Request JSON must be an object')
     functions={'/api/early':early_estimate,'/api/takeoff':takeoff,'/api/rate':unit_rate,'/api/appraise':appraise,'/api/development':development}
     if path in functions:return functions[path](data)
+    if path=='/api/measured-boq':return measured_boq(data)
     if path=='/api/boq':
         project=data.get('project',{})
         if not isinstance(project,dict):raise ValueError('project: use an object')

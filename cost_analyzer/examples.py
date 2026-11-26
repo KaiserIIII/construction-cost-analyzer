@@ -2,6 +2,7 @@
 def example():
     return {
         'development':development_example(),
+        'measured-boq':measured_boq_example(),
         'early':{'project_name':'Community workspace','currency':'GBP','area_m2':1000,'base_rate':1000,
                  'base_index':100,'target_index':120,'base_location_index':100,'target_location_index':105,
                  'preliminaries_pct':10,'overheads_profit_pct':5,'contingency_pct':0,'fees_pct':0,'vat_pct':0,
@@ -23,6 +24,30 @@ def example():
                           'overheads_profit_pct':0,'contingency_pct':5,'fees_pct':0,'vat_pct':0}},
         'appraise':{'cashflows':[-100000,30000,30000,30000,30000],'discount_rate_pct':8,'currency':'GBP',
                     'gdv':1000000,'non_land_cost':700000,'target_profit_pct':20,'profit_basis':'gdv'}}
+
+
+def measured_boq_example():
+    source = 'Self-authored unit prices for arithmetic practice'
+    return {
+        'project': {'project_name': 'Example footing and specialist package', 'currency': 'GBP',
+                    'overheads_profit_pct': 20, 'contingency_pct': 7},
+        'quantity_places': 3,
+        'measurement_standard': 'Illustrative dimension schedule; project measurement rules to be supplied',
+        'items': [
+            {'item_id':'F01','description':'Strip foundation concrete','element':'Substructure',
+             'unit':'m3','rate':'120.50','source_ref':source,'price_date':'2026-01-01'},
+            {'item_id':'PC01','description':'Specialist floor supply','element':'PC sums','unit':'item',
+             'kind':'pc_sum','rate':100,'source_ref':source,'price_date':'2026-01-01'},
+            {'item_id':'D01','description':'General operative','unit':'h','kind':'daywork_rate',
+             'rate':25,'source_ref':source,'price_date':'2026-01-01'},
+        ],
+        'measurements': [
+            {'measurement_id':'M01','item_id':'F01','drawing_ref':'Illustrative sketch SK-01 Rev A',
+             'timesing':2,'dimensions':['4.2','0.6','0.3'],'note':'Two matching strips'},
+            {'measurement_id':'M02','item_id':'F01','drawing_ref':'Illustrative sketch SK-01 Rev A',
+             'operation':'deduct','dimensions':['0.4','0.6','0.3'],'note':'Shared junction counted above'},
+        ],
+    }
 
 
 def development_example():

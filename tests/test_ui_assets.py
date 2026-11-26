@@ -58,7 +58,7 @@ for (const language of ['zh', 'en']) {
 assert.deepEqual(ui.apiPaths, {
   early:'/api/early', takeoff:'/api/takeoff', rate:'/api/rate',
   boq:'/api/boq', benchmark:'/api/benchmark', appraise:'/api/appraise',
-  development:'/api/development'
+  development:'/api/development', 'measured-boq':'/api/measured-boq'
 });
 assert.equal(ui.csvCell('=HYPERLINK("bad")'), '"\'=HYPERLINK(""bad"")"');
 assert.equal(ui.csvCell('  +SUM(1,2)'), '"\'  +SUM(1,2)"');
@@ -76,6 +76,40 @@ assert.ok(fields.early.includes('rate_includes_ohp'));
 assert.ok(fields.takeoff.includes('wall_thickness'));
 assert.ok(fields.rate.includes('crew_output_per_hour'));
 assert.ok(fields.boq.includes('csv'));
+const measuredInput = {
+  project:{project_name:'Practice',currency:'GBP',overheads_profit_pct:20},
+  quantity_places:0,
+  measurement_standard:'Course exercise',
+  items:[
+    {item_id:'F01',description:'Strip concrete',unit:'m³',rate:'120.500001',included_ohp:'yes'},
+    {item_id:'D01',description:'Daywork',kind:'daywork_rate',unit:'h',rate:25},
+    {item_id:'F02',description:'Fixed quantity',kind:'fixed',unit:'item',quantity:'0',rate:15},
+  ],
+  measurements:[
+    {measurement_id:'M01',item_id:'F01',drawing_ref:'SK-01 A',dimensions:['4.200001','0.6','0.3']},
+    {measurement_id:'M02',item_id:'F01',drawing_ref:'SK-01 B',operation:'deduct',note:'Overlap',dimensions:['0.4','0.6','0.3']},
+  ],
+};
+const form = ui.normalizedInputs('measured-boq', measuredInput);
+assert.equal(form.items[0].unit,'m3');
+assert.equal(form.items[0].rate,'120.500001');
+assert.equal(form.measurements[0].dimensions,'4.200001, 0.6, 0.3');
+form.measurements[0].dimensions='4.500001, 0.6, 0.3';
+const edited = ui.measuredBoqInput(form);
+assert.equal(edited.quantity_places,0);
+assert.equal(edited.project.overheads_profit_pct,'20');
+assert.deepEqual(edited.measurements[0].dimensions,['4.500001','0.6','0.3']);
+assert.equal(edited.measurements[1].operation,'deduct');
+assert.equal(edited.measurements[1].note,'Overlap');
+assert.equal(edited.items[0].included_ohp,true);
+assert.equal(edited.items[2].quantity,'0');
+assert.equal(edited.items[1].quantity,undefined);
+assert.equal(measuredInput.measurements[0].dimensions[0],'4.200001');
+assert.throws(() => ui.normalizedInputs('measured-boq',{items:[{item_id:'F01', raet:21}]}), /raet/);
+assert.throws(() => ui.normalizedInputs('measured-boq',{items:[{item_id:'F01', unit:'ft'}]}), /unit/);
+assert.throws(() => ui.normalizedInputs('measured-boq',{measurements:[{dimensions:'4, 2'}]}), /dimensions/);
+const countForm = ui.normalizedInputs('measured-boq', {measurements:[{dimensions:[],timesing:3}]});
+assert.deepEqual(ui.measuredBoqInput(countForm).measurements[0].dimensions,[]);
 assert.ok(fields.benchmark.includes('source_type'));
 assert.ok(fields.appraise.includes('profit_basis'));
 assert.deepEqual(ui.restoreIndexSource({base_index:100,target_index:120}), null);
